@@ -1,0 +1,30 @@
+{
+  "contributors": [
+    {
+      "name": "Sebastian Sycz",
+      "email": "youhosi99@gmail.com",
+      "url": "https://github.com/youhosi"
+    }
+  ],
+  "description": "Oxide Theme Premium",
+  "homepage": "https://github.com/youhosi/nodebb-theme-oxide#readme",
+  "keywords": [
+    "nodebb",
+    "theme",
+    "forum",
+    "bootstrap",
+    "responsive",
+    "oxide"
+  ],
+  "license": "MIT",
+  "main": "theme.less",
+  "name": "nodebb-theme-oxide",
+  "nbbpm": {
+    "compatibility": "^1.10.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youhosi/nodebb-theme-oxide.git"
+  },
+  "version": "1.0.1"
+}
