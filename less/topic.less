@@ -1,0 +1,832 @@
+.topic,
+.posts {
+
+	> ul {
+		background-image: url(https://oxidepolska.pl/assets/uploads/system/1x1.png);
+		background-repeat: repeat-y;
+		background-position: 11px;
+		margin-bottom: 0;
+		list-style: none;
+
+		@media (min-width: @screen-sm-max) {
+			& {
+				background-position: 23px;
+			}
+		}
+	}
+	
+	h1 {
+		> span {
+			text-transform: uppercase;
+			color: @gray-light;
+			font-size: 12px;
+			display: inline-block;
+			margin-top: 8px;
+
+			> span {
+				vertical-align: middle;
+				margin-right: 8px;
+			}
+		}
+
+		.btn-group, .btn {
+			margin-left: 15px;
+		}
+
+		.btn {
+			background: @body-bg;
+			text-transform: uppercase;
+			font-weight: 600;
+			box-shadow: none !important;
+			font-size: 11px;
+			color: @gray-light;
+			padding: 0;
+		}
+	}
+
+	[component="post/header"] {
+		margin: 0 0 30px;
+		// line-height: 40px;
+	
+		.topic-title {
+			word-wrap: break-word;
+			font-size: 25px;
+			font-weight: bold;
+			color: inherit;
+			line-height: 29px;
+			text-transform: initial;
+		}
+
+		.fa {
+			margin-top: 7px;
+			font-size: 20px;
+			background: #FFF;
+			height: 30px;
+			line-height: 30px;
+			width: 30px;
+			text-align: center;
+			border-radius: 50%;
+			box-shadow: 0 3px 6px rgba(0,0,0, .2);
+		}
+	}
+	
+	[component="post"] {
+		position: relative;
+
+		[component="post/anchor"] {
+			position: relative;
+			top: -20px;		/* 20px used here as that is the bottom margin of the hr in between posts */
+		}
+
+		[component="post/upvote"],
+		[component="post/downvote"] {
+			color: @gray-light;
+			padding: 0 5px;
+			font-size: 14px;
+	
+			&:focus {
+				text-decoration: none;
+			}
+	
+			&.upvoted,
+			&.downvoted {
+				color: @brand-primary;
+			}
+		}
+	
+		[component="post/vote-count"] {
+			min-width: 20px;
+			display: inline-block;
+			text-align: center;
+			font-size: 13px;
+			font-weight: bold;
+		}
+
+		[component="post/replies"] {
+			margin-left: 0;
+			margin-top: 0;
+			border: none;
+			padding-top: 20px;
+			padding-left: 81px;
+			width: 100%;
+			position: relative;
+			top: 17px;
+			background-image: url(https://oxidepolska.pl/assets/uploads/system/1x1.png);
+			background-repeat: repeat-y;
+			background-position: 91px;
+			list-style: none;
+	
+			> li:last-child {
+				background-color: #fafafa;
+			}
+	
+			@media (max-width: 480px) {
+				& {
+					padding-left: 30px;
+					background-position: 41px;
+				}
+			}
+			@media (min-width: @screen-sm-max) {
+				& {
+					background-position: 104px;
+				}
+			}
+		}
+
+		.icon {
+			position: relative;
+			border-radius: 50%;
+			min-width: 46px;
+			min-height: 46px;
+
+			> a > .status {
+				position: absolute;
+				right: 12px;
+				font-size: 12px;
+				top: 0px;
+				vertical-align: 0%;
+
+				@media (min-width: @screen-md-min) {
+					top: 2px;
+					font-size: 16px;
+				}
+			}
+
+			img, .user-icon {
+				margin-right: 15px;
+				box-shadow: 0 4px 9px rgba(0,0,0, .1);
+				.user-icon-style(46px, 2.4rem, 50%);
+				
+			}
+		}
+
+		.content {	
+			padding: 20px 20px 50px;
+			margin-top: -45px;
+			margin-left: 65px;
+			transition: .6s ease-in-out border-color;
+			background-color: #fff;
+			border: 1px solid #e6e6e6;
+			box-shadow: 0 1px 3px rgba(0,0,0, .03);
+			border-radius: 4px;
+
+			// Typical content
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				margin: 0 0 15px;
+	
+				&:first-child {
+					margin-top: 0px;
+				}
+			}
+	
+			h1 {
+				font-size: 25px;
+			}
+	
+			h2 {
+				font-size: 23px;
+			}
+	
+			h3 {
+				font-size: 21px;
+			}
+	
+			h4 {
+				font-size: 18px;
+			}
+	
+			h5 {
+				font-size: 16px;
+			}
+	
+			h6 {
+				font-size: 14px;
+			}
+
+			.plugin-markdown { // tmp
+				input[type=checkbox],
+				label {
+					pointer-events: none;
+				}
+
+				input[type=checkbox] {
+					margin: 5px;
+					opacity: .7;
+				}
+
+				label {
+					font-weight: normal;
+				}
+			}
+
+			s > .plugin-markdown > label {
+				text-decoration: line-through;
+			}
+
+			pre {
+				max-height: 350px;
+
+				code {
+					white-space: pre;
+					word-wrap: normal;
+					min-width: 100%;
+				}
+
+				@media (max-width: @screen-sm-min) {
+					& {
+						max-height: 250px;
+					}
+				}
+			}
+
+			blockquote {
+				font-size: 13px;
+
+				> blockquote {
+					> *:not(.blockquote) {
+						display: none;
+					}
+				}
+
+				> blockquote.uncollapsed {
+					> *:not(.blockquote) {
+						display: block;
+					}
+				}
+			}
+
+			.plugin-mentions-user {
+				padding: 2px 5px;
+				border-radius: 4px;
+				border: 1px solid #666;
+				font-size: 13px;
+				font-weight: bold;
+				display: inline-block;
+				color: #666;
+			}
+
+			//
+
+			.fix-lists;
+
+			iframe,
+			.img-responsive {
+				max-width: 85%;
+				display: inline;
+			}
+
+			.toggle {
+				padding: 0px 5px;
+				border: 1px solid #e0e0e0;
+				background: #fcfcfc;
+				width: 50px;
+				text-align: center;
+				display:block!important;
+			}
+
+			.post-author {
+				display: block;
+				font-size: 14px;
+				position: relative;
+				margin: -20px -20px 20px;
+				padding: 10px 20px;
+				border-bottom: 1px solid #ececec;
+				background: #00000005;
+	
+				.group-label {
+					text-transform: capitalize;
+					vertical-align: middle;
+					border-radius: 3px;
+					margin: 0 5px;
+					padding: 4px;
+				}
+	
+				.permalink {
+					font-size: 11px;
+					text-decoration: none;
+	
+					&:before {
+						font-family: FontAwesome;
+						content: '\f017';
+						font-size: 11px;
+						padding-right: 3px;
+					}
+				}
+	
+				[component="post/parent"] {
+					background-color: #fff;
+					border: 1px solid #ccc;
+					border-radius: 3px;
+					color: #999;
+					font-size: 9px;
+					vertical-align: middle;
+					margin: 0 5px;
+				}
+	
+				.bookmarked {
+					position: absolute;
+					top: 10px;
+					right: 20px;
+					font-size: 15px;
+					// color: darken(@brand-info, 20%);
+					color: inherit;
+					opacity: 0;
+					.transition(0.75s ease-in-out opacity);
+				}
+			}
+	
+			.post-signature {
+				font-size: 12px;
+				font-style: italic;
+				word-wrap: break-word;
+				border-top: 1px dashed #ececec;
+				border-bottom: 1px dashed #ececec;
+				display: block;
+				padding: 10px 20px;
+				margin: 20px -20px 0 !important;
+				
+				p {
+					margin: 0;
+				}
+			}
+	
+			@media (max-width: @screen-sm-max) {
+				& {
+					margin-top: -28px;
+					margin-left: 38px;	
+				}
+			}
+
+			@media (max-width: 480px) {
+				& {
+					margin-top: -15px;
+					margin-left: 0;
+				}
+			}
+		}
+	
+		.post-footer {
+			position: relative;
+			top: -37px;
+
+			.threaded-replies {
+				text-decoration: none;
+				margin-left: 55px;
+				font-size: 11px;
+		
+		
+				img, .user-icon {
+					.user-icon-style(16px, 10px, 50%);
+					vertical-align: 1px;
+				}
+		
+				img {
+					vertical-align: -4px;
+				}
+		
+				.replies-count {
+					margin-left: 3px;
+					font-weight: bold;
+				}
+		
+				.replies-last {
+					color: @gray-light;
+				}
+		
+				.fa {
+					font-size: 80%;
+				}
+		
+				.avatars {
+					position: relative;
+		
+					&.hasMore > *:last-child:after {
+						content: "\2022\2022\2022";
+						width: 16px;
+						height: 16px;
+						line-height: 16px;
+						background: #000;
+						opacity: .6;
+						color: white;
+						position: absolute;
+						right: 2px;
+						border-radius: 50%;
+						bottom: -1px;
+						text-align: center;
+						font-size: 12px;
+					}
+				}
+	
+				@media (max-width: 480px) {
+					& {
+						margin-left: 15px;
+					}
+				}
+				@media (min-width: @screen-sm-max) {
+					& {
+						margin-left: 82px;
+					}
+				}
+			}
+	
+			.post-footer-menu {
+				margin-right: 10px;
+	
+				.post-tools {
+					a {
+						padding-right: 10px;
+						.pointer;
+					}
+				}
+	
+				.moderator-tools {
+					margin-left: 10px;
+					font-size: 14px;
+			
+					> a {
+						padding: 0.25em;
+					}
+			
+					a {
+						color: @gray-light;
+						outline: none;
+			
+						&[role="menuitem"] {
+							color: inherit;
+						}
+					}
+			
+					// temporary until we build component toggling
+					.favourite.btn-warning, .follow.btn-success {
+						background: white !important;
+						color: #333;
+						&:hover {
+							background: @brand-primary !important;
+						}
+					}
+				}
+	
+				[component="post/reply-count"] {
+					margin-left: 55px;
+					font-size: 12px;
+	
+					@media (min-width: 992px) {
+						margin-left: 82px;
+					}
+				}
+			}
+		}
+
+		.edit-icon {
+			vertical-align: -2%;
+		}
+
+		&.deleted {
+			> .content {
+				.opacity(0.3);
+			}
+
+			.votes {
+				display: none;
+			}
+		}
+
+		> hr {
+			.transition(0.75s ease-in-out border-color);
+		}
+
+		&.highlight > .content {
+			border-color: #999;
+		}
+	}
+
+	.posts {
+		list-style-type: none;
+		padding: 0;
+
+		[component="post"] {
+			&.highlight .bookmarked {
+				opacity: 1;
+			}
+		}
+	}
+
+	@media (max-width: 992px) {
+		> .postbar {	
+			background-position: 11px -35px;
+		}
+	}
+
+	> .post-bar > hr {
+		background: #fafafa;
+		padding-bottom: 35px;
+		margin-bottom: -35px;
+	}
+
+	.post-bar {
+		background-image: url(https://oxidepolska.pl/assets/uploads/system/1x67.png);
+		background-repeat: no-repeat;
+		background-position: 11px 0;
+			
+		hr {
+			position: relative;
+			top: -60px;
+			z-index: 0;
+			margin-left: 11px;
+			border-color: #e6e6e6;
+			
+			@media (min-width: 992px) {
+				margin-left: 23px;
+			}
+		}
+
+		.topic-main-buttons {
+			background-color: #fafafa;
+			border-radius: 4px;
+			position: relative;
+			z-index: 1;
+
+			.stats {
+				margin: 1px 10px;
+				padding: 0;
+				line-height: 15px;
+				font-size: 15px;
+				float: left;
+		
+				.human-readable-number {
+					font-weight: 700;
+					display: inline-block;
+					margin-bottom: 1px;
+				}
+			}
+		}
+
+		.tags {
+			vertical-align: -40%;
+			margin-bottom: 20px;
+
+			@media (max-width: 480px) {
+				& {
+					margin-left: 0 !important;
+
+					li {
+						margin: 0 0 2px 30px;
+						display: block;
+					}
+				}
+			}
+			@media (max-width: @screen-sm-max) {
+				& {
+					margin-left: 40px;
+				}
+			}
+			@media (min-width: @screen-sm-max) {
+				 & {
+					margin-left: 65px;
+				 }
+			}
+		}
+
+		@media (min-width: 768px) {
+			.topic-main-buttons {
+				border: 1px solid #e6e6e6;
+				padding: 20px 20px 20px 10px;
+			}
+		}
+		
+		@media (max-width: 768px) {
+			& {
+				background-position: 11px -35px;
+			}	
+		}
+
+		@media (min-width: @screen-sm-max) {
+			& {
+				background-position: 23px 0px;
+			}
+		}
+	}
+
+	.title {
+		p {
+			margin-bottom: 4px;
+		}
+
+		small {
+			margin-top: 2px;
+			display: block;
+
+			color: @gray-light;
+
+			strong {
+				color: @gray-dark;
+			}
+		}
+	}
+
+	.quick-reply {
+		.icon {
+			position: relative;
+			border-radius: 50%;
+			min-width: 46px;
+			min-height: 46px;
+			margin-top: 2px;
+
+			> a > .status {
+				position: absolute;
+				right: 12px;
+				font-size: 12px;
+				top: 0px;
+
+				@media (min-width: @screen-md-min) {
+					top: 2px;
+					font-size: 16px;
+				}
+			}
+
+			img, .user-icon {
+				margin-right: 15px;
+				.user-icon-style(46px, 2.4rem, 50%);
+			}
+		}
+		
+		.quickreply-message {
+			margin-left: 61px;
+			margin-bottom: 5px;
+			
+			@media (max-width: @screen-sm-max) {
+				margin-left: 0;
+				
+				[component="topic/quickreply/text"] {
+					font-size: 16px;
+					padding: 10px;
+				}
+			}
+		}
+		
+		[component="topic/quickreply/button"] {
+			margin-bottom: 10px;
+		}
+	}
+
+	&.deleted {
+		.opacity(0.3);
+
+		.votes {
+			display: none;
+		}
+	}
+
+	.pagination-block {
+		position: fixed;
+		bottom: 0px;
+		left: 0px;
+		width: 100%;
+		z-index: 100;
+		transition: opacity 250ms ease-in;
+		opacity: 0;
+		box-shadow: 0 -1px 3px rgba(0,0,0, .2);
+		background-color: #fafafa;
+
+		&.ready {
+			opacity: 1;
+		}
+
+		.wrapper {
+			padding: 7px 0px 7px 0px;
+
+			i {
+				font-size: 17px;
+				width: 25px;
+			}
+		}
+
+		.progress-bar {
+			background-color: #c5c5c5;
+			display:block;
+			z-index: -1;
+			position: absolute;
+		}
+	}
+
+	@media (max-width: @screen-sm-max) {
+		.content {
+			
+			.table {
+				overflow-x: auto;
+				display: block;
+			}
+		}
+
+		.post-signature {
+			margin-left: 0px;
+		}
+
+		.posts .icon {
+			min-width: 0;
+			min-height: 0;
+			margin-top: -3px;
+
+			img, .user-icon {
+				.user-icon-style(23px, 1.3rem, 50%);
+			}
+		}
+
+		[component="post/reply-count"] {
+			margin-left: 0;
+		}
+	}
+}
+
+[component="post"] {
+
+	[component="user/picture"], [component="user/status"] {
+		opacity: 1;
+	}
+
+	.icon:before {
+		opacity: 0;
+	}
+
+	&.bg-success {
+		background-color: initial;
+
+		.icon:before {
+			border: 1px solid #5cb85c;
+    		color: #5cb85c;
+    		-webkit-transition: .2s ease-in-out all;
+    		transition: .2s ease-in-out all;
+    		content: "\f00c";
+    		padding: 14px;
+		    border-radius: 50%;
+		    opacity: 1;
+		    position: absolute;
+		    display: inline-block;
+		    font: normal normal normal 14px/1 FontAwesome;
+		}
+
+		[component="user/picture"], [component="user/status"] {
+			opacity: 0;
+		}
+	}
+}
+
+.thread_active_users {
+	text-transform: initial;
+
+	a[data-uid] {
+		position: relative;
+
+		img, .user-icon {
+			.user-icon-style(20px, 1rem, 50%);
+			vertical-align: middle;
+			margin: 0 7px;
+		}
+
+		&::after {
+			position: absolute;
+			z-index: 0;
+			opacity: 0;
+
+			font-family: "FontAwesome";
+			content: "\f11c";
+			padding: 4px 0.25em;
+			top: -36px;
+			left: 7px;
+
+			.transition(~"opacity ease 250ms, top ease 250ms")
+		}
+
+		&.replying::after {
+			opacity: 1;
+			top: -50px;
+			.animation(topic-reply-pulse 2s ease-in infinite);
+		}
+	}
+
+	.anonymous-box {
+		border: 1px solid #ddd;
+		width: 24px;
+		height: 24px;
+		position: relative;
+		text-align: center;
+	}
+}
+
+.fork-thread-card {
+	position: fixed;
+	bottom: 10%;
+	right: 2rem;
+	z-index: 1;
+}
+
+@media screen and (min-width: @screen-sm-min) {
+	.fork-thread-card {
+		max-width: 33%;
+	}
+}

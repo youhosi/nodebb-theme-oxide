@@ -1,0 +1,115 @@
+.tags,
+.tag-list {
+	padding-left: 0;
+	margin: 0 0 -5px -5px;	
+	display: block;
+
+	> li {
+		position: relative;
+		display: inline-block;
+		list-style: none;
+		margin: 0 6px 0 6px;
+		height: 22px;
+
+		> .tag {
+			background: #777777;
+			color: #FFFFFF !important;
+			font-size: 10px;
+			line-height: 23px;
+			height: 22px;
+			padding: 0 7px;
+			display: block;
+			position: relative;
+			letter-spacing: 0;
+			border-radius: 4px 5px 5px 4px;
+
+			> .tag-item {
+				display: inline-block;
+				max-width: 150px;
+				text-overflow: ellipsis;
+				overflow: hidden;
+				white-space: nowrap;
+				text-transform: uppercase;
+
+				&:before {
+					display: block;
+					position: absolute;
+					font-size: 28px;
+					line-height: 30px;
+					overflow: hidden;
+					text-shadow: none;
+					content: '';
+					top: 0;
+					bottom: 0;
+					width: 0;
+					border-style: solid;
+					border-width: 11px;
+					-webkit-transform: scaleX(.6) rotate(45deg);
+					-moz-transform: scaleX(.6) rotate(45deg);
+					-ms-transform: scaleX(.6) rotate(45deg);
+					-o-transform: scaleX(.6) rotate(45deg);
+					transform: scaleX(.6) rotate(45deg);
+					left: -8px;
+					border-radius: 11px 1px 11px 1px;
+					border-color: transparent transparent #777 #777;
+				}
+				&:after {
+					content: '';
+					display: block;
+					width: 4px;
+					height: 4px;
+					border-radius: 4px;
+					background: #fff;
+					position: absolute;
+					top: 9px;
+					left: -1px;
+			
+			
+			
+			
+				}
+				
+				> .tag-topic-count {
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+// categories 
+.category {
+	.category-item {
+		.box-footer {
+			.tag-list {
+				padding-left: 0;
+				margin: 0 0 -5px -5px;	
+				display: block;
+			}
+		}
+	}
+}
+
+// tag list
+.tags {
+	.category {
+		.tag-list {
+			margin-top: 20px;
+
+			> .pull-left {
+				margin: 0 5px 10px 13px;
+
+				.tag {
+					padding: 0 0 0 7px !important;
+
+					.tag-topic-count {
+						padding: 5px 7px;
+						background: rgba(0,0,0, .1);
+						border-radius: 0 5px 5px 0;
+						margin-left: 3px;
+					}
+				}
+			}
+		}
+	}
+}

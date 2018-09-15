@@ -1,0 +1,137 @@
+.users {
+
+	&.admin {
+		#users-container {
+			padding: 0;
+		}
+
+		.users-box {
+			display: inline-block;
+			margin-top: 20px;
+			text-align: center;
+			vertical-align: top;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			height: auto;
+			max-width: 125px;
+
+			img {
+				width: 80px;
+				height: 80px;
+			}
+
+			a {
+				margin-bottom:5px;
+			}
+		}
+	}
+
+	.status {
+		position: absolute;
+		
+		top: 13px;
+		right: 30px;
+	}
+
+	.nav-pills {
+		> li {
+			margin-left: 0;
+			border: 1px solid rgba(0,0,0, .1);
+			border-left: 0;
+			transition: all .1s linear;
+			overflow: hidden;
+
+			&.active > a {
+				border-radius: 0;
+				color: #FFF;
+			}
+
+			> a {
+				padding: 10px;
+				font-weight: bold;
+				font-size: 13px;
+				color: #737373;
+				border-radius: 0 !important;
+			}
+	
+			&:first-child {
+				border-left: 1px solid rgba(0,0,0, .1);
+				border-radius: 5px 0 0 5px;
+			}
+
+			&:last-child {
+				border-radius: 0 5px 5px 0;
+			}
+		}
+	}
+}
+
+.status {
+	-webkit-text-stroke: 2px #fafafa;
+}
+
+.users-container {
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+
+	li {
+		padding-bottom: 10px;
+	}
+
+	.users-box{
+		display: inline-block;
+		margin-top: 35px;
+		padding-bottom: 0;
+		position: relative;
+		text-align: center;
+		vertical-align: top;
+		width: 138px;
+
+		img,
+		.user-icon {
+			.user-icon-style(80px, 4rem, 50%);
+			box-shadow: 0 8px 16px rgba(0,0,0, .1);
+		}
+
+		a {
+			max-width: 94px;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+	}
+
+	.user-info {
+		margin-top: 15px;
+
+		> span {
+			max-width: 94px;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			display: inline-block;
+		}
+
+		.joindate,
+		.reputation,
+		.post-count {
+			color: #404040;
+			font-size: 12px;
+		}
+	}
+
+	.user-img {
+		.user-icon-style(20px, 1rem, 50%);
+		vertical-align: middle;
+	}
+
+	.anon-user {
+		.user-icon {
+			background: #e6e6e6;
+			color: white;
+			text-shadow: 0 1px 3px rgba(0,0,0, .05);
+		}
+	}
+}
