@@ -1,9 +1,10 @@
-Oxide theme for NodeBB
-====================
+# Oxide theme for NodeBB
 
-Oxide is the new default theme for [OxidePolska](https://oxidepolska.pl)
+---
+
+Oxide is the free theme for NodeBB.
 
 ## Screenshot
 
-![](https://raw.githubusercontent.com/youhosi/nodebb-theme-oxide/master/screenshot.png)
-![](https://raw.githubusercontent.com/youhosi/nodebb-theme-oxide/master/screenshot2.png)
+![screenshot](https://raw.githubusercontent.com/youhosi/nodebb-theme-oxide/master/screenshot.png "Strona Główna Oxide Polska")
+![screenshot](https://raw.githubusercontent.com/youhosi/nodebb-theme-oxide/master/screenshot2.png "Widok tematów")
