@@ -20,7 +20,7 @@ library.addAdminNavigation = function(header, callback) {
 	header.plugins.push({
 		route: '/plugins/oxide',
 		icon: 'fa-paint-brush',
-		name: 'Oxide Theme Premium'
+		name: 'Oxide Theme'
 	});
 
 	callback(null, header);

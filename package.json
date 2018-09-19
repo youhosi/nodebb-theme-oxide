@@ -7,7 +7,7 @@
     }
   ],
   "description": "Oxide Theme",
-  "homepage": "https://github.com/youhosi/nodebb-theme-oxide#readme",
+  "homepage": "https://oxidepolska.pl/",
   "keywords": [
     "nodebb",
     "theme",
@@ -26,5 +26,5 @@
     "type": "git",
     "url": "git+https://github.com/youhosi/nodebb-theme-oxide.git"
   },
-  "version": "1.0.4"
+  "version": "1.0.5"
 }

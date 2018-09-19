@@ -1,9 +1,3 @@
-*:hover,
-*:active,
-*:focus {
-	outline: none;
-}
-
 html {
 	overflow-y: scroll;
 	min-height: 100%;
@@ -32,6 +26,12 @@ body {
 
 button, a {
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
+
+	&:hover,
+	&:active,
+	&:focus {
+		outline: none;
+	}
 }
 
 .block, .show {
@@ -100,7 +100,6 @@ a:hover, .btn-link:hover, .btn-link:active, .btn-link:focus {
 	}
 }
 
-
 .topic .topic-item, .category .category-item {
 	-webkit-transition: background-color 500ms linear;
 	-moz-transition: background-color 500ms linear;
@@ -113,19 +112,22 @@ a:hover, .btn-link:hover, .btn-link:active, .btn-link:focus {
 	background-color: lighten(@brand-info, 20%);
 }
 
+.fa-facebook-square,
+.fa-twitter-square,
+.fa-google-plus-square {
+	background:transparent;
+}
+
 .fa-facebook-square {
 	color:#3b5998;
-	background:transparent;
 }
 
 .fa-twitter-square {
 	color:#0084b4;
-	background:transparent;
 }
 
 .fa-google-plus-square {
 	color:#dd4b39;
-	background:transparent;
 }
 
 .category .post-link, .topic .post-link {
@@ -239,7 +241,6 @@ a:hover, .btn-link:hover, .btn-link:active, .btn-link:focus {
 }
 
 a.permalink {
-	&,
 	&:hover,
 	&:focus,
 	&:active {
@@ -256,4 +257,26 @@ a.permalink {
 	.form-control {
 		font-size: 16px;
 	}
+}
+
+.teaser,
+.navbar-default,
+.stats,
+.avatar,
+.icon,
+.post-author,
+.post-footer-menu,
+.threaded-replies,
+.breadcrumb,
+.panel-heading,
+.form-control,
+.taskbar,
+.topic-main-buttons,
+.open > .dropdown-menu,
+.users-box,
+.tag {
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
 }
