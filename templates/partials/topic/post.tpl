@@ -11,7 +11,7 @@
 	</div>
 </div>
 
-<div class="content" component="post/content" itemprop="text">
+<div class="content" itemprop="text">
 	<div class="post-author">
 		<strong>
 			<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->" itemprop="author" data-username="{posts.user.username}" data-uid="{posts.user.uid}">{posts.user.username}</a>
@@ -47,8 +47,10 @@
 		<span class="bookmarked"><i class="fa fa-bookmark-o"></i></span>
 	</div>
 
-	{posts.content}
-
+	<div component="post/content" >
+		{posts.content}
+	</div>
+	
 	<!-- IF posts.user.signature -->
 	<div component="post/signature" data-uid="{posts.user.uid}" class="post-signature">{posts.user.signature}</div>
 	<!-- ENDIF posts.user.signature -->

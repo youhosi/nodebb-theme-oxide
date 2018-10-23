@@ -17,9 +17,11 @@
 				<div class="title">
 					<a href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->">{../topic.title}</a>
 				</div>
+
 				<div class="by-user">
-					<span>Przez <a href="{config.relative_path}/user/{../user.userslug}">{../user.username}</a></span>
+					<a href="{config.relative_path}/user/{../user.userslug}">{../user.username}</a>,
 				</div>
+
 				<div class="time">
 					<a class="permalink" href="{config.relative_path}/topic/{../topic.slug}<!-- IF ../index -->/{../index}<!-- ENDIF ../index -->">
 						<small class="timeago" title="{../timestampISO}"></small>
