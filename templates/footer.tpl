@@ -17,7 +17,6 @@
 	</div>
 	<!-- ENDIF !isSpider -->
 
-
 	<script defer src="{relative_path}/assets/nodebb.min.js?{config.cache-buster}"></script>
 
 	<!-- BEGIN scripts -->
