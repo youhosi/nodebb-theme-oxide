@@ -23,7 +23,7 @@
 				width: 5px;
 				border-radius: 5px 0 0 5px;
 			}
-			
+
 			.content {
 				.show-separator {
 					transition: border-color .15s ease-in;
@@ -74,8 +74,10 @@
 					color: @gray-dark;
 				}
 			}
+
 			@media (max-width: @screen-sm-max) {
-				.user-img, .user-icon {
+				.user-img,
+				.user-icon {
 					.user-icon-style(@border-radius: 50%);
 					margin-right: 8px;
 				}
@@ -101,8 +103,6 @@
 				}
 			}
 
-			// oxide style
-
 			.o-teaser {
 				display: table;
 				width: 100%;
@@ -110,7 +110,6 @@
 				> .avatar,
 				> .info {
 					float: left;
-					height: 55px;
 					display: table-cell;
 				}
 
@@ -146,23 +145,17 @@
 						.text-ellipsis();
 
 						a {
-							font-size: 15px;
+							font-size: 14px;
+							font-weight: 500;
 						}
 					}
 
-					.by-user {
-
-						a {
-							font-weight: bold;
-						}
+					.by-user, .time {
+						display: inline;
 					}
 
-					.time {
-						small.timeago:before {
-							font-family: FontAwesome;
-							content: '\f017';
-							margin-right: 4px;
-						}
+					.by-user a {
+						font-weight: bold;
 					}
 				}
 			}

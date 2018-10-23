@@ -113,9 +113,9 @@
 			<div class="card">
 				<div class="o-teaser">
 					<!-- IF topics.unreplied -->
-					<p>
-					[[category:no_replies]]
-					</p>
+						<p>
+						[[category:no_replies]]
+						</p>
 					<!-- ELSE -->
 						<div class="avatar">
 							<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">
@@ -127,19 +127,18 @@
 							</a>
 						</div>
 
-						<div class="info">						
+						<div class="info">
 							<!-- IF topics.teaser.pid -->
 							<div class="by-user">
-								<span>Przez <a href="{config.relative_path}/user/{../user.userslug}">{../user.username}</a></span>
+								<a href="{config.relative_path}/user/{../user.userslug}">{../user.username}</a>
 							</div>
 
 							<div class="time">
 								<a class="permalink" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
-									<span class="timeago" title="{topics.teaser.timestampISO}"></span>
+									<small class="timeago" title="{topics.teaser.timestampISO}"></small>
 								</a>
 							</div>
 							<!-- ENDIF topics.teaser.pid -->
-							
 						</div>
 					<!-- ENDIF topics.unreplied -->
 				</div>

@@ -153,24 +153,28 @@
 				}
 			}
 
-			.card .user-icon,
-			.card .user-img {
-				display: inline-block;
-				.user-icon-style(24px, 1.5rem, 50%);
+			.card   {
+				&.user-img,
+				&.user-icon {
+					display: inline-block;
+					.user-icon-style(24px, 1.5rem, 50%);
+				}
 			}
 
 			.o-teaser {
+				.info {
+					.by-user {
+						.text-ellipsis();
+						padding-bottom: 5px;
 
-				.time {
-					.timeago {
-						margin: 0 0 10px;
-						display: inline-block;
-
-						&:before {
-							font-family: FontAwesome;
-							content: '\f017';
-							margin-right: 4px;
+						a {
+							font-size: 14px;
+							font-weight: 500;
 						}
+					}
+
+					.by-user, .time {
+						display: block !important;
 					}
 				}
 			}
@@ -179,8 +183,6 @@
 		&:last-child li {
 			border-bottom: 0;
 		}
-
-		// oxide
 
 		.category-item,
 		.topic .topic-item {
