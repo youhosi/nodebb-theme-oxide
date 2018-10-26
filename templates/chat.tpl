@@ -45,7 +45,7 @@
 				</ul>
 
 				<div component="chat/composer">
-					<textarea component="chat/input" placeholder="[[modules:chat.placeholder]]" class="form-control chat-input mousetrap" rows="1"></textarea>
+					<textarea component="chat/input" placeholder="[[modules:chat.placeholder]]" class="form-control chat-input mousetrap" rows="3"></textarea>
 					<button class="btn btn-primary" type="button" data-action="send"><i class="fa fa-fw fa-2x fa-paper-plane"></i></button>
 					<span component="chat/message/remaining">{maximumChatMessageLength}</span>
 				</div>
