@@ -6,7 +6,7 @@
 		<span component="chat/title"><!-- IF rooms.roomName -->{rooms.roomName}<!-- ELSE -->{rooms.usernames}<!-- ENDIF rooms.roomName --></span>
 		<!-- ENDIF !rooms.lastUser.uid -->
 	</strong>
-	<div class="avatar-placeholder"></div>
+
 	<!-- BEGIN rooms.users -->
 	<!-- IF @first -->
 	<div class="main-avatar">

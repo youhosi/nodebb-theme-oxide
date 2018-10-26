@@ -1,8 +1,6 @@
 # Oxide theme for NodeBB
 
----
-
-Oxide is the free theme for NodeBB.
+Oxide Theme is the free theme for NodeBB.
 
 ## Screenshot
 

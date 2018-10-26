@@ -130,7 +130,7 @@
 						<div class="info">
 							<!-- IF topics.teaser.pid -->
 							<div class="by-user">
-								<a href="{config.relative_path}/user/{../user.userslug}">{../user.username}</a>
+								<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">{topics.teaser.user.username}</a>
 							</div>
 
 							<div class="time">
