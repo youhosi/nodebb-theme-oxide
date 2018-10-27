@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="col-sm-2 col-xs-12 settings-header">Theme settings</div>
 	<div class="col-sm-10 col-xs-12">	
-		<form role="form" class="persona-settings">
+		<form role="form" class="oxide-settings">
 			<div class="checkbox">
 				<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
 					<input class="mdl-switch__input" type="checkbox" id="hideSubCategories" name="hideSubCategories">
