@@ -1,3 +1,7 @@
 {
-    "mobile-menu-side": "Menüposition der mobilen Seiten umschalten"
+    "mobile-menu-side": "Menüposition der mobilen Seiten umschalten",
+    "theme-settings": "Themen Einstellungen",
+    "hide-sub-category": "Unterkategorien in der Kategorieansicht ausblenden",
+    "hide-last-entry": "Blenden Sie den letzten Eintrag in der Kategorieansicht aus",
+    "turn-quick-answer": "Aktivieren Sie die schnelle Antwort"
 }

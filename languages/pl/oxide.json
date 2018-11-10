@@ -1,3 +1,7 @@
 {
-    "mobile-menu-side": "Menu mobilne po prawej stronie."
+    "mobile-menu-side": "Menu mobilne po prawej stronie",
+    "theme-settings": "Ustawienia tematu",
+    "hide-sub-category": "Ukryj podkategorie w widoku kategorii",
+    "hide-last-entry": "Ukryj ostatni wpis w widoku kategorii",
+    "turn-quick-answer": "Włącz szybką odpowiedź"
 }
