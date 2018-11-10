@@ -3,5 +3,5 @@
     "name": "Oxide",
     "description": "Oxide Theme",
     "url": "https://github.com/youhosi/nodebb-theme-oxide",
-    "screenshot": "screenshot.png"
+    "screenshot": "./img/screenshot.png"
 }

@@ -1,30 +1,37 @@
 {
-  "contributors": [
-    {
-      "name": "Sebastian Sycz",
-      "email": "youhosi99@gmail.com",
-      "url": "https://github.com/youhosi"
-    }
-  ],
-  "description": "Oxide Theme",
-  "homepage": "https://oxidepolska.pl/",
-  "keywords": [
-    "nodebb",
-    "theme",
-    "forum",
-    "bootstrap",
-    "responsive",
-    "oxide"
-  ],
-  "license": "MIT",
-  "main": "theme.less",
-  "name": "nodebb-theme-oxide",
-  "nbbpm": {
-    "compatibility": "^1.10.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/youhosi/nodebb-theme-oxide.git"
-  },
-  "version": "1.0.8-2"
+	"name": "nodebb-theme-oxide",
+	"description": "Oxide Theme for NodeBB",
+	"version": "1.0.9",
+	"homepage": "https://oxidepolska.pl/",
+	"license": "MIT",
+	"main": "theme.less",
+	"contributors": [
+		{
+			"name": "Sebastian Sycz",
+			"email": "sebastiansycz99@icloud.com",
+			"url": "https://github.com/youhosi"
+		}
+	],
+	"keywords": [
+		"nodebb",
+		"theme",
+		"forum",
+		"bootstrap",
+		"responsive",
+		"oxide"
+	],
+	"nbbpm": {
+		"compatibility": "^1.10.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/youhosi/nodebb-theme-oxide.git"
+	},
+	"bugs": {
+		"url": "https://github.com/youhosi/nodebb-theme-oxide/issues"
+	},
+	"dependencies": {
+		"pulling": "^2.0.0",
+		"striptags": "^3.1.1"
+	}
 }
