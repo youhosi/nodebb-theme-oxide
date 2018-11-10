@@ -40,18 +40,41 @@
 			overflow-y: auto;
 			margin-bottom: 0;
 			height: ~"calc(100% - 3em)";
+			padding-bottom: 14px;
 		}
 
 		.chat-search {
 			padding: 10px;
 			border-bottom: 1px solid rgba(0,0,0, .1);
 
-			input {
-				background-color: #FFF;
-				color: @link-color;
-				border-radius: 5px;
-				border: none;
-				box-shadow: 0 1px 3px rgba(0,0,0, .15);
+			.search-forum {
+				display: block;
+				font-weight: unset;
+				margin-bottom: unset;
+
+				&::before {
+					font-family: FontAwesome;
+					content: '\f002';
+					color: #a9a9a9;;
+					display: inline-block;
+					position: absolute;
+					left: 20px;
+					top: 17px;
+				}
+
+				input {
+					background-color: #FFF;
+					color: @link-color;
+					border-radius: 5px;
+					border: none;
+					box-shadow: 0 1px 3px rgba(0,0,0, .15);
+					text-align: center;
+
+					&:focus {
+						padding-left: 30px;
+						text-align: left !important;
+					}
+				}
 			}
 
 			ul {
