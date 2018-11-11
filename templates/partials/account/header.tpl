@@ -77,17 +77,6 @@
 
 <div class="row">
 	<div class="col-md-4">
-		<!-- IF selectedGroup.length -->
-		<div class="user-group">
-			<!-- BEGIN selectedGroup -->
-			<!-- IF selectedGroup.slug -->
-			<a href="{config.relative_path}/groups/{selectedGroup.slug}"><small class="label group-label inline-block" style="background-color: {selectedGroup.labelColor};">
-					<!-- IF selectedGroup.icon --><i class="fa {selectedGroup.icon}"></i> <!-- ENDIF selectedGroup.icon -->{selectedGroup.userTitle}</small></a>
-			<!-- ENDIF selectedGroup.slug -->
-			<!-- END selectedGroup -->
-		</div>
-		<!-- ENDIF selectedGroup.length -->
-
 		<!-- IF ips.length -->
 		<div class="card hidden">
 			<h2 class="card-title">
