@@ -1,5 +1,6 @@
+<!-- IMPORT partials/breadcrumbs.tpl -->
+
 <div class="account">
-	<!-- IMPORT partials/account/header.tpl -->
 	<!-- IF sso.length --><div><!-- ENDIF sso.length -->
 		<div class="row">
 			<div class="col-md-2 col-sm-4">

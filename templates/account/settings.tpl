@@ -1,6 +1,6 @@
-<div class="account">
-	<!-- IMPORT partials/account/header.tpl -->
+<!-- IMPORT partials/breadcrumbs.tpl -->
 
+<div class="account">
 	<div class="row">
 		<div class="col-xs-12 col-md-6">
 			<!-- IF !disableCustomUserSkins -->

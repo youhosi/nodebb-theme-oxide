@@ -1,18 +1,21 @@
+<!-- IMPORT partials/breadcrumbs.tpl -->
+
 <div class="account">
 	<!-- IMPORT partials/account/header.tpl -->
 
-	<div class="row">
-		<h1>{title}</h1>
+			<h1 class="section-title">{title}</h1>
 
-		<!-- IF !topics.length -->
-			<div class="alert alert-warning text-center">{noItemsFoundKey}</div>
-		<!-- ENDIF !topics.length -->
+			<div class="category">
+				<!-- IF !topics.length -->
+				<div class="alert alert-warning">{noItemsFoundKey}</div>
+				<!-- ENDIF !topics.length -->
 
-		<div class="category">
-			<!-- IMPORT partials/topics_list.tpl -->
-			<!-- IF config.usePagination -->
-				<!-- IMPORT partials/paginator.tpl -->
-			<!-- ENDIF config.usePagination -->
+				<!-- IMPORT partials/topics_list.tpl -->
+
+				<!-- IF config.usePagination -->
+					<!-- IMPORT partials/paginator.tpl -->
+				<!-- ENDIF config.usePagination -->
+			</div>
 		</div>
 	</div>
 </div>
