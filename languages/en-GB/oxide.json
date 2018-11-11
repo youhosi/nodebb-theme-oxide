@@ -3,5 +3,7 @@
     "theme-settings": "Theme settings",
     "hide-sub-category": "Hide sub-categories in the category view",
     "hide-last-entry": "Hide the last entry in the category view",
-    "turn-quick-answer": "Turn on the quick answer"
+    "turn-quick-answer": "Turn on the quick answer",
+    "card-information": "Information about ",
+    "aboutme": "About me"
 }

@@ -1,6 +1,8 @@
+<!-- IMPORT partials/breadcrumbs.tpl -->
+
 <div class="account">
-	<!-- IMPORT partials/account/header.tpl -->
-	<h2>[[user:consent.title]]</h2>
+	<h1 class="section-title">[[user:consent.title]]</h1>
+	
 	<p class="lead">[[user:consent.lead]]</p>
 	<p>[[user:consent.intro]]</p>
 

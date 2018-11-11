@@ -1,4 +1,4 @@
-<div class="btn-group account-fab bottom-sheet">
+<div class="btn-group account-fab">
 	<button type="button" class="fab dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		<i class="fa fa-ellipsis-v"></i>
 	</button>

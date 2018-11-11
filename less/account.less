@@ -1,246 +1,284 @@
 .account {
-	.breadcrumb {
-		margin-bottom: 30px;
-	}
-
-	.edit-form {
-		max-width: 300px;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50px;
-	}
-
-	> .row {
-		max-width: @screen-lg-min;
-		margin-left: auto;
-		margin-right: auto;
-
-		.fullname {
-			text-align: center;
-			font-size: 20px;
-			color: @gray-light;
-			font-weight: 300;
-			margin-bottom: 24px;
-		}
-	}
-
-	.cover {
-		background-size: cover;
-		background-repeat: no-repeat;
-		height: 200px;
+	.card {
 		position: relative;
-		margin-bottom: 1em;
-		background-origin: content-box;
-		width: 100%;
-		top: 50px;
-		position: absolute;
-		left: auto;
-		right: 0px;
+		background: #ffffff;
+		margin-bottom: 20px;
+		border-radius: 5px;
+		box-shadow: 0 1px 3px rgba(0,0,0, .15);
 
-		.avatar-wrapper {
-			position: absolute;
-			left: 50%;
-			margin-left: -64px;
-			top: 128px;
-			border: 4px solid white;
-			border-radius: 50%;
-
-			.fab.btn-morph {
-				top: 93px;
-				right: 4px;
-				position: absolute;
-			}
-
-			.status {
-				position: absolute;
-				font-size: 23px;
-				top: 17px;
-				right: -3px;
-			}
-
-			.chat, .follow {
-				position: absolute;
-				width: 30px;
-				height: 30px;
-			}
-
-			.chat {
-				left: -1px;
-				bottom: 1px;
-			}
-
-			.follow {
-				right: 1px;
-				bottom: 1px;
-			}
-		}
-
-		&:hover {
-			.controls {
-				.opacity(0.8);
-			}
-		}
-
-		.controls {
-			text-align: center;
+		.cover {
+			top: 0 !important;
 			height: 200px;
-			line-height: 200px;
-			.opacity(0);
-			.transition(opacity .15s linear);
-			cursor: pointer;
-			pointer-events: none;
-
-			> * {
-				pointer-events: all;
-			}
-
-			.fa {
-				color: white;
-				font-size: 35px;
-				background-color: #333;
-				opacity: 1;
-				width: 55px;
-				height: 55px;
-				line-height: 55px;
-				border-radius: 50%;
-				margin: 0 5px;
-			}
-		}
-
-		&.active {
-			&:hover {
-				cursor: move;
-			}
+			width: 100%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-origin: content-box;
+			border-radius: 5px 5px 0 0;
+			position: relative;
 
 			.controls {
+				text-align: center;
+				height: 200px;
+				line-height: 200px;
+				.opacity(0);
+				.transition(opacity .15s linear);
+				cursor: pointer;
+				pointer-events: none;
+
 				> * {
-					display: none;
+					pointer-events: all;
+				}
+
+				.fa {
+					color: white;
+					font-size: 35px;
+					background-color: #333;
+					opacity: 1;
+					width: 55px;
+					height: 55px;
+					line-height: 55px;
+					border-radius: 50%;
+					margin: 0 5px;
 				}
 			}
 
-			.save {
+			.save, .indicator {
 				display: inline-block;
-			}
-		}
+				position: absolute;
+				top: 15px;
+				right: 15px;
+				opacity: 1;
+				background-color: @brand-primary;
+				color: @gray-lighter;
+				padding: 5px 10px;
+				font-weight: bold;
+				border-radius: 5px;
 
-		&.saving {
-			.save {
+				&:hover {
+					cursor: pointer;
+				}
+			}
+
+			.save, .indicator {
 				display: none;
 			}
 
-			.indicator {
-				display: inline-block;
-			}
-		}
+			&.active {
+				&:hover {
+					cursor: move;
+				}
 
-		.save, .indicator {
-			display: inline-block;
-			position: absolute;
-			top: 1em;
-			right: 2em;
-			opacity: 1;
-			background-color: @brand-primary;
-			color: @gray-lighter;
-			padding: 0.5em;
-			font-weight: bold;
+				.controls {
+					> * {
+						display: none;
+					}
+				}
+
+				.save {
+					display: inline-block;
+				}
+			}
+
+			&.saving {
+				.save {
+					display: none;
+				}
+
+				.indicator {
+					display: inline-block;
+				}
+			}
 
 			&:hover {
-				cursor: pointer;
+				.controls {
+					.opacity(0.8);
+				}
+			}
+
+			.btn-morph {
+				top: 15px;
+				right: 15px;
+				position: absolute;
 			}
 		}
 
-		.save {
-			display: none;
-		}
-
-		.indicator {
-			display: none;
-		}
-	}
-
-	margin-top: 200px;
-
-	.container {
-		height: 200px;
-		position: relative;
-		pointer-events: none;
-
-		> * {
-			pointer-events: all;
-		}
-	}
-
-	@media (min-width: @screen-md-min) {
-		margin-top: 300px;
-		
-		.cover,  .container {
-			height: 300px;
-
-			.controls {
-				height: 300px;
-				line-height: 300px;
-			}
+		.card-info {
+			position: relative;
+			padding: 15px 15px 15px 155px;
 
 			.avatar-wrapper {
-				top: 230px;
+				.avatar {
+					position: absolute;
+					left: 25px;
+					top: -60px;
+					height: 120px;
+					width: 120px;
+					font-size: 5rem;
+					border: 3px solid #fff;
+					line-height: 120px;
+				}
+
+				.status {
+					position: absolute;
+					font-size: 20px;
+					top: -50px;
+					left: 120px;
+				}
+
+				.chat, .follow {
+					position: absolute;
+					width: 30px;
+					height: 30px;
+				}
+
+				.chat {
+					left: -1px;
+					bottom: 1px;
+				}
+
+				.follow {
+					right: 1px;
+					bottom: 1px;
+				}
+			}
+
+			.profile-name {
+				position: absolute;
+				left: 155px;
+				top: -60px;
+
+				.fullname {
+					color: #FFF;
+					text-shadow: 0 1px 3px rgba(0,0,0, .15);
+					font-size: 25px;
+
+					i {
+						font-weight: 300;
+						font-size: 15px;
+						vertical-align: middle;
+					}
+				}
+			}
+
+			.account-stats {
+				display: block;
+				width: 100%;
+
+				.stat {
+					display: inline-block;
+					margin-right: 20px;
+					padding-right: 20px;
+					border-right: 1px solid rgba(0,0,0,0.1);
+					text-align: center;
+
+					.human-readable-number {
+						font-weight: bold;
+					}
+				}
+			}
+
+			.account-fab {
+				position: absolute;
+				right: 20px;
+				top: -20px;
+				
+				button {
+					width: 40px;
+					height: 40px;
+					line-height: 40px;
+					background-color: #fff;
+				}
+			}
+
+			@media (max-width: @screen-md-min) {
+				.avatar-wrapper {
+					.avatar {
+						left: 50%;
+						margin-left: -60px;
+					}
+
+					.status {
+							left: 50%;
+						margin-left: 35px;
+					}
+				}
+
+				.profile-name {
+					position: relative;
+					left: unset;
+					top: unset;
+					margin-top: 50px; 
+					text-align: center;
+
+					.fullname {
+						color: @gray-base;
+
+						i {
+							display: block;
+						}
+					}
+				}
+
+				.account-stats .stat {
+					margin-bottom: 10px;
+					padding-bottom: 10px;
+					display: block;
+					text-align: center;
+					border-bottom: 1px solid rgba(0,0,0,.1);
+
+					padding-right: 0;
+					margin-right: 0;
+					border-right: 0;
+
+					&:last-child {
+						border-bottom: 0;
+						margin-bottom: 0;
+						padding-bottom: 0;
+					}
+				}
+
+				& {
+					padding: 15px;
+				}
+			}
+		}
+
+		.card-title {
+			font-size: 14px;
+			text-transform: uppercase;
+			font-weight: 300;
+			padding: 10px;
+			margin: 0;
+			background: rgba(0,0,0, .1);
+			border-radius: 5px 5px 0 0;
+		}
+
+		.data-item {
+			padding: 7px 5px;
+			margin: 5px;
+			border-bottom: 1px solid rgba(0,0,0, .05);
+
+			&:last-child {
+				border-bottom: 0 !important;
+			}
+		}
+
+		.user-group {
+			.group-label {
+				display: block;
+				padding: 10px 0;
+				border-radius: 0;
+				font-size: 13px;
+				font-weight: 300;
 			}
 		}
 	}
 
-	.profile {
-		margin-bottom: 40px;
-
-		.fullname {
-			margin-bottom: 12px;
-			font-size: 32px;
-		}
-
-		.username {
-			text-transform: uppercase;
-			text-align: center;
-			margin-top: 0px;
-			font-size: 15px;
-		}
-
-		.aboutme > p {
-			max-width: 75%;
-			margin-left: auto;
-			margin-right: auto;
-			color: @gray-light;
-		}
-
-		.profile-meta {
-			font-size: 10px;
-			text-transform: uppercase;
-			color: #777;
-			margin-top: 25px;
-
-			strong {
-				color: #333;
-			}
-		}
-
-		.account-stats {
-			text-align: center;
-			font-size: 35px;
-			line-height: 25px;
-			margin-top: 25px;
-			margin-bottom: -20px;
-
-			.stat {
-				display: inline-block;
-				min-width: 100px;
-				margin-bottom: 20px;
-			}
-
-			.stat-label {
-				font-size: 12px;
-				text-transform: uppercase;
-				color: @gray-light;
-			}
-		}
+	.section-title {
+		font-size: 26px;
+		margin: 0 0 20px;
 	}
-	
+
 	.show-success {
 		.form-control {
 			border-color: #5cb85c;
@@ -276,45 +314,11 @@
 			margin-top: .25rem;
 		}
 	}
-
-	[component="account/moderation-note/list"] .icon {
-		margin-right: 10px;
-	}
 }
 
-
-.btn-group.account-fab {
-	position: absolute;
-	right: 15px;
-	bottom: -26px;
-
-	.open #profile {
-		background-color: lighten(@brand-primary, 10%);
-	}
-
-	.fab {
-		background-color: #FFFFFF;
-		font-size: 20px;
-	}
-}
-
-
-@media (max-width: @screen-md-min) {
-	.account > .row {
-		overflow: hidden;
-	}
-
-	.profile {
-		margin-top: -25px;
-	}
-}
-
-
-//
-
-.account-picture-block{
+.account-picture-block {
 	vertical-align:top;
-	margin-bottom:20px;
+	margin-bottom: 20px;
 
 	div {
 		margin-bottom: 10px;
@@ -327,12 +331,6 @@
 
 .user-picture-label {
 	font-size:20px;
-}
-
-
-.account-username{
-  font-size:20px;
-  font-weight:bold;
 }
 
 .picture-switcher {
