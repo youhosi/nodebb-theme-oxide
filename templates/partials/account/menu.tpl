@@ -3,7 +3,7 @@
 		<i class="fa fa-ellipsis-v"></i>
 	</button>
 	<ul class="dropdown-menu dropdown-menu-right">
-		<!-- IF config.loggedIn -->
+		<!-- IF loggedIn -->
 
 		<!-- IF !isSelf -->
 		<!-- IF !banned -->
@@ -25,7 +25,7 @@
 		<!-- ENDIF !banned -->
 		<!-- ENDIF !isSelf -->
 
-		<!-- END config.loggedIn -->
+		<!-- END loggedIn -->
 		<li>
 			<a href="{config.relative_path}/user/{userslug}" class="inline-block" id="profile">[[user:profile]]</a>
 		</li>
