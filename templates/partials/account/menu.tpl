@@ -3,6 +3,8 @@
 		<i class="fa fa-ellipsis-v"></i>
 	</button>
 	<ul class="dropdown-menu dropdown-menu-right">
+		<!-- IF config.loggedIn -->
+
 		<!-- IF !isSelf -->
 		<!-- IF !banned -->
 		<!-- IF !config.disableChat -->
@@ -22,6 +24,8 @@
 		<li class="divider"></li>
 		<!-- ENDIF !banned -->
 		<!-- ENDIF !isSelf -->
+
+		<!-- END config.loggedIn -->
 		<li>
 			<a href="{config.relative_path}/user/{userslug}" class="inline-block" id="profile">[[user:profile]]</a>
 		</li>
