@@ -1,5 +1,5 @@
 .account {
-	.card {
+	.profile-card {
 		position: relative;
 		background: #ffffff;
 		margin-bottom: 20px;
@@ -254,12 +254,27 @@
 		}
 
 		.data-item {
+			display: table;
 			padding: 7px 5px;
 			margin: 5px;
+			width: ~"calc(100% - 10px)";
 			border-bottom: 1px solid rgba(0,0,0, .05);
 
 			&:last-child {
 				border-bottom: 0 !important;
+			}
+			
+			.data-header, strong {
+				display: table-cell;
+			}
+
+			.data-header {
+				min-width: 100px;
+				width: 100px;
+			}
+
+			strong {
+				word-break: break-all;
 			}
 		}
 

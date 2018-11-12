@@ -1,4 +1,4 @@
-<div class="card">
+<div class="profile-card">
 	<div class="cover" component="account/cover" style="background-image: url({cover:url}); background-position: {cover:position};">
 		<!-- IF allowCoverPicture -->
 		<div class="controls">
@@ -78,7 +78,7 @@
 <div class="row">
 	<div class="col-md-4">
 		<!-- IF ips.length -->
-		<div class="card hidden">
+		<div class="profile-card hidden">
 			<h2 class="card-title">
 				[[global:recentips]]
 			</h2>
@@ -91,7 +91,7 @@
 		</div>
 		<!-- ENDIF ips.length -->
 
-		<div class="card">
+		<div class="profile-card">
 			<h2 class="card-title">
 				[[oxide:card-information]] 
 				<!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname -->
@@ -108,41 +108,41 @@
 			<!-- ENDIF groups.length -->
 
 			<div class="data-item">
-				<span>[[user:joined]]</span>
+				<div class="data-header"><span>[[user:joined]]</span></div>
 				<strong class="timeago" title="{joindateISO}"></strong>
 			</div>
 			<div class="data-item">
-				<span>[[user:lastonline]]</span>
+				<div class="data-header"><span>[[user:lastonline]]</span></div>
 				<strong class="timeago" title="{lastonlineISO}"></strong>
 			</div>
 			<!-- IF email -->
 			<div class="data-item">
-				<span>[[user:email]]</span>
+				<div class="data-header"><span>[[user:email]]</span></div>
 				<strong><i class="fa fa-eye-slash {emailClass}" title="[[user:email_hidden]]"></i> {email}</strong>
 			</div>
 			<!-- ENDIF email -->
 			<!-- IF websiteName -->
 			<div class="data-item">
-				<span>[[user:website]]</span>
+				<div class="data-header"><span>[[user:website]]</span></div>
 				<strong><a href="{websiteLink}" rel="nofollow noopener noreferrer">{websiteName}</a></strong>
 			</div>
 			<!-- ENDIF websiteName -->
 			<!-- IF location -->
 			<div class="data-item">
-				<span>[[user:location]]</span>
+				<div class="data-header"><span>[[user:location]]</span></div>
 				<strong>{location}</strong>
 			</div>
 			<!-- ENDIF location -->
 			<!-- IF age -->
 			<div class="data-item">
-				<span>[[user:age]]</span>
+				<div class="data-header"><span>[[user:age]]</span></div>
 				<strong>{age}</strong>
 			</div>
 			<!-- ENDIF age -->
 		</div>
 
 		<!-- IF aboutme -->
-		<div class="card">
+		<div class="profile-card">
 			<h2 class="card-title">
 				[[oxide:aboutme]]
 			</h2>
