@@ -97,15 +97,16 @@
 				<!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname -->
 			</h2>
 
-			<!-- IF groups.length -->
+			<!-- IF selectedGroup.length -->
 			<div class="user-group">
-				<!-- BEGIN groups -->
-				<a href="{config.relative_path}/groups/{groups.slug}"><span class="label group-label inline-block" style="background-color: {groups.labelColor};">
-						<!-- IF groups.icon --><i class="fa {groups.icon}"></i> <!-- ENDIF groups.icon -->{groups.userTitle}</span>
-				</a>
-				<!-- END groups -->
+				<!-- BEGIN selectedGroup -->
+				<!-- IF selectedGroup.slug -->
+				<a href="{config.relative_path}/groups/{selectedGroup.slug}"><small class="label group-label inline-block" style="background-color: {selectedGroup.labelColor};">
+						<!-- IF selectedGroup.icon --><i class="fa {selectedGroup.icon}"></i> <!-- ENDIF selectedGroup.icon -->{selectedGroup.userTitle}</small></a>
+				<!-- ENDIF selectedGroup.slug -->
+				<!-- END selectedGroup -->
 			</div>
-			<!-- ENDIF groups.length -->
+			<!-- ENDIF selectedGroup.length -->
 
 			<div class="data-item">
 				<div class="data-header"><span>[[user:joined]]</span></div>
