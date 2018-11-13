@@ -1,7 +1,7 @@
 {
 	"name": "nodebb-theme-oxide",
 	"description": "Oxide Theme for NodeBB",
-	"version": "2.0.6",
+	"version": "2.0.7",
 	"homepage": "https://oxidepolska.pl/",
 	"license": "MIT",
 	"main": "theme.less",
