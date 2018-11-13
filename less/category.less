@@ -184,18 +184,8 @@
 			border-bottom: 0;
 		}
 
-		.category-item,
-		.topic .topic-item {
-			&.highlight {
-				background: 0 0;
-
-				.category-details {
-					border-color: #999999;
-				}
-			}
-		}
-
-		.topic .highlight > .content {
+		.category-item&.highlight .category-details {
+			box-shadow: 0 0 0 3px #e6e6e6;
 			border-color: #999999;
 		}
 	}
