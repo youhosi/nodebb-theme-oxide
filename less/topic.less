@@ -342,7 +342,7 @@
 				display:block!important;
 			}
 
-			.post-author {
+		.post-author {
 				display: block;
 				font-size: 14px;
 				position: relative;
@@ -789,7 +789,6 @@
 }
 
 [component="post"] {
-
 	[component="user/picture"], [component="user/status"] {
 		opacity: 1;
 	}
@@ -818,6 +817,10 @@
 		[component="user/picture"], [component="user/status"] {
 			opacity: 0;
 		}
+	}
+
+	&:last-child {
+		background: @body-bg;
 	}
 }
 
