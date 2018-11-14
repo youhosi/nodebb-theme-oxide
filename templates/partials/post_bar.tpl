@@ -1,4 +1,15 @@
 <div class="clearfix">
+	<!-- IF tags -->
+	<ul class="tags hidden">
+		<!-- BEGIN tags -->
+		<li>
+			<a href="{config.relative_path}/tags/{tags.value}" class="tag hidden" style="<!-- IF tags.color -->color: {tags.color};<!-- ENDIF tags.color --><!-- IF tags.bgColor -->background-color: {tags.bgColor};<!-- ENDIF tags.bgColor -->">
+				<span class="tag-item" data-tag="{tags.value}">{tags.valueEscaped}</span>
+			</a>
+		</li>
+		<!-- END tags -->
+	</ul>
+	<!-- ENDIF tags -->
 
 	<!-- IMPORT partials/topic/browsing-users.tpl -->
 

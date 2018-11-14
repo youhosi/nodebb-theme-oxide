@@ -50,6 +50,8 @@
 					<meta itemprop="dateModified" content="{posts.editedISO}">
 
 					<!-- IMPORT partials/topic/post.tpl -->
+	
+					<!-- IF tags -->
 					<!-- IF !posts.index -->
 					<ul class="tags">
 						<!-- BEGIN tags -->
@@ -61,6 +63,8 @@
 						<!-- END tags -->
 					</ul>
 					<!-- ENDIF !posts.index -->
+					<!-- ENDIF tags -->
+
 				</li>
 			<!-- END posts -->
 		</ul>
