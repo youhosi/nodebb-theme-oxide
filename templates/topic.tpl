@@ -50,9 +50,6 @@
 					<meta itemprop="dateModified" content="{posts.editedISO}">
 
 					<!-- IMPORT partials/topic/post.tpl -->
-					<!-- IF !posts.index -->
-					<div class="post-bar-placeholder"></div>
-					<!-- ENDIF !posts.index -->
 				</li>
 			<!-- END posts -->
 		</ul>
@@ -69,7 +66,7 @@
 		<!-- IMPORT partials/paginator.tpl -->
 		<!-- ENDIF config.usePagination -->
 
-		<div class="visible-xs visible-sm pagination-block text-center" data-toggle="tooltip" data-placement="top" title="[[global:pagination.out_of, 0, 0]]>
+		<div class="visible-xs visible-sm pagination-block text-center" data-toggle="tooltip" data-placement="top" title="[[global:pagination.out_of, 0, 0]]">
 			<div class="progress-bar"></div>
 			<div class="wrapper">
 				<i class="fa fa-2x fa-angle-double-up pointer fa-fw pagetop"></i>
