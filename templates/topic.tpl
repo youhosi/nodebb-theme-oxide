@@ -50,6 +50,17 @@
 					<meta itemprop="dateModified" content="{posts.editedISO}">
 
 					<!-- IMPORT partials/topic/post.tpl -->
+					<!-- IF !posts.index -->
+					<ul class="tags">
+						<!-- BEGIN tags -->
+						<li>
+							<a href="{config.relative_path}/tags/{tags.value}" class="tag" style="<!-- IF tags.color -->color: {tags.color};<!-- ENDIF tags.color --><!-- IF tags.bgColor -->background-color: {tags.bgColor};<!-- ENDIF tags.bgColor -->">
+								<span class="tag-item" data-tag="{tags.value}">{tags.valueEscaped}</span>
+							</a>
+						</li>
+						<!-- END tags -->
+					</ul>
+					<!-- ENDIF !posts.index -->
 				</li>
 			<!-- END posts -->
 		</ul>

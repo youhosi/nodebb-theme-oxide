@@ -589,32 +589,6 @@
 			}
 		}
 
-		.tags {
-			vertical-align: -40%;
-			margin-bottom: 20px;
-
-			@media (max-width: 480px) {
-				& {
-					margin-left: 0 !important;
-
-					li {
-						margin: 0 0 2px 30px;
-						display: block;
-					}
-				}
-			}
-			@media (max-width: @screen-sm-max) {
-				& {
-					margin-left: 40px;
-				}
-			}
-			@media (min-width: @screen-sm-max) {
-				 & {
-					margin-left: 65px;
-				 }
-			}
-		}
-
 		@media (min-width: 768px) {
 			.topic-main-buttons {
 				border: 1px solid #e6e6e6;
@@ -626,6 +600,32 @@
 			& {
 				background-position: 11px -35px;
 			}	
+		}
+	}
+
+	.tags {
+		vertical-align: -40%;
+		margin-bottom: 20px;
+
+		@media (max-width: 480px) {
+			& {
+				margin-left: 0 !important;
+
+				li {
+					margin: 0 0 2px 30px;
+					display: block;
+				}
+			}
+		}
+		@media (max-width: @screen-sm-max) {
+			& {
+				margin-left: 40px;
+			}
+		}
+		@media (min-width: @screen-sm-max) {
+				& {
+				margin-left: 65px;
+				}
 		}
 	}
 
