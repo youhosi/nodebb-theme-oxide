@@ -5,5 +5,7 @@
     "hide-last-entry": "Hide the last entry in the category view",
     "turn-quick-answer": "Turn on the quick answer",
     "card-information": "Information about ",
-    "aboutme": "About me"
+    "aboutme": "About me",
+    "not-support-js": "Your browser does not seem to support JavaScript. As a result, your viewing experience will be diminished, and you may not be able to execute some actions.",
+    "download-brower-js": "Please download a browser that supports JavaScript, or enable it if it's disabled (i.e. NoScript)."
 }

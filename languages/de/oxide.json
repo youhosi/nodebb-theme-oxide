@@ -5,5 +5,7 @@
     "hide-last-entry": "Blenden Sie den letzten Eintrag in der Kategorieansicht aus",
     "turn-quick-answer": "Aktivieren Sie die schnelle Antwort",
     "card-information": "Information über ",
-    "aboutme": "Über mich"
+    "aboutme": "Über mich",
+    "not-support-js": "Ihr Browser scheint kein JavaScript zu unterstützen. Dies führt dazu, dass Ihre Anzeige weniger wird und Sie möglicherweise einige Aktionen nicht ausführen können",
+    "download-brower-js": "Laden Sie einen Browser herunter, der JavaScript unterstützt, oder aktivieren Sie ihn, wenn er deaktiviert ist (z. B. NoScript)."
 }

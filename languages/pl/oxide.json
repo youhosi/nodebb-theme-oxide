@@ -5,5 +5,7 @@
     "hide-last-entry": "Ukryj ostatni wpis w widoku kategorii",
     "turn-quick-answer": "Włącz szybką odpowiedź",
     "card-information": "Informacje o ",
-    "aboutme": "O mnie"
+    "aboutme": "O mnie",
+    "not-support-js": "Twoja przeglądarka prawdopodobnie nie obsługuje JavaScript. W rezultacie wrażenia z oglądania zostaną zmniejszone, a wykonanie niektórych czynności może nie być możliwe.",
+    "download-brower-js": "Pobierz przeglądarkę obsługującą JavaScript lub włącz ją, jeśli jest wyłączona (np. NoScript)."
 }
