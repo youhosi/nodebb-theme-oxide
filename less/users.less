@@ -10,9 +10,7 @@
 			margin-top: 20px;
 			text-align: center;
 			vertical-align: top;
-			white-space: nowrap;
-			text-overflow: ellipsis;
-			overflow: hidden;
+			.text-ellipsis;
 			height: auto;
 			max-width: 125px;
 
@@ -29,7 +27,6 @@
 
 	.status {
 		position: absolute;
-		
 		top: 13px;
 		right: 30px;
 	}
@@ -39,7 +36,7 @@
 			margin-left: 0;
 			border: 1px solid rgba(0,0,0, .1);
 			border-left: 0;
-			transition: all .1s linear;
+			.transition(all .1s linear);
 			overflow: hidden;
 
 			&.active > a {
@@ -52,16 +49,16 @@
 				font-weight: bold;
 				font-size: 13px;
 				color: #737373;
-				border-radius: 0 !important;
+				.border-radius('0 !important');
 			}
 	
 			&:first-child {
 				border-left: 1px solid rgba(0,0,0, .1);
-				border-radius: 5px 0 0 5px;
+				.border-radius(5px 0 0 5px);
 			}
 
 			&:last-child {
-				border-radius: 0 5px 5px 0;
+				.border-radius(0 5px 5px 0);
 			}
 		}
 	}
@@ -97,9 +94,7 @@
 
 		a {
 			max-width: 94px;
-			text-overflow: ellipsis;
-			overflow: hidden;
-			white-space: nowrap;
+			.text-ellipsis;
 			font-weight: 500;
 		}
 	}
@@ -109,9 +104,7 @@
 
 		> span {
 			max-width: 94px;
-			text-overflow: ellipsis;
-			overflow: hidden;
-			white-space: nowrap;
+			.text-ellipsis;
 			display: inline-block;
 		}
 

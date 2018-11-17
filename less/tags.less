@@ -26,10 +26,8 @@
 			> .tag-item {
 				display: inline-block;
 				max-width: 150px;
-				text-overflow: ellipsis;
-				overflow: hidden;
-				white-space: nowrap;
 				text-transform: uppercase;
+				.text-ellipsis;
 
 				&:before {
 					display: block;
@@ -44,11 +42,7 @@
 					width: 0;
 					border-style: solid;
 					border-width: 11px;
-					-webkit-transform: scaleX(.6) rotate(45deg);
-					-moz-transform: scaleX(.6) rotate(45deg);
-					-ms-transform: scaleX(.6) rotate(45deg);
-					-o-transform: scaleX(.6) rotate(45deg);
-					transform: scaleX(.6) rotate(45deg);
+					.transform(scaleX(.6) rotate(45deg));
 					left: -8px;
 					border-radius: 11px 1px 11px 1px;
 					border-color: transparent transparent #777 #777;

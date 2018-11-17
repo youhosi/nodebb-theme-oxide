@@ -19,7 +19,7 @@
 				border-radius: 2px;
 				font-weight: bold;
 				text-shadow: 0 1px 0 rgba(0,0,0, .1);
-				transition: background .1s linear;
+				.transition(background .1s linear);
 				.text-ellipsis();
 
 				&:hover {
@@ -57,7 +57,7 @@
 			a {
 				white-space: normal;
 				margin: 0;
-				text-overflow: ellipsis;
+				.text-ellipsis;
 
 				.text {
 					margin-left: 40px;
@@ -172,7 +172,7 @@
 	.forum-logo {
 		float: left;
 		max-height: 37px;
-        margin-top: 7px;
+		margin-top: 7px;
 		width: auto;
 	}
 
@@ -187,12 +187,10 @@
 		padding: 15px 15px;
 		font-size: 18px;
 		line-height: 20px;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		white-space: nowrap;
+		.text-ellipsis;
+
 		span {
-			text-overflow: ellipsis;
-			white-space: nowrap;
+			.text-ellipsis;
 			color: @brand-primary;
 		}
 	}
@@ -200,12 +198,12 @@
 	.pagination-block {
 		margin-right: 10px !important;
 		margin-left: 10px !important;
-		transition: opacity 250ms ease-in;
-		opacity: 0;
+		.transition(opacity 250ms ease-in);
+		.opacity(0);
 		pointer-events: none;
 
 		&.ready {
-			opacity: 1;
+			.opacity(1);
 			pointer-events: inherit;
 		}
 
@@ -232,16 +230,12 @@
 
 		.dropdown-toggle {
 			display: inline-block;
-			padding-left: 5px;
-			padding-right: 5px;
-			padding-top: 0px;
-			padding-bottom: 0px;
+			padding: 0 5px 0 5px;
 		}
 
-		.open>a {
+		.open > a {
 			background-color: rgba(0, 0, 0, 0)!important;
 		}
-
 
 		.dropdown-menu {
 			padding: 10px;
@@ -283,7 +277,7 @@
 	font-weight: bold;
 	margin-bottom: 15px;
 	padding: 0;
-    opacity: 0.8;
+	.opacity(.8);
 	background: none;
 
 	li {
@@ -296,13 +290,13 @@
 		color: rgb(153, 153, 153);
 	}
 
-    [component="breadcrumb/current"] {
-        [itemprop="title"] {
-            a {
-                display: none;
-            } 
-        }
-    }
+	[component="breadcrumb/current"] {
+		[itemprop="title"] {
+			a {
+				display: none;
+			}
+		}
+	}
 
 	@media (max-width: @screen-sm-max) {
 		li {
@@ -321,18 +315,12 @@
 
 #reconnect {
 	font-size: 14px;
-	-webkit-transition: opacity 250ms linear;
-	-moz-transition: opacity 250ms linear;
-	-ms-transition: opacity 250ms linear;
-	-o-transition: opacity 250ms linear;
-	transition: opacity 250ms linear;
-	-moz-opacity: 0.00;
-	opacity: 0.00;
+	.transition(opacity 250ms linear);
+	.opacity(0);
 	min-width: 45px;
 
 	&.active {
-		-moz-opacity: 1;
-		opacity: 1;
+		.opacity(1);
 	}
 
 	& +div.tooltip .tooltip-inner {
@@ -342,7 +330,7 @@
 
 .unread-count:after {
 	position: absolute;
-    left: 23px;
+	left: 23px;
 	top: 10px;
 	font-family: @font-family-sans-serif;
 	font-weight: bold;
@@ -351,11 +339,11 @@
 	text-align: center;
 	padding: 1px 0 0;
 	min-width: 16px;
-    min-height: 15px;
-    line-height: 15px;
-    border-radius: 50%;
-    background: #d9534f;
-    box-shadow: 0 1px 7px rgba(250,26,44, .29);
+	min-height: 15px;
+	line-height: 15px;
+	border-radius: 50%;
+	background: #d9534f;
+	box-shadow: 0 1px 7px rgba(250,26,44, .29);
 }
 
 .unread-count[data-content]:not([data-content=""]):not([data-content="0"]):after {
@@ -389,7 +377,7 @@
 		width: auto;
 		max-width: 100%;
 		overflow: hidden;
-		transition: max-width 0.2s ease 0s;
+		.transition(max-width 0.2s ease 0s);
 		max-height: 42px;
 		float: right;
 		display: inline-block !important;
@@ -435,7 +423,6 @@ label.dropdown-toggle {
 .navbar-default {
 	.navbar-nav {
 
-
 		> li > label {
 			color: @navbar-default-link-color;
 
@@ -480,7 +467,7 @@ label.dropdown-toggle {
 		border: none;
 		display: block;
 		padding: 3px 20px;
-		clear: both;
+		.clear;
 		font-weight: normal;
 		line-height: @line-height-base;
 		color: @dropdown-link-color;

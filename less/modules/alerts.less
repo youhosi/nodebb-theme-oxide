@@ -2,7 +2,6 @@
 	position: fixed;
 	width: 300px;
 	z-index: 10002;
-
 	right: 20px;
 	bottom: 0px;
 
@@ -11,7 +10,7 @@
 		border: 0;
 		border-left: 5px solid !important;
 		box-shadow: 0 2px 4px 0 rgba(0,0,0, .2);
-		border-radius: 4px;
+		.border-radius(4px);
 
 		&::before {
 			position: relative;
@@ -20,7 +19,7 @@
 			display: block;
 			height: 2px;
 			width: 0;
-			transition: inherit;
+			.transition(inherit);
 		}
 
 		&.alert-info::before {

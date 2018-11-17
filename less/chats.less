@@ -65,7 +65,7 @@
 				input {
 					background-color: #FFF;
 					color: @link-color;
-					border-radius: 5px;
+					.border-radius(5px);
 					border: none;
 					box-shadow: 0 1px 3px rgba(0,0,0, .15);
 					text-align: center;
@@ -176,7 +176,7 @@
 			box-shadow: none;
 			border: 0;
 			border-top: 1px solid rgba(0,0,0, .1);
-			border-radius: 0;
+			.border-radius(0);
 			padding-right: 90px;
 		}
 
@@ -186,7 +186,7 @@
 			top: -30px;
 			height: 60px;
 			width: 60px;
-			border-radius: 50%;
+			.border-radius(50%);
 			box-shadow: 0 2px 4px rgba(0,0,0, .1);
 
 			> i {
@@ -257,11 +257,9 @@
 
 		.teaser-content {
 			display: block;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
+			.text-ellipsis;
 			font-size: 13px;
-			opacity: 0.8;
+			.opacity(.8);
 		}
 
 		.room-name {
@@ -294,15 +292,13 @@
 			margin-top: 10px;
 		}
 
-		a {
+		a,
+		p {
 			.text-ellipsis;
 		}
 
 		p {
 			margin: 0;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
 			height: 20px;
 		}
 
@@ -314,9 +310,10 @@
 		}
 
 		.leave {
-			opacity: 0.5;
+			.opacity(.5);
+
 			&:hover {
-				opacity: 1.0;
+				.opacity(1);
 			}
 		}
 
@@ -353,13 +350,13 @@
 			position: absolute;
 			top: 50%;
 			left: 10px;
-			transform: translateY(-50%);
+			.transform(translateY(-50%));
 
 			.avatar {
 				height: 60px;
 				width: 60px;
 				font-size: 30px;
-				border-radius: 50%;
+				.border-radius(50%);
 				box-shadow: 0 3px 6px rgba(0,0,0,.1);
 			}
 		}
@@ -425,7 +422,7 @@
 			font-weight: 300;
 			padding: 0 1.428rem;
 			margin-right: 1.428rem;
-			transition: opacity .5s ease;
+			.transition(opacity .5s ease);
 
 			&:first-child {
 				padding-top: 1.428rem;
@@ -447,7 +444,7 @@
 			}
 
 			&.deleted {
-				opacity: 0.3;
+				.opacity(.3);
 
 				.controls {
 					[data-action] {
@@ -492,7 +489,8 @@
 				}
 			}
 
-			&[data-self="0"] + [data-self="0"], &[data-self="1"] + [data-self="1"] {
+			&[data-self="0"] + [data-self="0"],
+			&[data-self="1"] + [data-self="1"] {
 				&[data-break="false"] {
 					.message-header {
 						display: none;
@@ -575,10 +573,7 @@
 	.page-user-chats {
 		padding-bottom: 0;
 
-		[component="chat/nav-wrapper"][data-loaded="1"] {
-			display: none;
-		}
-
+		[component="chat/nav-wrapper"][data-loaded="1"],
 		[component="chat/nav-wrapper"][data-loaded="0"] + [component="chat/main-wrapper"] {
 			display: none;
 		}

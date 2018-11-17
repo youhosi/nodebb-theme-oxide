@@ -64,7 +64,7 @@
 			line-height: 30px;
 			width: 30px;
 			text-align: center;
-			border-radius: 50%;
+			.border-radius(50%);
 			box-shadow: 0 3px 6px rgba(0,0,0, .2);
 		}
 	}
@@ -74,7 +74,7 @@
 
 		[component="post/anchor"] {
 			position: relative;
-			top: -20px;		/* 20px used here as that is the bottom margin of the hr in between posts */
+			top: -20px;
 		}
 
 		[component="post/upvote"],
@@ -134,7 +134,7 @@
 
 		.icon {
 			position: relative;
-			border-radius: 50%;
+			.border-radius(50%);
 			min-width: 46px;
 			min-height: 46px;
 
@@ -159,15 +159,15 @@
 			}
 		}
 
-		.content {	
+		.content {
 			padding: 20px 20px 50px;
 			margin-top: -45px;
 			margin-left: 65px;
 			background-color: #fff;
 			border: 1px solid #e6e6e6;
-			border-radius: 4px;
+			.border-radius(4px);
 			box-shadow: 0 1px 3px rgba(0,0,0, .03);
-			transition: .6s ease-in-out border-color;
+			.transition(.6s ease-in-out border-color);
 
 			@media (max-width: @screen-sm-max) {
 				& {
@@ -269,7 +269,7 @@
 
 				input[type=checkbox] {
 					margin: 5px;
-					opacity: .7;
+					.opacity(.7);
 				}
 
 				label {
@@ -315,15 +315,13 @@
 
 			.plugin-mentions-user {
 				padding: 2px 5px;
-				border-radius: 4px;
+				.border-radius(4px);
 				border: 1px solid #666;
 				font-size: 13px;
 				font-weight: bold;
 				display: inline-block;
 				color: #666;
 			}
-
-			//
 
 			.fix-lists;
 
@@ -339,7 +337,7 @@
 				background: #fcfcfc;
 				width: 50px;
 				text-align: center;
-				display:block!important;
+				display: block!important;
 			}
 
 		.post-author {
@@ -354,7 +352,7 @@
 				.group-label {
 					text-transform: capitalize;
 					vertical-align: middle;
-					border-radius: 3px;
+					.border-radius(3px);
 					margin: 0 5px;
 					padding: 4px;
 				}
@@ -374,7 +372,7 @@
 				[component="post/parent"] {
 					background-color: #fff;
 					border: 1px solid #ccc;
-					border-radius: 3px;
+					.border-radius(3px);
 					color: #999;
 					font-size: 9px;
 					vertical-align: middle;
@@ -386,10 +384,9 @@
 					top: 10px;
 					right: 20px;
 					font-size: 15px;
-					// color: darken(@brand-info, 20%);
 					color: inherit;
-					opacity: 0;
-					.transition(0.75s ease-in-out opacity);
+					.opacity(0);
+					.transition(.75s ease-in-out opacity);
 				}
 			}
 	
@@ -417,7 +414,6 @@
 				text-decoration: none;
 				margin-left: 55px;
 				font-size: 11px;
-		
 		
 				img, .user-icon {
 					.user-icon-style(16px, 10px, 50%);
@@ -450,11 +446,11 @@
 						height: 16px;
 						line-height: 16px;
 						background: #000;
-						opacity: .6;
+						.opacity(.6);
 						color: white;
 						position: absolute;
 						right: 2px;
-						border-radius: 50%;
+						.border-radius(50%);
 						bottom: -1px;
 						text-align: center;
 						font-size: 12px;
@@ -500,7 +496,6 @@
 						}
 					}
 			
-					// temporary until we build component toggling
 					.favourite.btn-warning, .follow.btn-success {
 						background: white !important;
 						color: #333;
@@ -570,7 +565,7 @@
 	.post-bar {
 		.topic-main-buttons {
 			background-color: #fafafa;
-			border-radius: 4px;
+			.border-radius(4px);
 			position: relative;
 			z-index: 1;
 
@@ -599,7 +594,7 @@
 		@media (max-width: 768px) {
 			& {
 				background-position: 11px -35px;
-			}	
+			}
 		}
 	}
 
@@ -649,7 +644,7 @@
 	.quick-reply {
 		.icon {
 			position: relative;
-			border-radius: 50%;
+			.border-radius(50%);
 			min-width: 46px;
 			min-height: 46px;
 			margin-top: 2px;
@@ -692,7 +687,7 @@
 	}
 
 	&.deleted {
-		.opacity(0.3);
+		.opacity(.3);
 
 		.votes {
 			display: none;
@@ -705,7 +700,7 @@
 		bottom: 60px;
 		left: 0px;
 		padding: 10px;
-		border-radius: 5px;
+		.border-radius(5px);
 		white-space: nowrap;
 		z-index: 100;
 	}
@@ -716,13 +711,13 @@
 		left: 0px;
 		width: 100%;
 		z-index: 100;
-		transition: opacity 250ms ease-in;
+		.transition(opacity 250ms ease-in);
 		opacity: 0;
 		box-shadow: 0 -1px 3px rgba(0,0,0, .2);
 		background-color: #fafafa;
 
 		&.ready {
-			opacity: 1;
+			.opacity(1);
 		}
 
 		.wrapper {
@@ -744,7 +739,6 @@
 
 	@media (max-width: @screen-sm-max) {
 		.content {
-			
 			.table {
 				overflow-x: auto;
 				display: block;
@@ -791,14 +785,14 @@
     		content: "\f00c";
     		padding: 14px;
 		    border-radius: 50%;
-		    opacity: 1;
+		    .opacity(1);
 		    position: absolute;
 		    display: inline-block;
 		    font: normal normal normal 14px/1 FontAwesome;
 		}
 
 		[component="user/picture"], [component="user/status"] {
-			opacity: 0;
+			.opacity(0);
 		}
 	}
 
@@ -822,7 +816,7 @@
 		&::after {
 			position: absolute;
 			z-index: 0;
-			opacity: 0;
+			.opacity(0);
 
 			font-family: "FontAwesome";
 			content: "\f11c";
@@ -834,7 +828,7 @@
 		}
 
 		&.replying::after {
-			opacity: 1;
+			.opacity(1);
 			top: -50px;
 			.animation(topic-reply-pulse 2s ease-in infinite);
 		}
