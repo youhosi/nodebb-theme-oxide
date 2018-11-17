@@ -34,11 +34,11 @@
 			<!-- ELSE -->
 				<div class="avatar avatar-xl avatar-rounded" style="background-color: {icon:bgColor};" title="{username}">{icon:text}</div>
 			<!-- ENDIF picture -->
-			<i component="user/status" class="fa fa-circle status {status}" title="[[global:{status}]]"></i>
 		</div>
 
 		<div class="profile-name">
 			<h2 class="fullname">
+				<i component="user/status" class="fa fa-circle status {status}" title="[[global:{status}]]"></i>
 				<!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname -->
 				<!-- IF !banned --><i>(@{username})</i><!-- ELSE --><i>([[user:banned]])</i><!-- ENDIF !banned -->
 			</h1>
