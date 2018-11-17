@@ -1,5 +1,4 @@
 <div class="clearfix">
-	<!-- IF tags -->
 	<ul class="tags hidden">
 		<!-- BEGIN tags -->
 		<li>
@@ -9,7 +8,6 @@
 		</li>
 		<!-- END tags -->
 	</ul>
-	<!-- ENDIF tags -->
 
 	<!-- IMPORT partials/topic/browsing-users.tpl -->
 
