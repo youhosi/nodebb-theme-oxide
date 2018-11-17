@@ -30,7 +30,7 @@
 	<div class="card-info">
 		<div class="avatar-wrapper" data-uid="{uid}">
 			<!-- IF picture -->
-				<img src="{picture}" class="avatar avatar-xl avatar-rounded" />
+				<img src="{picture}" class="avatar avatar-xl avatar-rounded"/>
 			<!-- ELSE -->
 				<div class="avatar avatar-xl avatar-rounded" style="background-color: {icon:bgColor};" title="{username}">{icon:text}</div>
 			<!-- ENDIF picture -->
