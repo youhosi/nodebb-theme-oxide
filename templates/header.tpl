@@ -26,6 +26,7 @@
 
 <body class="{bodyClass} skin-{config.bootswatchSkin}">
 	<nav id="menu" class="slideout-menu hidden">
+		<!-- IF config.loggedIn -->
 		<div class="menu-profile">
 			<!-- IF user.uid -->
 			<!-- IF user.picture -->
@@ -36,6 +37,7 @@
 			<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i>
 			<!-- ENDIF user.uid -->
 		</div>
+		<!-- ENDIF config.loggedIn -->
 
 		<section class="menu-section" data-section="navigation">
 			<h3 class="menu-section-title">[[global:header.navigation]]</h3>
