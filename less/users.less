@@ -32,15 +32,21 @@
 	}
 
 	.nav-pills {
+		display: flex;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+
 		> li {
 			margin-left: 0;
 			border: 1px solid rgba(0,0,0, .1);
 			border-left: 0;
 			.transition(all .1s linear);
 			overflow: hidden;
+			flex: 0 0 auto;
 
 			&.active > a {
-				border-radius: 0;
+				.border-radius(0);
 				color: #FFF;
 			}
 
