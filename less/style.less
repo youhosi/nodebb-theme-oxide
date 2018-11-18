@@ -241,6 +241,19 @@ a {
 	}
 }
 
+.nav-pills,
+.category-children {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+
+	li,
+	.category-children-item {
+		flex: 0 0 auto;
+	}
+}
+
 .alert,
 .teaser,
 .navbar-default,
