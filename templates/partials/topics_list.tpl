@@ -5,16 +5,16 @@
 		<meta itemprop="name" content="{function.stripTags, title}">
 
 		<div class="content">
-			<div class="avatar hidden-xs col-md-1 col-xs-12 col-sm-1" title="{topics.user.username}">
+			<div class="avatar hidden-xs col-md-1 col-xs-12 col-sm-1" >
 				<!-- IF showSelect -->
-				<div class="select" component="topic/select">
+				<div class="select avatar" component="topic/select" title="{topics.user.username}">
 					<!-- IF topics.thumb -->
-					<img src="{topics.thumb}" class="user-img" />
+					<img src="{topics.thumb}" class="user-img not-responsive" />
 					<!-- ELSE -->
 					<!-- IF topics.user.picture -->
-					<img component="user/picture" data-uid="{topics.user.uid}" src="{topics.user.picture}" class="user-img" />
+					<img component="user/picture" data-uid="{topics.user.uid}" src="{topics.user.picture}" class="user-img not-responsive" />
 					<!-- ELSE -->
-					<div class="user-icon" style="background-color: {topics.user.icon:bgColor};">{topics.user.icon:text}</div>
+					<div class="user-icon " style="background-color: {topics.user.icon:bgColor};">{topics.user.icon:text}</div>
 					<!-- ENDIF topics.user.picture -->
 					<!-- ENDIF topics.thumb -->
 					<i class="fa fa-check"></i>
@@ -24,10 +24,10 @@
 				<!-- IF !showSelect -->
 				<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->" class="pull-left">
 					<!-- IF topics.thumb -->
-					<img src="{topics.thumb}" class="user-img" />
+					<img src="{topics.thumb}" class="user-img not-responsive" />
 					<!-- ELSE -->
 					<!-- IF topics.user.picture -->
-					<img component="user/picture" data-uid="{topics.user.uid}" src="{topics.user.picture}" class="user-img" />
+					<img component="user/picture" data-uid="{topics.user.uid}" src="{topics.user.picture}" class="user-img not-responsive" />
 					<!-- ELSE -->
 					<div class="user-icon" style="background-color: {topics.user.icon:bgColor};">{topics.user.icon:text}</div>
 					<!-- ENDIF topics.user.picture -->
@@ -120,7 +120,7 @@
 						<div class="avatar">
 							<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">
 								<!-- IF topics.teaser.user.picture -->
-								<img title="{topics.teaser.user.username}" class="user-img" src="{topics.teaser.user.picture}" />
+								<img title="{topics.teaser.user.username}" class="user-img not-responsive" src="{topics.teaser.user.picture}" />
 								<!-- ELSE -->
 								<span title="{topics.teaser.user.username}" class="user-icon user-img" style="background-color: {topics.teaser.user.icon:bgColor};">{topics.teaser.user.icon:text}</span>
 								<!-- ENDIF topics.teaser.user.picture -->
