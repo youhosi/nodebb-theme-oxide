@@ -133,7 +133,6 @@
 }
 
 .header {
-
 	[component="navbar/title"] {
 		display: none !important;
 	}
@@ -234,7 +233,7 @@
 		}
 
 		.open > a {
-			background-color: rgba(0, 0, 0, 0)!important;
+			background-color: rgba(0, 0, 0, 0) !important;
 		}
 
 		.dropdown-menu {
@@ -268,6 +267,17 @@
 	#search-form {
 		.advanced-search-link {
 			margin-left: -30px;
+		}
+	}
+
+	[component="user/logout"] {
+		.btn {
+			color: #cb2431;
+
+			&:hover {
+				background: #cb2431;
+				color: #FFF;
+			}
 		}
 	}
 }
