@@ -3,7 +3,7 @@
 <head>
 	<title>{browserTitle}</title>
 	<!-- BEGIN metaTags -->{function.buildMetaTag}<!-- END metaTags -->
-	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/stylesheet<!-- IF bootswatchSkin -->-{bootswatchSkin}<!-- END -->.css?{config.cache-buster}" />
+	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/client<!-- IF bootswatchSkin -->-{bootswatchSkin}<!-- END -->.css?{config.cache-buster}" />
 	<!-- BEGIN linkTags -->{function.buildLinkTag}<!-- END linkTags -->
 
 	<script>
