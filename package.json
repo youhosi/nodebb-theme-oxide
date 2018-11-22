@@ -21,7 +21,7 @@
 		"oxide"
 	],
 	"nbbpm": {
-		"compatibility": "^1.10.2"
+		"compatibility": "^1.11.0"
 	},
 	"repository": {
 		"type": "git",
