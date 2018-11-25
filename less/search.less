@@ -52,7 +52,7 @@
 		width: auto;
 		max-width: 100%;
 		overflow: hidden;
-		.transition(max-width 0.2s ease 0s);
+		.transition(max-width .2s ease 0s);
 		max-height: 42px;
 		float: right;
 		display: inline-block !important;
@@ -63,18 +63,18 @@
 		}
 
 		.form-control {
-			width: 98%;
+			width: 100%;
 		}
 
 		.form-group {
 			position: relative;
-			
+
 			.advanced-search-link {
 				width: 0;
 				position: absolute;
 				top: 50%;
-				right: 30px;
-				transform: translateY(-50%);
+				right: 25px;
+				.transform(translateY(-50%));
 			}
 		}
 	}
