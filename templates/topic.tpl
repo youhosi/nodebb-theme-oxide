@@ -15,6 +15,7 @@
 			<!-- BEGIN icons -->@value<!-- END icons -->
 
 			<span class="topic-title" component="topic/title">{title}</span>
+			<span class="tid">#{tid}</span>
 		</h1>
 
 		<!-- IF merger -->
