@@ -20,6 +20,13 @@
 								<option value="tags">[[tags:tags]]</option>
 							</select>
 						</div>
+						<div class="col-md-3">
+							<label>[[search:match-words]]</label>
+							<select id="match-words-filter" class="form-control">
+								<option value="all">[[search:all]]</option>
+								<option value="any">[[search:any]]</option>
+							</select>
+						</div>
 						<div class="col-md-2">
 							<label>[[search:match-words]]</label>
 							<select id="match-words-filter" class="form-control">
