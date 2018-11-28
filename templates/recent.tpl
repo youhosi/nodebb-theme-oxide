@@ -12,6 +12,10 @@
 			<!-- ELSE -->
 			<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
 			<!-- ENDIF loggedIn -->
+
+			<a href="{config.relative_path}/{selectedFilter.url}" class="inline-block">
+				<div class="alert alert-warning hide" id="new-topics-alert"></div>
+			</a>
 		</div>
 
 		<div component="category/dropdown" class="btn-group pull-right category-dropdown-container <!-- IF !categories.length -->hidden<!-- ENDIF !categories.length -->">
@@ -51,10 +55,6 @@
 		<!-- IF !topics.length -->
 		<div class="alert alert-warning" id="category-no-topics">[[recent:no_recent_topics]]</div>
 		<!-- ENDIF !topics.length -->
-
-		<a href="{config.relative_path}/{selectedFilter.url}">
-			<div class="alert alert-warning hide" id="new-topics-alert"></div>
-		</a>
 
 		<!-- IMPORT partials/topics_list.tpl -->
 
