@@ -1,7 +1,7 @@
 .account {
 	.profile-card {
 		position: relative;
-		background: #ffffff;
+		background: #fff;
 		margin-bottom: 20px;
 		.border-radius(5px);
 		box-shadow: 0 1px 3px rgba(0,0,0, .15);
@@ -30,9 +30,9 @@
 				}
 
 				.fa {
-					color: white;
-					font-size: 35px;
-					background-color: #333;
+					color: #fff;
+					font-size: @font-size-h1;
+					background-color: @gray-darker;
 					.opacity(1);
 					width: 55px;
 					height: 55px;
@@ -91,7 +91,7 @@
 
 			&:hover {
 				.controls {
-					.opacity(0.8);
+					.opacity(.8);
 				}
 			}
 
@@ -141,7 +141,7 @@
 				top: -60px;
 
 				.fullname {
-					color: #FFF;
+					color: #fff;
 					text-shadow: 0 1px 3px rgba(0,0,0, .15);
 					font-size: 25px;
 
@@ -167,7 +167,7 @@
 					display: inline-block;
 					margin-right: 20px;
 					padding-right: 20px;
-					border-right: 1px solid rgba(0,0,0,0.1);
+					border-right: 1px solid rgba(0,0,0, .1);
 					text-align: center;
 
 					.human-readable-number {
@@ -218,7 +218,7 @@
 					padding-bottom: 10px;
 					display: block;
 					text-align: center;
-					border-bottom: 1px solid rgba(0,0,0,.1);
+					border-bottom: 1px solid rgba(0,0,0, .1);
 					padding-right: 0;
 					margin-right: 0;
 					border-right: 0;
@@ -290,7 +290,7 @@
 
 	.show-success {
 		.form-control {
-			border-color: #5cb85c;
+			border-color: @material-success;
 			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%235cb85c' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3E%3C/svg%3E");
 			padding-right: 2.25rem;
 			background-repeat: no-repeat;
@@ -299,7 +299,7 @@
 		}
 		
 		.form-feedback {
-			color: #5cb85c;
+			color: @material-success;
 			display: block;
 			margin-top: .25rem;
 		}
@@ -307,7 +307,7 @@
 	
 	.show-danger {
 		.form-control {
-			border-color: #d9534f;
+			border-color: @material-danger;
 			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23d9534f' viewBox='-2 -2 7 7'%3E%3Cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3E%3Ccircle r='.5'/%3E%3Ccircle cx='3' r='.5'/%3E%3Ccircle cy='3' r='.5'/%3E%3Ccircle cx='3' cy='3' r='.5'/%3E%3C/svg%3E");
 			padding-right: 2.25rem;
 			background-repeat: no-repeat;
@@ -316,7 +316,7 @@
 		}
 		
 		.form-feedback {
-			color: #d9534f;
+			color: @material-danger;
 			display: block;
 			margin-top: .25rem;
 		}
@@ -337,7 +337,7 @@
 }
 
 .user-picture-label {
-	font-size:20px;
+	font-size: 20px;
 }
 
 .picture-switcher {

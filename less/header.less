@@ -5,15 +5,15 @@
 	.chats {
 		.notif-action-buttons {
 			padding: 10px 10px 0;
-			border-top: 1px solid #e6e6e6;
+			border-top: 1px solid @gray-lighter;
 
 			a {
 				font-size: 10px;
-				display: inline-block;
+				.inline-block;
 				width: ~"calc(50% - 2px)";
 				box-sizing: border-box;
-				background: #b3b3b3;
-				color: #FFF;
+				background: @gray-light;
+				color: #fff;
 				text-align: center;
 				padding: 7px;
 				border-radius: 2px;
@@ -122,7 +122,7 @@
 				padding-left: 1rem;
 
 				li {
-					display: inline-block;
+					.inline-block;
 					width: 16px;
 					padding: 0;
 					margin: 0;
@@ -158,7 +158,7 @@
 			border: 0px none;
 
 			span {
-				font-size: 14px;
+				font-size: @font-size-base;
 				font-weight: 400;
 			}
 		}
@@ -184,7 +184,7 @@
 	.header-topic-title {
 		text-align: right;
 		padding: 15px 15px;
-		font-size: 18px;
+		font-size: @font-size-h4;
 		line-height: 20px;
 		.text-ellipsis;
 
@@ -207,7 +207,7 @@
 		}
 
 		a {
-			display: inline-block;
+			.inline-block;
 			padding-left: 2px;
 			padding-right: 2px;
 		}
@@ -217,7 +217,7 @@
 			position: absolute;
 			bottom: 8px;
 			left: 8px;
-			background: #e7e6e6;
+			background: @gray-lighter;
 			width: 90%;
 			margin: auto;
 
@@ -228,7 +228,7 @@
 		}
 
 		.dropdown-toggle {
-			display: inline-block;
+			.inline-block;
 			padding: 0 5px 0 5px;
 		}
 
@@ -242,7 +242,7 @@
 
 		@media (max-width: @screen-xs-max) {
 			.progress-container {
-				display: inline-block;
+				.inline-block;
 				position: static;
 				bottom: 0px;
 				margin-left: 1em;
@@ -270,14 +270,14 @@
 
 			&:hover {
 				background: #cb2431;
-				color: #FFF;
+				color: #fff;
 			}
 		}
 	}
 }
 
 .breadcrumb {
-	font-size: 14px;
+	font-size: @font-size-base;
 	font-weight: bold;
 	margin-bottom: 15px;
 	padding: 0;
@@ -308,7 +308,7 @@
 		}
 
 		li:nth-last-child(2), li:nth-last-child(1), li:last-child {
-			display: inline-block;
+			.inline-block;
 		}
 
 		li:nth-last-child(2):before {
@@ -346,7 +346,7 @@
 	min-height: 15px;
 	line-height: 15px;
 	border-radius: 50%;
-	background: #d9534f;
+	background: @brand-danger;
 	box-shadow: 0 1px 7px rgba(250,26,44, .29);
 }
 
@@ -372,7 +372,7 @@ body.skin-default .header {
 }
 
 label.dropdown-toggle {
-	cursor: pointer;
+	.pointer;
 	margin: 0;
 }
 
