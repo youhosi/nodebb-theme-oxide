@@ -8,13 +8,13 @@
 //## Gray and brand colors for use across Bootstrap.
 
 @gray-base:              #444444;
-@gray-darker:            lighten(@gray-base, 13.5%);
-@gray-dark:              lighten(@gray-base, 20%);
-@gray:                   lighten(@gray-base, 33.5%);
-@gray-light:             lighten(@gray-base, 46.7%);
-@gray-lighter:           lighten(@gray-base, 70%);
+@gray-darker:            lighten(@gray-base, 13.5%); // #666
+@gray-dark:              lighten(@gray-base, 20%); // #777
+@gray:                   lighten(@gray-base, 33.5%); // #999
+@gray-light:             lighten(@gray-base, 46.7%); // #bbbbbb
+@gray-lighter:           lighten(@gray-base, 65%); // #eaeaea
 
-@brand-primary:         #4099de;
+@brand-primary:         #0366d6;
 @brand-success:         #6eb76e;
 @brand-info:            #7ab9cc;
 @brand-warning:         #e8b97d;
@@ -52,12 +52,12 @@
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
-@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
-@font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
-@font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
-@font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
-@font-size-h5:            @font-size-base;
-@font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+@font-size-h1:            floor((@font-size-base * 1.8)); // ~25px
+@font-size-h2:            floor((@font-size-base * 1.65)); // ~23px
+@font-size-h3:            ceil((@font-size-base * 1.5)); // ~21px
+@font-size-h4:            ceil((@font-size-base * 1.24)); // ~18px
+@font-size-h5:            ceil((@font-size-base * 1.11)); // ~16px
+@font-size-h6:            @font-size-base;
 
 //** Unit-less `line-height` for use in components like buttons.
 @line-height-base:        1.428571429; // 20/14
@@ -823,14 +823,14 @@
 //
 //##
 
-@code-color:                  #c7254e;
-@code-bg:                     #f9f2f4;
+@code-color:                  @link-color;
+@code-bg:                     #f7f7f7;
 
-@kbd-color:                   #fff;
-@kbd-bg:                      #333;
+@kbd-color:                   @link-color;
+@kbd-bg:                      #f7f7f7;
 
-@pre-bg:                      #f5f5f5;
-@pre-color:                   @gray-dark;
+@pre-color:                   @link-color;
+@pre-bg:                      #f7f7f7;
 @pre-border-color:            #ccc;
 @pre-scrollable-max-height:   340px;
 
