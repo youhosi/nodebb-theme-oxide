@@ -47,7 +47,7 @@
 		<span class="bookmarked"><i class="fa fa-bookmark-o"></i></span>
 	</div>
 
-	<div component="post/content" >
+	<div component="post/content">
 		{posts.content}
 	</div>
 	

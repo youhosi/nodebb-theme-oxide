@@ -1,50 +1,51 @@
-<ul component="category" class="topic-list" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}" data-set="{set}">
+<ul component="category" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}" data-set="{set}">
 	<meta itemprop="itemListOrder" content="descending">
 	<!-- BEGIN topics -->
-	<li component="category/topic" class="row clearfix category-item {function.generateTopicClass}" <!-- IMPORT partials/data/category.tpl -->>
+	<li component="category/topic" class="row clearfix {function.generateTopicClass} category-item" <!-- IMPORT partials/data/category.tpl -->>
 		<meta itemprop="name" content="{function.stripTags, title}">
 
-		<div class="content">
-			<div class="avatar hidden-xs col-md-1 col-xs-12 col-sm-1" >
-				<!-- IF showSelect -->
-				<div class="select avatar" component="topic/select" title="{topics.user.username}">
-					<!-- IF topics.thumb -->
-					<img src="{topics.thumb}" class="user-img not-responsive" />
-					<!-- ELSE -->
-					<!-- IF topics.user.picture -->
-					<img component="user/picture" data-uid="{topics.user.uid}" src="{topics.user.picture}" class="user-img not-responsive" />
-					<!-- ELSE -->
-					<div class="user-icon " style="background-color: {topics.user.icon:bgColor};">{topics.user.icon:text}</div>
-					<!-- ENDIF topics.user.picture -->
-					<!-- ENDIF topics.thumb -->
-					<i class="fa fa-check"></i>
-				</div>
-				<!-- ENDIF showSelect -->
-
-				<!-- IF !showSelect -->
-				<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->" class="pull-left">
-					<!-- IF topics.thumb -->
-					<img src="{topics.thumb}" class="user-img not-responsive" />
-					<!-- ELSE -->
-					<!-- IF topics.user.picture -->
-					<img component="user/picture" data-uid="{topics.user.uid}" src="{topics.user.picture}" class="user-img not-responsive" />
-					<!-- ELSE -->
-					<div class="user-icon" style="background-color: {topics.user.icon:bgColor};">{topics.user.icon:text}</div>
-					<!-- ENDIF topics.user.picture -->
-					<!-- ENDIF topics.thumb -->
-				</a>
-				<!-- ENDIF !showSelect -->
+		<div class="col-md-1 col-xs-12 col-sm-1 hidden-xs avatar">
+			<!-- IF showSelect -->
+			<div class="select avatar" component="topic/select" title="{topics.user.username}">
+				<!-- IF topics.thumb -->
+				<img src="{topics.thumb}" class="user-img not-responsive" />
+				<!-- ELSE -->
+				<!-- IF topics.user.picture -->
+				<img component="user/picture" data-uid="{topics.user.uid}" src="{topics.user.picture}" class="user-img not-responsive" />
+				<!-- ELSE -->
+				<div class="user-icon " style="background-color: {topics.user.icon:bgColor};">{topics.user.icon:text}</div>
+				<!-- ENDIF topics.user.picture -->
+				<!-- ENDIF topics.thumb -->
+				<i class="fa fa-check"></i>
 			</div>
+			<!-- ENDIF showSelect -->
+		
+			<!-- IF !showSelect -->
+			<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->"
+			 class="pull-left">
+				<!-- IF topics.thumb -->
+				<img src="{topics.thumb}" class="user-img not-responsive" />
+				<!-- ELSE -->
+				<!-- IF topics.user.picture -->
+				<img component="user/picture" data-uid="{topics.user.uid}" src="{topics.user.picture}" class="user-img not-responsive" />
+				<!-- ELSE -->
+				<div class="user-icon" style="background-color: {topics.user.icon:bgColor};">{topics.user.icon:text}</div>
+				<!-- ENDIF topics.user.picture -->
+				<!-- ENDIF topics.thumb -->
+			</a>
+			<!-- ENDIF !showSelect -->
+		</div>
 
-			<div class="col-md-8 col-xs-12 col-sm-8 category-details clearfix">
-				<div class="col-md-8 col-xs-12 show-separator">
+		<div class="col-md-8 col-xs-12 col-sm-8 clearfix category-details">
+			<div class="content">
+				<div class="col-md-8 col-xs-10 show-separator contentItem">
 					<div class="pnt">
 						<i component="topic/pinned" class="fa fa-thumb-tack <!-- IF !topics.pinned -->hide<!-- ENDIF !topics.pinned -->" title="[[topic:pinned]]"></i>
 						<i component="topic/locked" class="fa fa-lock <!-- IF !topics.locked -->hide<!-- ENDIF !topics.locked -->" title="[[topic:locked]]"></i>
 						<i component="topic/moved" class="fa fa-arrow-circle-right <!-- IF !topics.oldCid -->hide<!-- ENDIF !topics.oldCid -->" title="[[topic:moved]]"></i>
 					</div>
 
-					<h2 component="topic/header" class="title">
+					<h4 component="topic/header" class="title">
 						<!-- BEGIN icons -->@value<!-- END icons -->
 
 						<!-- IF !topics.noAnchor -->
@@ -52,10 +53,10 @@
 						<!-- ELSE -->
 						<span>{topics.title}</span>
 						<!-- ENDIF !topics.noAnchor -->
-					</h2>
+					</h4>
 
 					<!-- IF !template.category -->
-					<small>
+					<small class="categoryLink">
 						<a href="{config.relative_path}/category/{topics.category.slug}">
 							<span class="fa-stack fa-lg">
 								<i style="color:{topics.category.bgColor};" class="fa fa-circle fa-stack-2x"></i>
@@ -78,38 +79,41 @@
 					</small>
 				</div>
 
-				<div class="mobile-stat col-xs-12 visible-xs text-right">
-					<span class="human-readable-number">{topics.postcount}</span> <a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}"><i class="fa fa-arrow-circle-right"></i></a>
+				<div class="mobile-stat col-xs-2 visible-xs text-right contentItem">
+					<a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
+						<i class="fa fa-comment mobileItem"></i>
+						<span class="human-readable-number mobileItem">{topics.postcount}</span>
+					</a>
+					
 				</div>
 
-				<div class="col-md-2 hidden-sm hidden-xs stats">
+				<div class="col-md-2 hidden-sm hidden-xs stats contentItem">
 					<span class="human-readable-number" title="{topics.postcount}">{topics.postcount}</span><br />
 					<small>[[global:posts]]</small>
 				</div>
 
-				<div class="col-md-2 hidden-sm hidden-xs stats">
+				<div class="col-md-2 hidden-sm hidden-xs stats contentItem">
 					<span class="human-readable-number" title="{topics.viewcount}">{topics.viewcount}</span><br />
 					<small>[[global:views]]</small>
 				</div>
-
-				<!-- IF topics.tags.length -->
-				<div class="col-md-12 col-xs-12 box-footer hidden-xs">
-					
-					<ul class="tag-list hidden-xs">
-						<!-- BEGIN tags -->
-						<li>
-							<a href="{config.relative_path}/tags/{topics.tags.value}" class="tag" style="<!-- IF topics.tags.color -->color: {topics.tags.color};<!-- ENDIF topics.tags.color --><!-- IF topics.tags.bgColor -->background-color: {topics.tags.bgColor};<!-- ENDIF topics.tags.bgColor -->">
-								<span class="tag-item">{topics.tags.valueEscaped}</span>
-							</a>
-						</li>
-						<!-- END tags -->
-					</ul>
-					
-				</div>
-				<!-- ENDIF topics.tags.length -->
 			</div>
+
+			<!-- IF topics.tags.length -->
+			<div class="col-md-12 col-xs-12 box-footer">
+				<ul class="tag-list">
+					<!-- BEGIN tags -->
+					<li>
+						<a href="{config.relative_path}/tags/{topics.tags.value}" class="tag" style="<!-- IF topics.tags.color -->color: {topics.tags.color};<!-- ENDIF topics.tags.color --><!-- IF topics.tags.bgColor -->background-color: {topics.tags.bgColor};<!-- ENDIF topics.tags.bgColor -->">
+							<span class="tag-item">{topics.tags.valueEscaped}</span>
+						</a>
+					</li>
+					<!-- END tags -->
+				</ul>
+			</div>
+			<!-- ENDIF topics.tags.length -->
 		</div>
-		<div class="col-md-3 col-sm-3 teaser hidden-xs" component="topic/teaser">
+
+		<div class="col-md-3 col-sm-3 hidden-xs teaser" component="topic/teaser">
 			<div class="card">
 				<div class="o-teaser">
 					<!-- IF topics.unreplied -->

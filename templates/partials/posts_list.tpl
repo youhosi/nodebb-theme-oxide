@@ -15,16 +15,16 @@
 				</div>
 			</div>
 
-			<div class="post-body">
-				<div component="post/content" class="content">
-					<div class="post-author">
-						<a class="topic-title" href="{config.relative_path}/post/{posts.pid}">
-							<!-- IF !posts.isMainPost -->RE: <!-- ENDIF !posts.isMainPost -->{posts.topic.title}
-						</a>
-						
-						<span class="permalink timeago" title="{posts.timestampISO}"></span>
-					</div>
+			<div class="post-body content">
+				<div class="post-author">
+					<strong>	
+						<a class="topic-title" href="{config.relative_path}/post/{posts.pid}"><!-- IF !posts.isMainPost --><!-- ENDIF !posts.isMainPost -->{posts.topic.title}</a>
+					</strong>
+					
+					<span class="permalink timeago" title="{posts.timestampISO}"></span>
+				</div>
 
+				<div component="post/content">
 					{posts.content}
 				</div>
 			</div>

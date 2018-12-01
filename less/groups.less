@@ -2,12 +2,12 @@
 	margin-top: 200px;
 
 	[component="groups/cover"] {
-		background-size: cover;
+		.background-size(cover);
 		background-repeat: no-repeat;
+		background-origin: content-box;
 		min-height: 200px;
 		position: relative;
 		margin-bottom: 1em;
-		background-origin: content-box;
 		width: 100%;
 		top: 50px;
 		position: absolute;
@@ -26,7 +26,7 @@
 			line-height: 200px;
 			.opacity(0);
 			.transition(opacity .15s linear);
-			cursor: pointer;
+			.pointer;
 			pointer-events: none;
 
 			> * {
@@ -34,14 +34,14 @@
 			}
 
 			.fa {
-				color: white;
-				font-size: 35px;
-				background-color: #333;
+				color: #fff;
+				font-size: @font-size-h1;
+				background-color: @gray-darker;
 				.opacity(1);
 				width: 55px;
 				height: 55px;
 				line-height: 55px;
-				border-radius: 50%;
+				.border-radius(50%);
 				margin: 0 5px;
 			}
 		}
@@ -58,7 +58,7 @@
 			}
 
 			.save {
-				display: inline-block;
+				.inline-block;
 			}
 		}
 
@@ -68,12 +68,12 @@
 			}
 
 			.indicator {
-				display: inline-block;
+				.inline-block;
 			}
 		}
 
 		.save, .indicator {
-			display: inline-block;
+			.inline-block;
 			position: absolute;
 			top: 1em;
 			right: 2em;
@@ -177,7 +177,7 @@
 
 		.list-cover {
 			display: block;
-			background-size: cover;
+			.background-size(cover);
 			min-height: 125px;
 			background-position: 50% 50%;
 			.pointer;
@@ -186,10 +186,10 @@
 
 			h3 {
 				background-color: rgba(0,0,0, .1);
-				display: inline-block;
+				.inline-block;
 				padding: 10px 15px;
 				width: 100%;
-				color: white;
+				color: #fff;
 				font-weight: bold;
 				text-transform: capitalize;
 				.border-radius(4px 4px 0 0);
@@ -215,7 +215,7 @@
 
 			> li {
 				list-style-type: none;
-				display: inline-block;
+				.inline-block;
 			}
 
 			.truncated {

@@ -22,7 +22,7 @@ noscript {
 			}
 
 			a {
-				font-size: 20px;
+				font-size: @font-size-large;
 			}
 		}
 	}
@@ -34,9 +34,9 @@ noscript {
 
 		.timestamp {
 			float: right;
-			color: #999;
+			color: @link-color;
 			font-style: italic;
-			font-size: 12px;
+			font-size: @font-size-small;
 		}
 
 		.teaser {
@@ -72,7 +72,7 @@ noscript {
 
 				span {
 					font-weight: bold;
-					display: inline-block;
+					.inline-block;
 					margin-top: 1em;
 				}
 			}

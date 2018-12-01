@@ -32,7 +32,7 @@
 
 		<hr class="hidden-xs" />
 
-		<p class="hidden-xs">{name}</p>
+		<h6 class="hidden-xs categories-title">{name}</h6>
 
 		<!-- IF !topics.length -->
 		<!-- IF privileges.topics:create -->

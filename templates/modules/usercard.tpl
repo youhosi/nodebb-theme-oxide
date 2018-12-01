@@ -1,4 +1,4 @@
-<div class="persona-usercard">
+<div class="oxide-usercard">
 	<a href="{config.relative_path}/user/{userslug}">
 		<!-- IF picture -->
 		<div class="usercard-picture" style="background-image:url({picture})"></div>
