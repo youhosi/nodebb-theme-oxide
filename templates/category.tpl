@@ -30,7 +30,7 @@
 			</span>
 		</div>
 
-		<hr class="hidden-xs" />
+		<hr class="hidden-xs"/>
 
 		<h6 class="hidden-xs categories-title">{name}</h6>
 

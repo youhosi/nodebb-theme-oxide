@@ -39,7 +39,7 @@
 	</div>
 
 	<!-- IF !config.hideCategoryLastPost -->
-	<div class="col-md-3 col-sm-3 teaser hidden-xs" component="topic/teaser">
+	<div class="col-md-3 col-sm-3 hidden-xs teaser" component="topic/teaser">
 		<!-- IMPORT partials/categories/lastpost.tpl -->
 	</div>
 	<!-- ENDIF !config.hideCategoryLastPost -->

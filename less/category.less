@@ -143,34 +143,26 @@
 			font-size: 90%;
 		}
 
-		.card   {
-			&.user-img,
-			&.user-icon {
-				display: inline-block;
-				.user-icon-style(24px, 1.5rem, 50%);
-			}
-		}
-
-		.o-teaser {
-			.info {
-				.by-user {
-					.text-ellipsis();
-					padding-bottom: 5px;
-
-					a {
-						font-size: 14px;
-						font-weight: 500;
-					}
-				}
-
-				.by-user, .time {
-					display: block !important;
-				}
-			}
-		}
-
 		&:last-child {
 			border-bottom: 0;
+		}
+	}
+}
+
+[component="category/topic"] {
+	.teaser {
+		.info .by-user {
+			padding-bottom: 5px;
+
+			a {
+				font-size: 14px;
+				font-weight: 500;
+			}
+		}
+
+		.info .by-user,
+		.info .time {
+			display: block !important;
 		}
 	}
 }

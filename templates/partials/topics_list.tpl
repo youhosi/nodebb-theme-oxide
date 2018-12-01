@@ -114,38 +114,38 @@
 		</div>
 
 		<div class="col-md-3 col-sm-3 hidden-xs teaser" component="topic/teaser">
-			<div class="card">
-				<div class="o-teaser">
-					<!-- IF topics.unreplied -->
-						<p>
-						[[category:no_replies]]
-						</p>
-					<!-- ELSE -->
-						<div class="avatar">
-							<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">
-								<!-- IF topics.teaser.user.picture -->
-								<img title="{topics.teaser.user.username}" class="user-img not-responsive" src="{topics.teaser.user.picture}" />
-								<!-- ELSE -->
-								<span title="{topics.teaser.user.username}" class="user-icon user-img" style="background-color: {topics.teaser.user.icon:bgColor};">{topics.teaser.user.icon:text}</span>
-								<!-- ENDIF topics.teaser.user.picture -->
-							</a>
-						</div>
-
-						<div class="info">
-							<!-- IF topics.teaser.pid -->
-							<div class="by-user">
-								<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">{topics.teaser.user.username}</a>
-							</div>
-
-							<div class="time">
-								<a class="permalink" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
-									<small class="timeago" title="{topics.teaser.timestampISO}"></small>
-								</a>
-							</div>
-							<!-- ENDIF topics.teaser.pid -->
-						</div>
-					<!-- ENDIF topics.unreplied -->
+			<div component="category/posts">
+				<!-- IF topics.unreplied -->
+				<div component="category/posts">
+					<div class="post-content">
+						<p>[[category:no_replies]]</p>
+					</div>
 				</div>
+				<!-- ELSE -->
+				<div class="avatar">
+					<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">
+						<!-- IF topics.teaser.user.picture -->
+						<img title="{topics.teaser.user.username}" class="user-img not-responsive" src="{topics.teaser.user.picture}"/>
+						<!-- ELSE -->
+						<span title="{topics.teaser.user.username}" class="user-icon user-img" style="background-color: {topics.teaser.user.icon:bgColor};">{topics.teaser.user.icon:text}</span>
+						<!-- ENDIF topics.teaser.user.picture -->
+					</a>
+				</div>
+				
+				<div class="info">
+					<!-- IF topics.teaser.pid -->
+					<div class="by-user">
+						<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">{topics.teaser.user.username}</a>
+					</div>
+				
+					<div class="time">
+						<a class="permalink" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
+							<small class="timeago" title="{topics.teaser.timestampISO}"></small>
+						</a>
+					</div>
+					<!-- ENDIF topics.teaser.pid -->
+				</div>
+				<!-- ENDIF topics.unreplied -->
 			</div>
 		</div>
 	</li>
