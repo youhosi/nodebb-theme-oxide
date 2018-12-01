@@ -65,6 +65,10 @@ a {
 	&.ajaxifying {
 		.opacity(0);
 	}
+
+	@media (max-width: @screen-xs-max) {
+		padding-bottom: 55px;
+	}
 }
 
 #user-control-list { // tmp
@@ -243,7 +247,7 @@ a {
 
 .nav-pills,
 .category-children,
-.tag-list {
+.box-footer .tag-list {
 	display: flex !important;
 	flex-wrap: nowrap;
 	overflow-x: auto;
