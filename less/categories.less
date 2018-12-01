@@ -93,56 +93,33 @@
 		}
 	}
 
-	.card {
-		text-align: left;
-		overflow: hidden;
-		height: 55px;
+	.teaser {
 		font-size: 12px;
 		line-height: 14px;
 
-		p {
-			margin: 0;
-
-			.emoji {
-				max-width: 12px;
-				max-height: 12px;
-			}
-		}
-
-		.o-teaser {
+		[component="category/posts"] {
+			display: table;
+			table-layout: fixed;
 			width: 100%;
-
-			> .avatar,
-			> .info {
-				float: left;
+			
+			.avatar,
+			.info {
 				display: table-cell;
+				vertical-align: top;
 			}
 
-			> .avatar {
+			.avatar {
 				width: 40px;
 
 				img,
 				.user-icon {
-					box-shadow: 0 1px 10px rgba(0,0,0,.15)
-				}
-
-				img {
-					.border-radius(50%);
-					width: 37px;
-					height: 37px;
-					vertical-align: middle;
-				}
-
-				.user-icon {
-					display: inline-block;
+					box-shadow: 0 1px 10px rgba(0,0,0,.15);
 					.user-icon-style(37px, 17px, 50%);
-					vertical-align: middle;
 				}
 			}
 
-			> .info {
-				padding-left: 12px;
-				width: ~"calc(100% - 40px)";
+			.info {
+				padding-left: 15px;
 
 				.title {
 					padding-bottom: 5px;
@@ -162,6 +139,15 @@
 				.by-user a {
 					font-weight: bold;
 				}
+			}
+		}
+
+		p {
+			margin: 0;
+
+			.emoji {
+				max-width: 12px;
+				max-height: 12px;
 			}
 		}
 	}
