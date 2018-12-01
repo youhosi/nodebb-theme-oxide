@@ -7,5 +7,6 @@
     "card-information": "Information über ",
     "aboutme": "Über mich",
     "not-support-js": "Ihr Browser scheint kein JavaScript zu unterstützen. Dies führt dazu, dass Ihre Anzeige weniger wird und Sie möglicherweise einige Aktionen nicht ausführen können",
-    "download-brower-js": "Laden Sie einen Browser herunter, der JavaScript unterstützt, oder aktivieren Sie ihn, wenn er deaktiviert ist (z. B. NoScript)."
+    "download-brower-js": "Laden Sie einen Browser herunter, der JavaScript unterstützt, oder aktivieren Sie ihn, wenn er deaktiviert ist (z. B. NoScript).",
+    "last-post": "Laatste bericht"
 }

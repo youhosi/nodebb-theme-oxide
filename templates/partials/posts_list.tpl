@@ -17,7 +17,7 @@
 
 			<div class="post-body content">
 				<div class="post-author">
-					<strong>	
+					<strong>
 						<a class="topic-title" href="{config.relative_path}/post/{posts.pid}"><!-- IF !posts.isMainPost --><!-- ENDIF !posts.isMainPost -->{posts.topic.title}</a>
 					</strong>
 					
