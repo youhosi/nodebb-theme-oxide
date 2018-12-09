@@ -1,5 +1,45 @@
 .composer {
+	z-index: @zindex-modal-background - 1 !important;
 
+	.help-text {
+		top: 10px !important;
+		right: 20px !important;
+	}
 
-	
+	@media (min-width: @screen-md) {
+		.write,
+		.preview {
+			border-radius: @border-radius-base !important;
+			box-shadow: none !important;
+		}
+
+		.write-container,
+		.preview-container {
+			margin: 0 12px;
+			padding: 3px;
+		}
+	}
+
+	.write {
+		background: @table-bg-accent;
+		border: 1px solid @gray-light;
+		outline: none;
+		.transition(all .1s linear);
+
+		@media (min-width: @screen-md) {
+			&:focus {
+				box-shadow: 0 0 0 3px @gray-lighter !important;
+				border: 1px solid @gray-light !important;
+			}
+		}
+	}
+
+	.preview {
+		background: #fff;
+		border: 1px solid @gray-lighter;
+
+		a:not(.plugin-mentions-a) {
+			color: @brand-primary;
+		}
+	}
 }
