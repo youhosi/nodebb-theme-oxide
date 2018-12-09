@@ -24,13 +24,13 @@
 				<span class="{../unread-class} human-readable-number" title="{../totalPostCount}">{../totalPostCount}</span><br />
 				<small>[[global:posts]]</small>
 			</div>
-			<span class="visible-xs col-xs-12">
-				<!-- IF ../teaser.timestampISO -->
+			<!-- IF ../teaser.timestampISO -->
+			<div class="visible-xs col-xs-12">
 				<a class="permalink" href="{../teaser.url}">
 					<small>[[oxide:last-post]] <strong class="timeago" title="{../teaser.timestampISO}"></strong></small>
 				</a>
-				<!-- ENDIF ../teaser.timestampISO -->
-			</span>
+			</div>
+			<!-- ENDIF ../teaser.timestampISO -->
 		</div>
 		
 		<!-- IF !config.hideSubCategories -->
