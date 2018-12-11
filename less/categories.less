@@ -4,7 +4,7 @@
 	color: @gray-light;
 	margin: 0 0 10px;
 	font-weight: normal;
-	display: inline-block;
+	.inline-block;
 	width: 100%;
 }
 
@@ -27,7 +27,7 @@
 		position: relative;
 		padding: 0;
 		border: 1px solid @gray-lighter;
-		.border-radius(5px);
+		.border-radius(@border-radius-base);
 
 		.content {
 			display: table;
@@ -53,9 +53,13 @@
 				}
 
 				.description {
-					font-size: 12px;
+					font-size: @font-size-small;
 					color: @gray-light;
-					margin: 5px 0 0 0;
+					margin: 10px 0 0 0;
+
+					p {
+						margin: 0 !important;
+					}
 				}
 			}
 
@@ -94,8 +98,8 @@
 	}
 
 	.teaser {
-		font-size: 12px;
-		line-height: 14px;
+		font-size: @font-size-small;
+		line-height: @font-size-small;
 
 		[component="category/posts"] {
 			display: table;
@@ -164,7 +168,7 @@
 				bottom: -1px;
 				width: 5px;
 				z-index: 1;
-				.border-radius(5px 0 0 5px);
+				.border-radius(@border-radius-base 0 0 @border-radius-base);
 			}
 
 			.category-children {
@@ -217,10 +221,10 @@
 	height: 110px;
 	text-align: center;
 	margin: 0;
-	padding-top:25px;
+	padding-top: 25px;
 	.pointer;
 	margin-bottom: 10px;
-	overflow:hidden;
+	overflow: hidden;
 
 	&:hover {
 		filter: brightness(115%);
@@ -228,21 +232,22 @@
 	}
 
 	.category-box {
-		height:90px;
+		height: 90px;
 
 		.post-preview {
-			padding-left:10px;
-			padding-right:10px;
-			text-align:left;
+			padding-left: 10px;
+			padding-right: 10px;
+			text-align: left;
+
 			img {
-				width:60px;
-				height:60px;
-				padding-right:5px;
+				width: 60px;
+				height: 60px;
+				padding-right: 5px;
 			}
 
 			p {
 				.text-ellipsis;
-				height:60px;
+				height: 60px;
 			}
 		}
 	}
@@ -255,10 +260,10 @@
 
 .category-header-image-cover {
 	.background-size(~"cover !important");
-	background-position: center!important;
+	background-position: center !important;
 }
 
 .category-header-image-contain {
 	.background-size(~"contain !important");
-	background-position: center!important;
+	background-position: center !important;
 }

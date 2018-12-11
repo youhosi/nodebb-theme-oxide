@@ -9,7 +9,7 @@
 	@media (min-width: @screen-md) {
 		.write,
 		.preview {
-			border-radius: @border-radius-base !important;
+			.border-radius(@border-radius-base ~"!important");
 			box-shadow: none !important;
 		}
 
@@ -40,6 +40,39 @@
 
 		a:not(.plugin-mentions-a) {
 			color: @brand-primary;
+		}
+	}
+
+	.tags-container {
+		padding: 0 3px !important;
+		margin-bottom: 10px !important;
+
+		.bootstrap-tagsinput {
+			display: inline-block !important;
+
+			.tag {
+				background: @gray-darker;
+				.border-radius(@border-radius-base);
+
+				[data-role="remove"] {
+					&:hover,
+					&:active {
+						box-shadow: unset !important;
+					}
+
+					&:after {
+						content: "\f057" !important;
+						font-family: FontAwesome;
+						vertical-align: middle;
+					}
+				}
+			}
+
+			input {
+				height: unset !important;
+				font-size: @font-size-base !important;
+				padding: 0 10px !important;
+			}
 		}
 	}
 }

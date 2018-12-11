@@ -3,7 +3,7 @@
 		position: relative;
 		background: #fff;
 		margin-bottom: 20px;
-		.border-radius(5px);
+		.border-radius(@border-radius-base);
 		box-shadow: 0 1px 3px rgba(0,0,0, .15);
 
 		.cover {
@@ -13,7 +13,7 @@
 			.background-size(cover);
 			background-repeat: no-repeat;
 			background-origin: content-box;
-			.border-radius(5px 5px 0 0);
+			.border-radius(@border-radius-base @border-radius-base 0 0);
 			position: relative;
 
 			.controls {
@@ -31,13 +31,9 @@
 
 				.fa {
 					color: #fff;
-					font-size: @font-size-h1;
 					background-color: @gray-darker;
 					.opacity(1);
-					width: 55px;
-					height: 55px;
-					line-height: 55px;
-					.border-radius(50%);
+					.user-icon-style(55px, @font-size-h1, 50%);
 					margin: 0 5px;
 				}
 			}
@@ -52,7 +48,7 @@
 				color: @gray-lighter;
 				padding: 5px 10px;
 				font-weight: bold;
-				.border-radius(5px);
+				.border-radius(@border-radius-base);
 
 				&:hover {
 					cursor: pointer;
@@ -237,13 +233,13 @@
 		}
 
 		.card-title {
-			font-size: 14px;
+			font-size: @font-size-base;
 			text-transform: uppercase;
 			font-weight: 300;
 			padding: 10px;
 			margin: 0;
 			background: rgba(0,0,0, .1);
-			.border-radius(5px 5px 0 0);
+			.border-radius(@border-radius-base @border-radius-base 0 0);
 		}
 
 		.data-item {
@@ -276,8 +272,8 @@
 			.group-label {
 				display: block;
 				padding: 10px 0;
-				border-radius: 0;
-				font-size: 13px;
+				.border-radius(0);
+				font-size: @font-size-base;
 				font-weight: 300;
 			}
 		}

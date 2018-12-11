@@ -175,15 +175,15 @@
 			margin-top: -45px;
 			margin-left: 65px;
 			background-color: #fff;
-			border: 1px solid #e6e6e6;
-			.border-radius(4px);
+			border: 1px solid @gray-lighter;
+			.border-radius(@border-radius-base);
 			box-shadow: 0 1px 3px rgba(0,0,0, .03);
 			.transition(.6s ease-in-out border-color);
 
 			@media (max-width: @screen-sm-max) {
 				& {
 					margin-top: -28px;
-					margin-left: 38px;	
+					margin-left: 38px;
 				}
 			}
 
@@ -313,14 +313,13 @@
 				.group-label {
 					text-transform: capitalize;
 					vertical-align: middle;
-					.border-radius(3px);
+					.border-radius(@border-radius-small);
 					margin: 0 5px;
 					padding: 4px;
 				}
 	
 				.permalink {
 					font-size: 11px;
-					text-decoration: none;
 	
 					&:before {
 						font-family: FontAwesome;
@@ -332,7 +331,7 @@
 	
 				[component="post/parent"] {
 					border: 1px solid @gray-light;
-					.border-radius(3px);
+					.border-radius(@border-radius-small);
 					color: @link-color;
 					font-size: 9px;
 					vertical-align: middle;
@@ -351,7 +350,7 @@
 			}
 	
 			.post-signature {
-				font-size: 12px;
+				font-size: @font-size-small;
 				font-style: italic;
 				word-wrap: break-word;
 				border-top: 1px dashed @gray-lighter;
@@ -444,7 +443,7 @@
 					font-size: 14px;
 			
 					> a {
-						padding: 0.25em;
+						padding: .25em;
 					}
 			
 					a {
@@ -459,6 +458,7 @@
 					.favourite.btn-warning, .follow.btn-success {
 						background: #fff !important;
 						color: #333;
+
 						&:hover {
 							background: @brand-primary !important;
 						}
@@ -525,7 +525,7 @@
 	.post-bar {
 		.topic-main-buttons {
 			background-color: @body-bg;
-			.border-radius(4px);
+			.border-radius(@border-radius-base);
 			position: relative;
 			z-index: 1;
 
