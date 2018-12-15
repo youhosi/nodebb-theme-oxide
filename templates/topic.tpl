@@ -15,7 +15,9 @@
 			<!-- BEGIN icons -->@value<!-- END icons -->
 
 			<span class="topic-title" component="topic/title">{title}</span>
+			<!-- IF config.enableShowTid -->
 			<span class="tid">#{tid}</span>
+			<!-- ENDIF config.enableShowTid -->
 		</h1>
 
 		<!-- IF merger -->
