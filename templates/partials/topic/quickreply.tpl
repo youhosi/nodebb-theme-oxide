@@ -14,9 +14,9 @@
 		<input type="hidden" name="tid" value="{tid}" />
 		<input type="hidden" name="_csrf" value="{config.csrf_token}" />
 		<div class="quickreply-message">
-			<textarea name="content" component="topic/quickreply/text" class="form-control" rows="5"></textarea>
+			<textarea name="content" component="topic/quickreply/text" class="form-control" rows="5" placeholder="[[oxide:quick-reply-placeholder]]"></textarea>
 		</div>
-		<button type="submit" component="topic/quickreply/button" class="btn btn-primary pull-right">Post quick reply</button>
+		<button type="submit" component="topic/quickreply/button" class="btn btn-primary pull-right">[[oxide:quick-reply]]</button>
 	</form>
 </div>
 <!-- ENDIF privileges.topics:reply -->

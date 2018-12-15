@@ -9,5 +9,7 @@
     "not-support-js": "Your browser does not seem to support JavaScript. As a result, your viewing experience will be diminished, and you may not be able to execute some actions.",
     "download-brower-js": "Please download a browser that supports JavaScript, or enable it if it's disabled (i.e. NoScript).",
     "last-post": "Last post",
-    "show-topic-tid": "Show ID topic in title"
+    "show-topic-tid": "Show ID topic in title",
+    "quick-reply": "Post quick reply",
+    "quick-reply-placeholder": "Message content"
 }
