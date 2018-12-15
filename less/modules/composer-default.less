@@ -24,7 +24,7 @@
 		background: @table-bg-accent;
 		border: 1px solid @gray-light;
 		outline: none;
-		.transition(all .1s linear);
+		.transition(box-shadow .1s linear);
 
 		@media (min-width: @screen-md) {
 			&:focus {
@@ -40,6 +40,17 @@
 
 		a:not(.plugin-mentions-a) {
 			color: @brand-primary;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			&:first-child {
+				margin-top: 0 !important;
+			}
 		}
 	}
 
