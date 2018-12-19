@@ -5,21 +5,23 @@
 		<span class="menu-icon"><i class="fa fa-fw fa-pencil"></i></span> [[topic:edit]]
 	</a>
 </li>
-<li role="presentation">
+<li role="presentation" <!-- IF posts.deleted -->hidden<!-- ENDIF posts.deleted -->>
 	<a component="post/delete" role="menuitem" tabindex="-1" href="#" class="<!-- IF posts.deleted -->hidden<!-- ENDIF posts.deleted -->">
 		<div class="inline menu-icon"><i class="fa fa-fw fa-trash-o"></i></div> <span>[[topic:delete]]</span>
 	</a>
 </li>
-<li role="presentation">
+<li role="presentation" <!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->>
 	<a component="post/restore" role="menuitem" tabindex="-1" href="#" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->">
 		<div class="inline menu-icon"><i class="fa fa-fw fa-history"></i></div> <span>[[topic:restore]]</span>
 	</a>
 </li>
-<li role="presentation">
+<!-- IF posts.display_purge_tools -->
+<li role="presentation" <!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->>
 	<a component="post/purge" role="menuitem" tabindex="-1" href="#" class="<!-- IF !posts.deleted -->hidden<!-- ENDIF !posts.deleted -->">
 		<span class="menu-icon"><i class="fa fa-fw fa-eraser"></i></span> [[topic:purge]]
 	</a>
 </li>
+<!-- END -->
 
 <!-- IF posts.display_history -->
 <li role="presentation">
@@ -40,7 +42,7 @@
 <!-- IF posts.ip -->
 <li role="presentation">
 	<a component="post/copy-ip" role="menuitem" tabindex="-1" href="#" data-clipboard-text="{posts.ip}">
-		<span class="menu-icon" ><i class="fa fa-fw  fa-copy"></i></span> [[topic:copy-ip]] {posts.ip}
+		<span class="menu-icon" ><i class="fa fa-fw fa-copy"></i></span> [[topic:copy-ip]] {posts.ip}
 	</a>
 </li>
 <!-- IF posts.display_ip_ban -->
@@ -73,7 +75,7 @@
 		<span component="post/bookmark-count" class="bookmarkCount" data-bookmarks="{posts.bookmarks}">{posts.bookmarks}</span>&nbsp;
 
 		<i component="post/bookmark/on" class="fa fa-fw fa-heart <!-- IF !posts.bookmarked -->hidden<!-- ENDIF !posts.bookmarked -->"></i>
-		<i component="post/bookmark/off" class="fa fa-fw  fa-heart-o <!-- IF posts.bookmarked -->hidden<!-- ENDIF posts.bookmarked -->"></i>
+		<i component="post/bookmark/off" class="fa fa-fw fa-heart-o <!-- IF posts.bookmarked -->hidden<!-- ENDIF posts.bookmarked -->"></i>
 	</a>
 </li>
 <!-- ENDIF config.loggedIn -->
