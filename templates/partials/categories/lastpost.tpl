@@ -1,5 +1,6 @@
 <!-- BEGIN posts -->
 <!-- IF @first -->
+<!-- IF !config.hideCategoryLastPost -->
 <div component="category/posts">
 	<div class="avatar">
 		<a href="{config.relative_path}/user/{../user.userslug}">
@@ -27,6 +28,7 @@
 		</div>
 	</div>
 </div>
+<!-- ENDIF !config.hideCategoryLastPost -->
 <!-- ENDIF @first -->
 <!-- END posts -->
 

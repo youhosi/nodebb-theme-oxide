@@ -19,24 +19,24 @@
 				<!-- ENDIF !loggedIn -->
 			<!-- ENDIF privileges.topics:create -->
 
-			<a href="{url}" class="inline-block">
-				<div class="alert alert-warning hide" id="new-topics-alert"></div>
-			</a>
-
-			<span class="pull-right" component="category/controls">
+			<div class="pull-right" component="category/controls">
 				<!-- IMPORT partials/category/watch.tpl -->
 				<!-- IMPORT partials/category/sort.tpl -->
 				<!-- IMPORT partials/category/tools.tpl -->
-			</span>
+			</div>
 		</div>
 
+		<a href="{url}" class="block">
+			<div class="alert alert-warning hide" id="new-topics-alert"></div>
+		</a>
+		
 		<hr class="hidden-xs"/>
 
 		<h6 class="hidden-xs categories-title">{name}</h6>
 
 		<!-- IF !topics.length -->
 		<!-- IF privileges.topics:create -->
-		<hr class="visible-xs" />
+		<hr class="visible-xs"/>
 		<div class="alert alert-warning" id="category-no-topics">
 			[[category:no_topics]]
 		</div>

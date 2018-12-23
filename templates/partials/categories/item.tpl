@@ -15,7 +15,6 @@
 				</div>
 				<!-- ENDIF ../descriptionParsed -->
 			</div>
-			<!-- IF !../link -->
 			<div class="col-md-2 hidden-sm hidden-xs stats contentItem">
 				<span class="{../unread-class} human-readable-number" title="{../totalTopicCount}">{../totalTopicCount}</span><br />
 				<small>[[global:topics]]</small>
@@ -32,12 +31,12 @@
 			</div>
 			<!-- ENDIF ../teaser.timestampISO -->
 		</div>
-		
 		<!-- IF !config.hideSubCategories -->
 		{function.generateChildrenCategories}
 		<!-- ENDIF !config.hideSubCategories -->
 	</div>
 
+	<!-- IF !../link -->
 	<!-- IF !config.hideCategoryLastPost -->
 	<div class="col-md-3 col-sm-3 hidden-xs teaser" component="topic/teaser">
 		<!-- IMPORT partials/categories/lastpost.tpl -->
