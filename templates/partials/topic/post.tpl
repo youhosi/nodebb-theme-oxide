@@ -78,9 +78,6 @@
 			<!-- ENDIF !downvote:disabled -->
 		</div>
 		<!-- ENDIF !reputation:disabled -->
-
-
-
 	</small>
 
 	<!-- IF !hideReplies -->
