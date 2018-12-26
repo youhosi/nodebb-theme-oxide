@@ -44,12 +44,12 @@
 			</span>
 		</span>
 
-		<span class="bookmarked"><i class="fa fa-bookmark-o"></i></span>
+		<!-- IMPORT partials/topic/post-menu.tpl -->
+
+		<span class="bookmarked pull-right"><i class="fa fa-bookmark-o"></i></span>
 	</div>
 
-	<div component="post/content">
-		{posts.content}
-	</div>
+	<div component="post/content">{posts.content}</div>
 	
 	<!-- IF posts.user.signature -->
 	<div component="post/signature" data-uid="{posts.user.uid}" class="post-signature">{posts.user.signature}</div>
@@ -58,13 +58,13 @@
 
 <div class="clearfix post-footer">
 	<small class="pull-right post-footer-menu">
-		<span class="post-tools">
+		<div class="post-tools">
 			<a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
 			<a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
-		</span>
+		</div>
 
 		<!-- IF !reputation:disabled -->
-		<span class="votes">
+		<div class="votes">
 			<a component="post/upvote" href="#" class="<!-- IF posts.upvoted -->upvoted<!-- ENDIF posts.upvoted -->">
 				<i class="fa fa-thumbs-up"></i>
 			</a>
@@ -76,10 +76,11 @@
 				<i class="fa fa-thumbs-down"></i>
 			</a>
 			<!-- ENDIF !downvote:disabled -->
-		</span>
+		</div>
 		<!-- ENDIF !reputation:disabled -->
 
-		<!-- IMPORT partials/topic/post-menu.tpl -->
+
+
 	</small>
 
 	<!-- IF !hideReplies -->

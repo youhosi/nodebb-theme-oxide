@@ -1,35 +1,35 @@
-html {
-	overflow-y: scroll;
-	min-height: 100%;
-}
-
 body {
 	min-height: 100%;
 	
-	@media (min-width: 979px)
-	{
-		padding-top: 70px;
-	}
-
-	@media (max-width: 979px)
-	{
-		padding-top: 70px;
-		padding-bottom: 50px;
-	}
-}
-
-@media (max-width: @screen-xs-max) {
-	.slideout-panel {
-		min-height: 100vh;
+	@media (min-width: @screen-md-min) {
+		padding-top: 50px;
 	}
 }
 
 button, a {
 	-webkit-tap-highlight-color: transparent;
+	.transition(all .2s ease 0s);
 }
 
-a {
-	transition: all .2s ease 0s;
+#content {
+	padding-bottom: 15px;
+	.transition(opacity .15s linear);
+
+	&.ajaxifying {
+		.opacity(0);
+	}
+}
+
+@media (min-width: @screen-lg-min) {
+	#panel {
+		padding-top: 20px !important;
+	}
+}
+
+@media (max-width: @screen-sm-max) {
+	.form-control {
+		font-size: 16px;
+	}
 }
 
 .block, .show {
@@ -56,26 +56,6 @@ a {
 
 .jumbotron {
 	word-wrap: break-word;
-}
-
-#content {
-	padding-bottom:20px;
-	.transition(opacity 150ms linear);
-
-	&.ajaxifying {
-		.opacity(0);
-	}
-
-	@media (max-width: @screen-xs-max) {
-		padding-bottom: 55px;
-	}
-}
-
-#user-control-list { // tmp
-	li > a > i {
-		width: unset;
-		margin-right: 10px
-	}
 }
 
 .status {
@@ -111,15 +91,15 @@ a {
 }
 
 .fa-facebook-square {
-	color:#3b5998;
+	color: #3b5998;
 }
 
 .fa-twitter-square {
-	color:#0084b4;
+	color: #0084b4;
 }
 
 .fa-google-plus-square {
-	color:#dd4b39;
+	color: #dd4b39;
 }
 
 .category,
@@ -150,56 +130,6 @@ a {
 	width: 100%;
 	margin: 0;
 	padding: 30px 0;
-}
-
-.skin-default, .skin-cerulean, .skin-cosmo, .skin-flatly, .skin-journal, .skin-lumen, .skin-paper, .skin-readable, .skin-sandstone, .skin-spacelab, .skin-united, .skin-yeti {
-	.fade-out {
-		background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, transparent),color-stop(1, white));
-		background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), white);
-		background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), white);
-		background-image: -ms-linear-gradient(top, transparent, white);
-		background-image: -o-linear-gradient(top, transparent, white);
-	}
-}
-
-.skin-cyborg .fade-out {
-	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, transparent),color-stop(1, #060606));
-	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), #060606);
-	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), #060606);
-	background-image: -ms-linear-gradient(top, transparent, #060606);
-	background-image: -o-linear-gradient(top, transparent, #060606);
-}
-
-.skin-darkly .fade-out {
-	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, transparent),color-stop(1, #222222));
-	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), #222222);
-	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), #222222);
-	background-image: -ms-linear-gradient(top, transparent, #222222);
-	background-image: -o-linear-gradient(top, transparent, #222222);
-}
-
-.skin-simplex .fade-out {
-	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, transparent),color-stop(1, #fcfcfc));
-	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), #fcfcfc);
-	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), #fcfcfc);
-	background-image: -ms-linear-gradient(top, transparent, #fcfcfc);
-	background-image: -o-linear-gradient(top, transparent, #fcfcfc);
-}
-
-.skin-slate .fade-out {
-	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, transparent),color-stop(1, #272b30));
-	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), #272b30);
-	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), #272b30);
-	background-image: -ms-linear-gradient(top, transparent, #272b30);
-	background-image: -o-linear-gradient(top, transparent, #272b30);
-}
-
-.skin-superhero .fade-out {
-	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, transparent),color-stop(1, #2b3e50));
-	background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), #2b3e50);
-	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), #2b3e50);
-	background-image: -ms-linear-gradient(top, transparent, #2b3e50);
-	background-image: -o-linear-gradient(top, transparent, #2b3e50);
 }
 
 .icon-container {
@@ -239,12 +169,6 @@ a {
 	pointer-events: none;
 }
 
-@media (max-width: @screen-sm-max) {
-	.form-control {
-		font-size: 16px;
-	}
-}
-
 .nav-pills,
 .category-children,
 .box-footer .tag-list {
@@ -282,7 +206,8 @@ img,
 .section-title,
 .accout .user-group,
 .stat .stat-label,
-.data-item span
+.data-item span,
+.categories-title
  {
 	.no-select;
 }
