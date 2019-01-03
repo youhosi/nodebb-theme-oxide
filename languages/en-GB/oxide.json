@@ -3,7 +3,7 @@
     "theme-settings": "Theme settings",
     "hide-sub-category": "Hide sub-categories in the category view",
     "hide-last-entry": "Hide the last entry in the category view",
-    "turn-quick-answer": "Turn on the quick answer",
+    "enable-quick-reply": "Turn on the quick reply",
     "card-information": "Information about ",
     "aboutme": "About me",
     "not-support-js": "Your browser does not seem to support JavaScript. As a result, your viewing experience will be diminished, and you may not be able to execute some actions.",
@@ -11,5 +11,6 @@
     "last-post": "Last post",
     "show-topic-tid": "Show ID topic in title",
     "quick-reply": "Post quick reply",
-    "quick-reply-placeholder": "Message content"
+    "quick-reply-placeholder": "Message content",
+    "enable-category-icon": "Show category icons"
 }

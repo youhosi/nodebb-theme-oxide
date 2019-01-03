@@ -3,7 +3,7 @@
     "theme-settings": "Ustawienia tematu",
     "hide-sub-category": "Ukryj podkategorie w widoku kategorii",
     "hide-last-entry": "Ukryj ostatni wpis w widoku kategorii",
-    "turn-quick-answer": "Włącz szybką odpowiedź",
+    "enable-quick-reply": "Włącz szybką odpowiedź",
     "card-information": "Informacje o ",
     "aboutme": "O mnie",
     "not-support-js": "Twoja przeglądarka prawdopodobnie nie obsługuje JavaScript. W rezultacie wrażenia z oglądania zostaną zmniejszone, a wykonanie niektórych czynności może nie być możliwe.",
@@ -11,5 +11,6 @@
     "last-post": "Ostatni post",
     "show-topic-tid": "Pokaż ID tematu w poście",
     "quick-reply": "Napisz szybką odpowiedź",
-    "quick-reply-placeholder": "Treść wiadomości"
+    "quick-reply-placeholder": "Treść wiadomości",
+    "enable-category-icon": "Pokaż ikony kategori"
 }

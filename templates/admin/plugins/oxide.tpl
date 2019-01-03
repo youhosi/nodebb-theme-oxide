@@ -17,13 +17,19 @@
 			<div class="checkbox">
 				<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
 					<input class="mdl-switch__input" type="checkbox" id="enableQuickReply" name="enableQuickReply">
-					<span class="mdl-switch__label"><strong>[[oxide:turn-quick-answer]]</strong></span>
+					<span class="mdl-switch__label"><strong>[[oxide:enable-quick-reply]]</strong></span>
 				</label>
 			</div>
 			<div class="checkbox">
 				<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
-					<input class="mdl-switch__input" type="checkbox" id="enableShowTopicTid" name="enableShowTid">
+					<input class="mdl-switch__input" type="checkbox" id="enableShowTid" name="enableShowTid">
 					<span class="mdl-switch__label"><strong>[[oxide:show-topic-tid]]</strong></span>
+				</label>
+			</div>
+			<div class="checkbox">
+				<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
+					<input class="mdl-switch__input" type="checkbox" id="enableCategoryIcons" name="enableCategoryIcons">
+					<span class="mdl-switch__label"><strong>[[oxide:enable-category-icon]]</strong></span>
 				</label>
 			</div>
 		</form>

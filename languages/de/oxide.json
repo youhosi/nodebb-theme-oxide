@@ -3,7 +3,7 @@
     "theme-settings": "Themen Einstellungen",
     "hide-sub-category": "Unterkategorien in der Kategorieansicht ausblenden",
     "hide-last-entry": "Blenden Sie den letzten Eintrag in der Kategorieansicht aus",
-    "turn-quick-answer": "Aktivieren Sie die schnelle Antwort",
+    "enable-quick-reply": "Aktivieren Sie die schnelle Antwort",
     "card-information": "Information über ",
     "aboutme": "Über mich",
     "not-support-js": "Ihr Browser scheint kein JavaScript zu unterstützen. Dies führt dazu, dass Ihre Anzeige weniger wird und Sie möglicherweise einige Aktionen nicht ausführen können",
@@ -11,5 +11,6 @@
     "last-post": "Laatste bericht",
     "show-topic-tid": "ID-Thema im Titel anzeigen",
     "quick-reply": "Posten Sie eine schnelle Antwort",
-    "quick-reply-placeholder": "Nachrichteninhalt"
+    "quick-reply-placeholder": "Nachrichteninhalt",
+    "enable-category-icon": "Kategorie-Icons anzeigen"
 }

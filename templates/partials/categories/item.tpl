@@ -6,6 +6,11 @@
 
 		<div class="content">
 			<div class="col-md-8 show-separator contentItem">
+				<!-- IF config.enableCategoryIcons -->
+				<div class="icon pull-left" style="{function.generateCategoryBackground}">
+					<i class="fa fa-fw {../icon}"></i>
+				</div>
+				<!-- ENDIF config.enableCategoryIcons -->
 				<h4 class="title">
 					<!-- IMPORT partials/categories/link.tpl -->
 				</h4>
