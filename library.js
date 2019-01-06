@@ -95,6 +95,7 @@ library.getThemeConfig = function(config, callback) {
 		config.enableQuickReply = settings.enableQuickReply === 'on';
 		config.enableShowTid = settings.enableShowTid === 'on';
 		config.enableCategoryIcon = settings.enableCategoryIcon === 'on';
+		config.enableShowUserAllGroupsInProfile = settings.enableShowUserAllGroupsInProfile === 'on';
 	});
 
 	callback(false, config);

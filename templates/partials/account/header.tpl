@@ -99,6 +99,17 @@
 				<!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname -->
 			</h2>
 
+			<!-- IF config.enableShowUserAllGroupsInProfile -->
+			<div class="user-group">
+				<!-- BEGIN groups -->
+				<a href="{config.relative_path}/groups/{groups.slug}">
+					<span class="label group-label inline-block" style="background-color: {groups.labelColor};">
+						<!-- IF groups.icon --><i class="fa {groups.icon}"></i> <!-- ENDIF groups.icon -->{groups.userTitle}
+					</span>
+				</a>
+				<!-- END groups -->
+			</div>
+			<!-- ELSE -->
 			<!-- IF selectedGroup.length -->
 			<div class="user-group">
 				<!-- BEGIN selectedGroup -->
@@ -112,6 +123,7 @@
 				<!-- END selectedGroup -->
 			</div>
 			<!-- ENDIF selectedGroup.length -->
+			<!-- ENDIF config.enableShowUserAllGroupsInProfile -->
 
 			<div class="data-item">
 				<div class="data-header"><span>[[user:joined]]</span></div>

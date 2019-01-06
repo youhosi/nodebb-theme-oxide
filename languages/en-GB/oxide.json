@@ -12,5 +12,7 @@
     "show-topic-tid": "Show ID topic in title",
     "quick-reply": "Post quick reply",
     "quick-reply-placeholder": "Message content",
-    "enable-category-icon": "Show category icons"
+    "enable-category-icon": "Show category icons",
+    "bagde-title": "Badges",
+    "enable-show-user-all-groups-in-profile": "Show all user groups in profile view"
 }
