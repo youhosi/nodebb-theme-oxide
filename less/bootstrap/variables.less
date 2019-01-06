@@ -7,12 +7,13 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-@gray-base:              #444444;
-@gray-darker:            lighten(@gray-base, 13.5%); // #666
-@gray-dark:              lighten(@gray-base, 20%); // #777
-@gray:                   lighten(@gray-base, 33.5%); // #999
-@gray-light:             lighten(@gray-base, 46.7%); // #bbbbbb
-@gray-lighter:           lighten(@gray-base, 65%); // #eaeaea
+@gray-base:              #000;
+
+@gray-darker:            lighten(@gray-base, 15%);
+@gray-dark:              lighten(@gray-base, 30%);
+@gray:                   lighten(@gray-base, 40%);
+@gray-light:             lighten(@gray-base, 55%);
+@gray-lighter:           lighten(@gray-base, 85%);
 
 @brand-primary:         #0366d6;
 @brand-success:         #6eb76e;
@@ -31,11 +32,11 @@
 @text-color:            @gray-dark;
 
 //** Global textual link color.
-@link-color:            #777;
+@link-color:            @gray-dark;
 //** Link hover color set via `darken()` function.
 @link-hover-color:      darken(@link-color, 15%);
 //** Link hover decoration.
-@link-hover-decoration: none;
+@link-hover-decoration: underline;
 
 
 //== Typography
