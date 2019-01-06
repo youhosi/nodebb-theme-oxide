@@ -103,8 +103,11 @@
 			<div class="user-group">
 				<!-- BEGIN selectedGroup -->
 				<!-- IF selectedGroup.slug -->
-				<a href="{config.relative_path}/groups/{selectedGroup.slug}"><small class="label group-label inline-block" style="background-color: {selectedGroup.labelColor};">
-						<!-- IF selectedGroup.icon --><i class="fa {selectedGroup.icon}"></i> <!-- ENDIF selectedGroup.icon -->{selectedGroup.userTitle}</small></a>
+				<a href="{config.relative_path}/groups/{selectedGroup.slug}">
+					<small class="label group-label inline-block" style="background-color: {selectedGroup.labelColor};">
+						<!-- IF selectedGroup.icon --><i class="fa {selectedGroup.icon}"></i> <!-- ENDIF selectedGroup.icon -->{selectedGroup.userTitle}
+					</small>
+				</a>
 				<!-- ENDIF selectedGroup.slug -->
 				<!-- END selectedGroup -->
 			</div>

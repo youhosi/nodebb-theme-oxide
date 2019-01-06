@@ -51,7 +51,7 @@
 
 			<div class="<!-- IF !sso.length -->col-md-9 col-sm-8<!-- ELSE -->col-md-5 col-sm-4<!-- ENDIF !sso.length -->">
 				<div>
-					<form class='form-horizontal'>
+					<form class="form-horizontal">
 
 						<div class="control-group">
 							<label class="control-label" for="inputFullname">[[user:fullname]]</label>
@@ -151,4 +151,3 @@
 		</div>
 	<!-- IF sso.length --></div><!-- ENDIF sso.length -->
 </div>
-
