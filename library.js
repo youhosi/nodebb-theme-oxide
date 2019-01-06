@@ -94,7 +94,7 @@ library.getThemeConfig = function(config, callback) {
 		config.hideCategoryLastPost = settings.hideCategoryLastPost === 'on';
 		config.enableQuickReply = settings.enableQuickReply === 'on';
 		config.enableShowTid = settings.enableShowTid === 'on';
-		config.enableCategoryIcons = settings.enableCategoryIcons === 'on';
+		config.enableCategoryIcon = settings.enableCategoryIcon === 'on';
 	});
 
 	callback(false, config);

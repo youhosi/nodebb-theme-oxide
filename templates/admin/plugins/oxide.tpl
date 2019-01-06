@@ -28,7 +28,7 @@
 			</div>
 			<div class="checkbox">
 				<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
-					<input class="mdl-switch__input" type="checkbox" id="enableCategoryIcons" name="enableCategoryIcons">
+					<input class="mdl-switch__input" type="checkbox" id="enableCategoryIcon" name="enableCategoryIcon">
 					<span class="mdl-switch__label"><strong>[[oxide:enable-category-icon]]</strong></span>
 				</label>
 			</div>
