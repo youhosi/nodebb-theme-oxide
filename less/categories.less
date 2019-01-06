@@ -40,20 +40,23 @@
 				vertical-align: middle;
 			}
 
+			.CategoryIcon {
+				padding: 0 0 0 15px;
+				width: 65px;
+
+				.icon {
+					.user-icon-style(40px, 14px, 50%);
+					text-align: center;
+					margin: auto;
+				}
+			}
+
 			.show-separator {
 				.transition(border-color .15s ease-in);
 				min-height: 80px;
 				padding: 15px;
 
-				.icon {
-					font-size: 17px;
-					line-height: 17px;
-					padding: 13px;
-					border-radius: 50%;
-					margin-right: 15px;
-					min-width: 46px;
-					min-height: 46px;
-				}
+
 
 				.title {
 					.text-ellipsis;
@@ -185,14 +188,14 @@
 				.category-children-item {
 					margin-right: 10px;
 
+					&:last-child {
+						padding-right: 10px; 
+					}
+
 					.icon {
-						min-width: 23px;
-						min-height: 23px;
-						font-size: 10px;
-						line-height: 10px;
-						padding: 5px;
+						.user-icon-style(23px, 10px, 50%);
 						margin-right: 5px;
-						.border-radius(50%);
+						text-align: center;
 					}
 
 					small {

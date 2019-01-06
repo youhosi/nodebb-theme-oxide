@@ -5,12 +5,14 @@
 		<div class="category-color" style="background-color: {../bgColor}"></div>
 
 		<div class="content">
-			<div class="col-md-8 show-separator contentItem">
-				<!-- IF config.enableCategoryIcons -->
-				<div class="icon pull-left" style="{function.generateCategoryBackground}">
+			<!-- IF config.enableCategoryIcon -->
+			<div class="hidden-xs CategoryIcon contentItem">
+				<div class="icon" style="{function.generateCategoryBackground}">
 					<i class="fa fa-fw {../icon}"></i>
 				</div>
-				<!-- ENDIF config.enableCategoryIcons -->
+			</div>
+			<!-- ENDIF config.enableCategoryIcon -->
+			<div class="col-md-8 show-separator contentItem">
 				<h4 class="title">
 					<!-- IMPORT partials/categories/link.tpl -->
 				</h4>
