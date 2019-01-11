@@ -38,16 +38,29 @@
 			</div>
 			<!-- ENDIF ../teaser.timestampISO -->
 		</div>
+
 		<!-- IF !config.hideSubCategories -->
 		{function.generateChildrenCategories}
 		<!-- ENDIF !config.hideSubCategories -->
+
+		<!-- IF categories.tagWhitelist -->
+		<div class="tagWhitelist">
+			<!-- BEGIN tagWhitelist -->
+			<span class="tagItem">#{categories.tagWhitelist}</span>
+			<!-- END tagWhitelist -->
+		</div>
+		<!-- ENDIF categories.tagWhitelist -->
 	</div>
 
-	<!-- IF !../link -->
 	<!-- IF !config.hideCategoryLastPost -->
+	<!-- IF !../link -->
 	<div class="col-md-3 col-sm-3 hidden-xs teaser" component="topic/teaser">
 		<!-- IMPORT partials/categories/lastpost.tpl -->
 	</div>
-	<!-- ENDIF !config.hideCategoryLastPost -->
+	<!-- ELSE -->
+	<div class="col-md-3 col-sm-3 hidden-xs teaser rediect">
+		<span class="rediectingText">[[oxide:rediect]]</span>
+	</div>
 	<!-- ENDIF !../link -->
+	<!-- ENDIF !config.hideCategoryLastPost -->
 </li>
