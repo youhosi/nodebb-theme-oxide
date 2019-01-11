@@ -3,7 +3,7 @@
 
 	<div class="clearfix <!-- IF config.hideCategoryLastPost -->col-md-12 col-sm-12<!-- ELSE -->col-md-9 col-sm-9<!-- ENDIF config.hideCategoryLastPost --> category-details">
 		<div class="category-color" style="background-color: {../bgColor}"></div>
-
+		
 		<div class="content">
 			<!-- IF config.enableCategoryIcon -->
 			<div class="hidden-xs CategoryIcon contentItem">
@@ -38,18 +38,9 @@
 			</div>
 			<!-- ENDIF ../teaser.timestampISO -->
 		</div>
-
 		<!-- IF !config.hideSubCategories -->
 		{function.generateChildrenCategories}
 		<!-- ENDIF !config.hideSubCategories -->
-
-		<!-- IF categories.tagWhitelist -->
-		<div class="tagWhitelist">
-			<!-- BEGIN tagWhitelist -->
-			<span class="tagItem">#{categories.tagWhitelist}</span>
-			<!-- END tagWhitelist -->
-		</div>
-		<!-- ENDIF categories.tagWhitelist -->
 	</div>
 
 	<!-- IF !config.hideCategoryLastPost -->

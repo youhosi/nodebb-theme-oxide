@@ -1,29 +1,24 @@
-.posts-list {
-	list-style-type: none;
-	padding-left: 0px;
+.posts-list-item {
+	.topic-category {
+		font-size: 13px;
+		font-weight: 900;
+		color: lighten(@gray-base, 40%);
+		text-align: right;
+		text-transform: uppercase;
+		display: block;
+		margin: 20px 10px;
+	}
 
-	.posts-list-item {
-		.topic-category {
-			font-size: 13px;
-			font-weight: 900;
-			color: lighten(@gray-base, 40%);
-			text-align: right;
-			text-transform: uppercase;
-			display: block;
-			margin: 20px 10px;
-		}
+	.post-header {
+		z-index: 1;
+	}
+	
+	.content {
+		display: block;
+		padding-bottom: 0;
 
-		.post-header {
-			z-index: 1;
-		}
-		
-		.content {
-			display: block;
-			padding-bottom: 0;
-
-			.topic-title {
-				display: unset;
-			}
+		.topic-title {
+			display: unset;
 		}
 	}
 }

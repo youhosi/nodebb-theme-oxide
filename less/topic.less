@@ -448,12 +448,18 @@
 		}
 
 		&.deleted {
-			> .content {
+			> .content,
+			.icon,
+			.tags {
 				.opacity(.3);
 			}
 
 			.votes {
 				display: none;
+			}
+
+			.post-footer {
+				margin: 0 0 20px;
 			}
 		}
 
