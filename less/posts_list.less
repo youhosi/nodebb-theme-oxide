@@ -1,32 +1,35 @@
 .posts-list-item {
 	.topic-category {
-		font-size: 13px;
+		font-size: @font-size-small;
 		font-weight: 900;
-		color: lighten(@gray-base, 40%);
+		color: @gray-dark;
 		text-align: right;
 		text-transform: uppercase;
 		display: block;
-		margin: 20px 10px;
+		margin: 15px 0;
 	}
 
 	.post-header {
-		z-index: 1;
+		line-height: unset !important;
 	}
-	
+
 	.content {
-		display: block;
-		padding-bottom: 0;
-
-		.topic-title {
-			display: unset;
-		}
+		padding-bottom: 0 !important;
 	}
 }
 
-.user-posts {
-	.section-title {
-		font-size: 26px;
-		padding: 20px 37px 25px ;
-		margin: -20px 0 0;
+[component="post"].posts-list-item {
+	.topic-title {
+		display: unset !important;
 	}
 }
+
+.diffs {
+	margin-bottom: 0;
+
+	.posts-list-item  {
+		margin-bottom: 0;
+	}
+}
+
+.form-group.topic { margin-bottom: 0; }
