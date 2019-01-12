@@ -448,12 +448,12 @@
 		}
 
 		&.deleted {
-			> .content {
+			[component="post/content"] {
 				.opacity(.3);
 			}
 
 			.votes {
-				display: none;
+				visibility: hidden;
 			}
 		}
 
