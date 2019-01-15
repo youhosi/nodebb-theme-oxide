@@ -380,8 +380,9 @@
 					min-width: 20px;
 					.inline-block;
 					text-align: center;
-					font-size: 13px;
+					font-size: @font-size-small;
 					font-weight: bold;
+					cursor: pointer;
 				}
 			}
 
@@ -596,6 +597,23 @@
 			z-index: -1;
 			position: absolute;
 		}
+	}
+}
+
+.vote-modal .bootbox-body {
+	h3 {
+		&:first-child {
+			margin: 0 0 15px;
+		}
+
+		&:last-child {
+			margin: 15px 0 0;
+		}
+	}
+
+	.avatar-sm {
+		.user-icon-style(24px, @font-size-large, 50%);
+		box-shadow: 0 3px 6px rgba(0,0,0,.1);
 	}
 }
 
