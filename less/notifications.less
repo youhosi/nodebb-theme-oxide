@@ -5,8 +5,10 @@
 	li {
 		clear: both;
 		list-style-type: none;
-		padding: 1em;
-		margin-bottom: 0.5em;
+		padding: 10px;
+		margin-bottom: 10px;
+		border: 1px solid @gray-light;
+		.border-radius(@border-radius-base);
 		.zebra;
 		.pointer;
 
@@ -15,11 +17,11 @@
 		}
 
 		&.unread {
-			background: #fefbed;
+			box-shadow: 0 0 0 3px @gray-lighter;
 		}
 
 		.timestamp {
-			font-size: .8em;
+			font-size: @font-size-small;
 		}
 
 		a {
@@ -28,7 +30,7 @@
 		}
 
 		p {
-			margin: 0 0 0 30px;
+			margin: 0 0 0 35px;
 		}
 
 		.user-img {
