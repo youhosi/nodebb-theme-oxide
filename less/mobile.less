@@ -1,6 +1,12 @@
 .slideout-menu {
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
+
+	@media only screen and (min-width: @screen-sm-min) {
+		& {
+			display: none !important;
+		}
+	}
 }
 
 @media (max-width: @screen-sm-max) {
@@ -96,7 +102,7 @@
 						height: 40px;
 						width: 40px;
 						font-size: 20px;
-						border-radius: 0;
+						.border-radius(0);
 					}
 				}
 
