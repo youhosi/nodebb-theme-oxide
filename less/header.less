@@ -42,7 +42,7 @@
 			text-align: left;
 			list-style-type: none;
 			clear: both;
-			padding: 5px 10px;
+			padding: 10px;
 			.zebra;
 
 			&.no-notifs,
@@ -311,7 +311,7 @@
 }
 
 #reconnect {
-	font-size: 14px;
+	font-size: @font-size-base;
 	.transition(opacity 250ms linear);
 	.opacity(0);
 	min-width: 45px;
@@ -356,10 +356,8 @@
 body.skin-default .header {
 	.notification-list {
 
-		li {
-			a {
-				color: inherit;
-			}
+		li a {
+			color: inherit;
 		}
 	}
 }
@@ -439,11 +437,5 @@ label.dropdown-toggle {
 			color: @dropdown-link-hover-color;
 			background-color: @dropdown-link-hover-bg;
 		}
-	}
-}
-
-html[data-dir="rtl"] {
-	.dropdown-menu > li > form > button {
-		text-align: right;
 	}
 }
