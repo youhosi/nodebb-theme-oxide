@@ -1,6 +1,6 @@
 # Oxide theme for NodeBB
 
-Oxide Theme is the free theme for NodeBB.
+A theme that is based on the GitHub design.
 
 ## Screenshot
 
