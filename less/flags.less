@@ -1,13 +1,89 @@
-.page-flags {
-    [component="flags/list"] {
-        td {
-            max-width: 300px;
-            .text-ellipsis;
-        }
+.modal-flag {
+	@media only screen and (min-width: @screen-sm-min)
+	{
+		.lead {
+			font-size: @font-size-large;
+		}
+	}
 
-        [component="flags/list/description"] {
-            font-style: italic;
-            color: @gray-light;
-        }
-    }
+	.form-group {
+		margin-top: 15px;
+
+		#flag-reason-custom {
+			min-width: 100%;
+			max-width: 100%;
+			min-height: 100px;
+		}
+	}
+}
+
+.page-flags {
+	.avatar-sm {
+		.user-icon-style(24px ~"!important", 15px ~"!important", 50% ~"!important");
+	}
+
+	.avatar-md {
+		.user-icon-style(32px ~"!important", 15px ~"!important", 50% ~"!important");
+	}
+
+	.avatar-lg {
+		.user-icon-style(44px ~"!important", 4rem ~"!important", 50% ~"!important");
+	}
+	
+	.ulFixBottom {
+		padding: 0;
+
+		ul, li {
+			list-style-type: none;
+			padding: 0;
+		}
+	}
+
+	.previewFlag {
+		.form-group:last-child {
+			margin-bottom: 0;
+		}
+
+		blockquote {
+			margin: 0;
+			background: @gray-lighter;
+			.border-radius(@border-radius-base);
+			padding: 10px;
+		}
+	}
+
+	.postFlagged {
+		.post-author {
+			margin: 0; 
+		}
+
+		.content {
+			padding-bottom: 0;
+		}
+	}
+
+	.flagNotes.posts { margin-top: 15px; }
+
+	[component="flag/history"] {
+		.media {
+			border-bottom: 1px solid @gray-lighter;
+			padding-bottom: 10px;
+
+			&:last-child {
+				border: 0;
+			}
+		}
+	}
+
+	[component="flags/list"] {
+		td {
+			max-width: 300px;
+			.text-ellipsis;
+		}
+
+		[component="flags/list/description"] {
+			font-style: italic;
+			color: @gray-light;
+		}
+	}
 }

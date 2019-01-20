@@ -3,23 +3,17 @@
 		<!-- IMPORT partials/flags/filters.tpl -->
 	</div>
 	<div class="col-sm-8 col-md-9">
-		<div class="text-center">
-			<div class="panel panel-default">
-				<div class="panel-body">
-					<div><canvas id="flags:daily" height="250"></canvas></div>
-					<p>
-
-					</p>
-				</div>
-				<div class="panel-footer"><small>Daily flags</small></div>
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div><canvas id="flags:daily" height="250"></canvas></div>
+				<p class="text-center"></p>
 			</div>
+			<div class="panel-footer text-center"><small>Daily flags</small></div>
 		</div>
 
 		<!-- IF hasFilter -->
 		<div class="alert alert-warning">
-			<p class="pull-right">
-				<a href="{config.relative_path}/flags?reset=1">[[flags:filter-reset]]</a>
-			</p>
+			<a href="{config.relative_path}/flags?reset=1" class="pull-right">[[flags:filter-reset]]</a>
 			[[flags:filter-active]]
 		</div>
 		<!-- ENDIF hasFilter -->

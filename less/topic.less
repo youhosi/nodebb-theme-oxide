@@ -48,7 +48,8 @@
 		}
 	}
 
-	[component="post"] {
+	[component="post"],
+	.postFlagged {
 		position: relative;
 		margin-bottom: 15px;
 		padding-left: 60px;
@@ -66,7 +67,8 @@
 
 				.user-icon,
 				.user-img,
-				[component="user/picture"] {
+				[component="user/picture"],
+				.media-object {
 					.user-icon-style(26px ~"!important", 16px ~"!important", 50% ~"!important");
 				}
 
@@ -204,7 +206,8 @@
 				}
 			}
 
-			[component="post/content"] {
+			[component="post/content"],
+			.postContent {
 				padding: 15px;
 				word-wrap: break-word;
 
@@ -612,7 +615,7 @@
 	}
 
 	.avatar-sm {
-		.user-icon-style(24px, @font-size-large, 50%);
+		.user-icon-style(26px, @font-size-large, 50%);
 		box-shadow: 0 3px 6px rgba(0,0,0,.1);
 	}
 }

@@ -3,7 +3,7 @@
 		<h3 class="panel-title">[[flags:quick-filters]]</h3>
 	</div>
 	<div class="panel-body">
-		<ul>
+		<ul class="ulFixBottom">
 			<li><a href="{config.relative_path}/flags?quick=mine">[[flags:filter-quick-mine]]</a></li>
 		</ul>
 	</div>
