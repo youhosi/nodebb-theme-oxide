@@ -8,7 +8,7 @@
 				<div><canvas id="flags:daily" height="250"></canvas></div>
 				<p class="text-center"></p>
 			</div>
-			<div class="panel-footer text-center"><small>Daily flags</small></div>
+			<div class="panel-footer text-center"><small>[[flags:graph-label]]</small></div>
 		</div>
 
 		<!-- IF hasFilter -->
