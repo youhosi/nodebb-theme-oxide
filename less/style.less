@@ -174,18 +174,21 @@ button, a {
 	margin-bottom: 0;
 }
 
-.nav-pills,
-.category-children,
-.box-footer .tag-list {
-	display: flex !important;
-	flex-wrap: nowrap;
-	overflow-x: auto;
-	-webkit-overflow-scrolling: touch;
-	overflow-y: hidden;
-	
-	li,
-	.category-children-item {
-		flex: 0 0 auto;
+@media only screen and (max-width: @screen-xs-max)
+{
+	.users-list-menu,
+	.category-children,
+	.box-footer .tag-list {
+		display: flex !important;
+		flex-wrap: nowrap;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		overflow-y: hidden;
+		
+		li,
+		.category-children-item {
+			flex: 0 0 auto;
+		}
 	}
 }
 
