@@ -4,6 +4,38 @@
 
 .topic,
 .posts {
+	.topic-header {
+		.topic-stats {
+			height: 27px;
+			line-height: 27px;
+			text-align: right;
+		}
+
+		.stats {
+			.inline-block;
+			padding: 0 5px;
+
+			small,
+			span {
+				font-family: @font-family-monospace;
+				font-size: @font-size-base;
+				color: @gray-light;
+			}
+
+			small {
+				padding-left: 5px;
+			}
+
+			span {
+				padding-left: 2px;
+			}
+
+			i {
+				font-size: @font-size-base + 2px;
+			}
+		}
+	}
+
 	[component="post/header"] {
 		margin: 0 0 20px;
 		line-height: 25px;
@@ -25,6 +57,7 @@
 		}
 
 		.tid {
+			font-family: @font-family-monospace;
 			color: @gray-light;
 			font-size: @font-size-h1;
 			letter-spacing: -1px;
@@ -528,27 +561,12 @@
 			.border-radius(@border-radius-base);
 			position: relative;
 			z-index: 1;
-
-			.stats {
-				margin: 1px 10px;
-				padding: 0;
-				line-height: 15px;
-				font-size: 15px;
-				float: left;
-				text-align: center;
-		
-				.human-readable-number {
-					font-weight: 700;
-					display: inline-block;
-					margin-bottom: 1px;
-				}
-			}
 		}
 
-		@media (min-width: 768px) {
+		@media (min-width: @screen-sm-min) {
 			.topic-main-buttons {
 				border: 1px solid @gray-lighter;
-				padding: 15px 15px 15px 5px;
+				padding: 15px;
 				background: #FFF;
 			}
 		}

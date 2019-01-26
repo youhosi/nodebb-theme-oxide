@@ -7,18 +7,25 @@
 <div class="row">
 	<div class="topic <!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
 
-		<h1 component="post/header" class="hidden-xs" itemprop="name">
-
-			<i class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->" title="[[topic:pinned]]"></i>
-			<i class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->" title="[[topic:locked]]"></i>
-			<i class="pull-left fa fa-arrow-circle-right <!-- IF !oldCid -->hidden<!-- ENDIF !oldCid -->" title="[[topic:moved]]"></i>
-			<!-- BEGIN icons -->@value<!-- END icons -->
-
-			<span class="topic-title" component="topic/title">{title}</span>
-			<!-- IF config.enableShowTid -->
-			<span class="tid">#{tid}</span>
-			<!-- ENDIF config.enableShowTid -->
-		</h1>
+		<div class="row topic-header">
+			<div class="col-lg-10 col-md-10 col-sm-9 hidden-xs">
+				<h1 component="post/header" itemprop="name">
+					<i class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->" title="[[topic:pinned]]"></i>
+					<i class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->" title="[[topic:locked]]"></i>
+					<i class="pull-left fa fa-arrow-circle-right <!-- IF !oldCid -->hidden<!-- ENDIF !oldCid -->" title="[[topic:moved]]"></i>
+					<!-- BEGIN icons -->@value
+					<!-- END icons -->
+				
+					<span class="topic-title" component="topic/title">{title}</span>
+					<!-- IF config.enableShowTid -->
+					<span class="tid">#{tid}</span>
+					<!-- ENDIF config.enableShowTid -->
+				</h1>
+			</div>
+			<div class="col-lg-2 col-md-2 col-sm-3 hidden-xs topic-stats">
+				<!-- IMPORT partials/topic/stats.tpl -->
+			</div>
+		</div>
 
 		<!-- IF merger -->
 		<div component="topic/merged/message" class="alert alert-warning clearfix">
