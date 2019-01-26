@@ -6,24 +6,22 @@
 </div>
 <div class="users">
 	<div class="row">
-		<div class="col-lg-6">
+		<div class="col-lg-8 col-sm-8">
 		<!-- IMPORT partials/users_list_menu.tpl -->
 		</div>
-		<div class="col-xs-3 text-right">
-			<!-- IF inviteOnly -->
-			<!-- IF loggedIn -->
-			<button component="user/invite" class="btn btn-success"><i class="fa fa-users"></i> [[users:invite]]</button>
-			<!-- ENDIF loggedIn -->
-			<!-- ENDIF inviteOnly -->
-		</div>
 		<!-- IF displayUserSearch -->
-		<div class="col-lg-3 col-xs-9">
+		<div class="col-lg-4 col-sm-4 col-xs-12">
 			<div class="search">
 				<div class="input-group">
+					<div class="input-group-btn">
+						<!-- IF inviteOnly -->
+						<!-- IF loggedIn -->
+						<button component="user/invite" class="btn btn-success"><i class="fa fa-users"></i> [[users:invite]]</button>
+						<!-- ENDIF loggedIn -->
+						<!-- ENDIF inviteOnly -->
+						<span class="btn btn-default"><i component="user/search/icon" class="fa fa-fw fa-at"></i></span>
+					</div>
 					<input class="form-control" id="search-user" type="text" placeholder="[[users:enter_username]]"/>
-					<span class="input-group-addon">
-						<i component="user/search/icon" class="fa fa-search"></i>
-					</span>
 				</div>
 			</div>
 		</div>

@@ -1,18 +1,15 @@
 .users {
-
 	&.admin {
 		#users-container {
 			padding: 0;
 		}
 
 		.users-box {
-			display: inline-block;
-			margin-top: 20px;
+			width: 110px;
+			margin-top: 30px;
+			.inline-block;
+			position: relative;
 			text-align: center;
-			vertical-align: top;
-			.text-ellipsis;
-			height: auto;
-			max-width: 125px;
 
 			img {
 				width: 80px;
@@ -20,47 +17,44 @@
 			}
 
 			a {
-				margin-bottom:5px;
+				margin-bottom: 5px;
 			}
+		}
+	}
+
+	.users-list-menu {
+		padding: 0;
+		margin: 0;
+
+		li.active {
+			background: @brand-primary;
+			border-color: @brand-primary;
+
+			a {
+				font-weight: 500;
+			}
+		}
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	@media only screen and (max-width: @screen-xs-max)
+	{
+		.bottom-sheet {
+			position: unset;
+		}
+
+		.search {
+			margin-top: 15px;
 		}
 	}
 
 	.status {
 		position: absolute;
-		top: 13px;
-		right: 30px;
-	}
-
-	.nav-pills {
-		> li {
-			margin-left: 0;
-			border: 1px solid rgba(0,0,0, .1);
-			border-left: 0;
-			.transition(all .1s linear);
-			overflow: hidden;
-
-			&.active > a {
-				.border-radius(0);
-				color: #fff;
-			}
-
-			> a {
-				padding: 10px;
-				font-weight: 500;
-				font-size: 13px;
-				color: @link-color;
-				.border-radius(0 ~'!important');
-			}
-	
-			&:first-child {
-				border-left: 1px solid rgba(0,0,0, .1);
-				.border-radius(5px 0 0 5px);
-			}
-
-			&:last-child {
-				.border-radius(0 5px 5px 0);
-			}
-		}
+		top: 7px;
+		right: 21px;
 	}
 }
 
@@ -69,18 +63,12 @@
 	list-style-type: none;
 	text-align: center;
 
-	li {
-		padding-bottom: 10px;
-	}
-
 	.users-box {
-		display: inline-block;
-		margin-top: 35px;
-		padding-bottom: 0;
+		width: 110px;
+		margin-top: 30px;
+		.inline-block;
 		position: relative;
 		text-align: center;
-		vertical-align: top;
-		width: 138px;
 
 		img,
 		.user-icon {
@@ -89,19 +77,19 @@
 		}
 
 		a {
-			max-width: 94px;
 			.text-ellipsis;
 			font-weight: 500;
+			text-decoration: none;
 		}
 	}
 
 	.user-info {
 		margin-top: 15px;
 
-		> span {
-			max-width: 94px;
+		.username {
+			max-width: 110px;
 			.text-ellipsis;
-			display: inline-block;
+			.inline-block;
 		}
 
 		.joindate,
