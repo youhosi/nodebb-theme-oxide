@@ -6,78 +6,62 @@
 	bottom: 0px;
 
 	.alert {
-		background-color: white;
-		border: 0;
-		border-left: 5px solid !important;
-		box-shadow: 0 2px 4px 0 rgba(0,0,0, .2);
-		.border-radius(4px);
+		background: #FFF;
+		position: relative;
+		overflow: hidden;
+		.border-radius(@border-radius-base);
 
 		&::before {
-			position: relative;
-			top: -15px;
-			left: -15px;
-			display: block;
-			height: 2px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 1px;
 			width: 0;
 			.transition(inherit);
 		}
 
-		&.alert-info::before {
-			background-color: @material-info;
-		}
-
-		&.alert-warning::before {
-			background-color: @material-warning;
-		}
-
-		&.alert-success::before {
-			background-color: @material-success;
-		}
-
-		&.alert-danger::before {
-			background-color: @material-danger;
-		}
-
-		&.animate {
-			&.alert-info::before {
-				background-color: lighten(@material-info, 25%);
-			}
-			
-			&.alert-warning::before {
-				background-color: lighten(@material-warning, 25%);
-			}
-			
-			&.alert-success::before {
-				background-color: lighten(@material-success, 25%);
-			}
-			
-			&.alert-danger::before {
-				background-color: lighten(@material-danger, 25%);
-			}
-			
-			&::before {
-				width: ~"calc(100% + 50px)";
-			}
-		}
-
 		&.alert-info {
 			color: @material-info;
-			border-color: @material-info;
+			border-color: darken(@material-info, 5%);
+			box-shadow: 0 0 0 3px lighten(@material-info, 25%);
+
+			&::before {
+				background-color: @material-info;
+			}
 		}
 
 		&.alert-warning {
 			color: @material-warning;
-			border-color: @material-warning;
+			border-color: darken(@material-warning, 5%);
+			box-shadow: 0 0 0 3px lighten(@material-warning, 25%);
+
+			&::before {
+				background-color: @material-warning;
+			}
 		}
 
 		&.alert-success {
 			color: @material-success;
-			border-color: @material-success;
+			border-color: darken(@material-success, 5%);
+			box-shadow: 0 0 0 3px lighten(@material-success, 25%);
+
+			&::before {
+				background-color: @material-success;
+			}
 		}
 
 		&.alert-danger {
 			color: @material-danger;
-			border-color: @material-danger;
+			border-color: darken(@material-danger, 5%);
+			box-shadow: 0 0 0 3px lighten(@material-danger, 25%);
+
+			&::before {
+				background-color: @material-danger;
+			}
+		}
+
+		&.animate::before {
+			width: 100%;
 		}
 	}
 }
