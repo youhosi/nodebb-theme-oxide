@@ -7,48 +7,59 @@
 <div class="row">
 	<div class="topic <!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
 
-		<div class="row topic-header">
-			<div class="col-lg-10 col-md-10 col-sm-9 hidden-xs">
-				<h1 component="post/header" itemprop="name">
-					<i class="pull-left fa fa-thumb-tack <!-- IF !pinned -->hidden<!-- ENDIF !pinned -->" title="[[topic:pinned]]"></i>
-					<i class="pull-left fa fa-lock <!-- IF !locked -->hidden<!-- ENDIF !locked -->" title="[[topic:locked]]"></i>
-					<i class="pull-left fa fa-arrow-circle-right <!-- IF !oldCid -->hidden<!-- ENDIF !oldCid -->" title="[[topic:moved]]"></i>
-					<!-- BEGIN icons -->@value
-					<!-- END icons -->
-				
-					<span class="topic-title" component="topic/title">{title}</span>
+		<div class="topic-header">
+			<div class="Table header-title">
+				<div class="Table-item topic-title">
+					<h1 class="topic-text" component="topic/title">{title}</h1>
 					<!-- IF config.enableShowTid -->
-					<span class="tid">#{tid}</span>
+					<span class="topic-number">#{tid}</span>
 					<!-- ENDIF config.enableShowTid -->
-				</h1>
-			</div>
-			<div class="col-lg-2 col-md-2 col-sm-3 hidden-xs topic-stats">
-				<!-- IMPORT partials/topic/stats.tpl -->
-			</div>
-		</div>
+				</div>
 
-		<!-- IF merger -->
-		<div component="topic/merged/message" class="alert alert-warning clearfix">
-			<span class="pull-left">[[topic:merged_message, {mergeIntoTid}, {merger.mergedIntoTitle}]]</span>
-			<span class="pull-right">
-				<a href="{config.relative_path}/user/{merger.userslug}">
-					<strong>{merger.username}</strong>
-				</a>
-				<small class="timeago" title="{mergedTimestampISO}"></small>
-			</span>
-		</div>
-		<!-- ENDIF merger -->
+				<div class="Table-item header-actions hidden-xs">
+					<a href="/compose?cid={category.cid}" component="category/post" id="new_topic" class="btn btn-success" data-ajaxify="false" role="button">Nowy temat</a>
+				</div>
+			</div>
 
-		<div component="topic/deleted/message" class="alert alert-warning<!-- IF !deleted --> hidden<!-- ENDIF !deleted --> clearfix">
-			<span class="pull-left">[[topic:deleted_message]]</span>
-			<span class="pull-right">
-				<!-- IF deleter -->
-				<a href="{config.relative_path}/user/{deleter.userslug}">
-					<strong>{deleter.username}</strong>
-				</a>
-				<small class="timeago" title="{deletedTimestampISO}"></small>
-				<!-- ENDIF deleter -->
-			</span>
+			<div class="Table header-meta">
+				<div class="Table-item pins" component="post/header">
+					<!-- IF pinned --><i class="pin-item fa fa-thumb-tack" title="[[topic:pinned]]"></i><!-- ENDIF pinned -->
+					<!-- IF locked --><i class="pin-item fa fa-lock" title="[[topic:locked]]"></i><!-- ENDIF locked -->
+					<!-- IF oldCid --><i class="pin-item fa fa-arrow-circle-right" title="[[topic:moved]]"></i><!-- ENDIF oldCid -->
+					<!-- BEGIN icons -->@value<!-- END icons -->
+				</div>
+
+				<div class="Table-item topic-stats">
+					<!-- IMPORT partials/topic/stats.tpl -->
+				</div>
+			</div>
+
+			<div class="header-info">
+
+			<!-- IF merger -->
+			<div component="topic/merged/message" class="alert alert-warning clearfix">
+				<span class="pull-left">[[topic:merged_message, {mergeIntoTid}, {merger.mergedIntoTitle}]]</span>
+				<span class="pull-right">
+					<a href="{config.relative_path}/user/{merger.userslug}">
+						<strong>{merger.username}</strong>
+					</a>
+					<small class="timeago" title="{mergedTimestampISO}"></small>
+				</span>
+			</div>
+			<!-- ENDIF merger -->
+
+			<div component="topic/deleted/message" class="alert alert-warning<!-- IF !deleted --> hidden<!-- ENDIF !deleted --> clearfix">
+				<span class="pull-left">[[topic:deleted_message]]</span>
+				<span class="pull-right">
+					<!-- IF deleter -->
+					<a href="{config.relative_path}/user/{deleter.userslug}">
+						<strong>{deleter.username}</strong>
+					</a>
+					<small class="timeago" title="{deletedTimestampISO}"></small>
+					<!-- ENDIF deleter -->
+				</span>
+			</div>
+			</div>
 		</div>
 
 		<ul component="topic" class="posts" data-tid="{tid}" data-cid="{cid}">

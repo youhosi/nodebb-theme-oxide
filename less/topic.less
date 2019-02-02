@@ -1,66 +1,73 @@
 .topic {
 	margin-bottom: 35px;
+	
+	> [component="topic"] {
+		padding-top: 20px !important;
+	}
 }
 
 .topic,
 .posts {
 	.topic-header {
-		.topic-stats {
-			height: 27px;
-			line-height: 27px;
-			text-align: right;
-		}
+		border-bottom: 1px solid @gray-lighter;
 
-		.stats {
-			.inline-block;
-			padding: 0 5px;
-
-			small,
-			span {
-				font-family: @font-family-monospace;
-				font-size: @font-size-base;
-				color: @gray-light;
+		.header-title {
+			.topic-title,
+			.header-meta {
+				width: 100%;
 			}
 
-			small {
-				padding-left: 5px;
+			.topic-title {
+				word-wrap: break-word;
+				white-space: unset;
+
+				.topic-text,
+				.topic-number {
+					.inline-block;
+					line-height: 27px;
+					margin: 0;
+					vertical-align: middle;
+				}
+
+				.topic-number {
+					font-family: @font-family-monospace;
+					color: @gray-light;
+					font-size: @font-size-h1;
+				}
 			}
 
-			span {
-				padding-left: 2px;
-			}
-
-			i {
-				font-size: @font-size-base + 2px;
+			.header-actions #new_topic {
+				font-size: @font-size-small;
+				font-weight: bold;
 			}
 		}
-	}
 
-	[component="post/header"] {
-		margin: 0 0 20px;
-		line-height: 25px;
+		.header-meta {
+			padding: 5px 0 15px;
+			width: 100%;
 
-		.fa {
-			font-size: @font-size-h4;
-			background: #ffffff;
-			height: 25px;
-			width: 25px;
-			line-height: 25px;
-			text-align: center;
-			border: 1px solid transparent;
-			.border-radius(50%);
-			box-shadow: 0 3px 6px rgba(0,0,0, .2);
-		}
+			.pins .pin-item {
+				font-size: @font-size-h4;
+				background: #ffffff;
+				height: 25px;
+				width: 25px;
+				line-height: 25px;
+				text-align: center;
+				border: 1px solid transparent;
+				.border-radius(50%);
+				box-shadow: 0 3px 6px rgba(0,0,0, .2);
 
-		.topic-title {
-			word-wrap: break-word;
-		}
+				&:last-child {
+					margin-right: 10px;
+				}
+			}
 
-		.tid {
-			font-family: @font-family-monospace;
-			color: @gray-light;
-			font-size: @font-size-h1;
-			letter-spacing: -1px;
+			.topic-stats {
+				width: 100%;
+				height: 25px;
+				white-space: normal;
+				word-wrap: break-word;
+			}
 		}
 	}
 
