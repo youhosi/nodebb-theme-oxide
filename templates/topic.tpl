@@ -16,9 +16,11 @@
 					<!-- ENDIF config.enableShowTid -->
 				</div>
 
+				<!-- IF config.loggedIn -->
 				<div class="Table-item header-actions hidden-xs">
 					<a href="/compose?cid={category.cid}" component="category/post" id="new_topic" class="btn btn-success" data-ajaxify="false" role="button">[[category:new_topic_button]]</a>
 				</div>
+				<!-- ENDIF config.loggedIn -->
 			</div>
 
 			<div class="Table header-meta">
