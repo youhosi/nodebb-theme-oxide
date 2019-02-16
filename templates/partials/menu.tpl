@@ -78,7 +78,7 @@
 							<img component="header/userpicture" src="{user.picture}" alt="{user.username}"/>
 							<!-- ELSE -->
 							<span component="header/usericon" class="user-icon" style="background-color: {user.icon:bgColor}; display: block;">{user.icon:text}</span>
-							<!-- ENDIF user.picture --> 
+							<!-- ENDIF user.picture -->
 							<span id="user-header-name" class="visible-xs-inline">{user.username}</span>
 						</label>
 						<input type="checkbox" class="hidden" id="user-control-list-check" aria-hidden="true">
@@ -178,12 +178,15 @@
 							<button id="search-button" type="button" class="btn btn-link"><i class="fa fa-search fa-fw" title="[[global:header.search]]"></i></button>
 							<div class="hidden" id="search-fields">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
+									<input autocomplete="off" type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
 									<a href="#"><i class="fa fa-sliders fa-fw advanced-search-link"></i></a>
 								</div>
 								<button type="submit" class="btn btn-default hide">[[global:search]]</button>
 							</div>
 						</form>
+						<ul id="quick-search-results" class="dropdown-menu quick-search-results hidden">
+							<!-- IMPORT partials/quick-search-results.tpl -->
+						</ul>
 					</li>
 					<li class="visible-xs" id="search-menu">
 						<a href="{relative_path}/search">
