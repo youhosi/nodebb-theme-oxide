@@ -9,13 +9,13 @@
 				</button>
 
 				<!-- IF brand:logo -->
-				<a href="<!-- IF brand:logo:url -->{brand:logo:url}<!-- ELSE -->{relative_path}/<!-- ENDIF brand:logo:url -->">
-					<img alt="{brand:logo:alt}" class="{brand:logo:display} forum-logo" src="{brand:logo}?{config.cache-buster}"/>
+				<a href="<!-- IF brand:logo:url -->{brand:logo:url}<!-- ELSE -->{relative_path}/<!-- ENDIF brand:logo:url -->" class="navbar-brand forum-logo {brand:logo:display}">
+					<img alt="{brand:logo:alt}" src="{brand:logo}?{config.cache-buster}"/>
 				</a>
 				<!-- ENDIF brand:logo -->
 				<!-- IF config.showSiteTitle -->
-				<a href="<!-- IF title:url -->{title:url}<!-- ELSE -->{relative_path}/<!-- ENDIF title:url -->">
-					<h1 class="navbar-brand forum-title">{config.siteTitle}</h1>
+				<a href="<!-- IF title:url -->{title:url}<!-- ELSE -->{relative_path}/<!-- ENDIF title:url -->" class="navbar-brand bold">
+					{config.siteTitle}
 				</a>
 				<!-- ENDIF config.showSiteTitle -->
 
@@ -27,7 +27,6 @@
 			<div id="nav-dropdown" class="hidden-xs">
 				<!-- IF !maintenanceHeader -->
 				<!-- IF config.loggedIn -->
-
 				<ul id="logged-in-menu" class="nav navbar-nav navbar-right">
 					<li class="notifications dropdown text-center hidden-xs" component="notifications">
 						<a href="{relative_path}/notifications" title="[[global:header.notifications]]" class="dropdown-toggle" data-toggle="dropdown" id="notif_dropdown" data-ajaxify="false" role="button">
@@ -171,30 +170,32 @@
 					</li>
 				</ul>
 				<!-- ENDIF config.loggedIn -->
+
+
 				<!-- IF config.searchEnabled -->
-				<ul class="nav navbar-nav navbar-right">
-					<li>
-						<form id="search-form" class="navbar-form navbar-right hidden-xs" role="search" method="GET">
-							<button id="search-button" type="button" class="btn btn-link"><i class="fa fa-search fa-fw" title="[[global:header.search]]"></i></button>
-							<div class="hidden" id="search-fields">
-								<div class="form-group">
-									<input autocomplete="off" type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
-									<a href="#"><i class="fa fa-sliders fa-fw advanced-search-link"></i></a>
-								</div>
-								<button type="submit" class="btn btn-default hide">[[global:search]]</button>
-							</div>
-						</form>
+				<ul class="nav navbar-form navbar-right hidden-xs">
+					<form id="search-form" role="search" method="GET">
+						<div id="search-fields" class="input-group">
+							<input autocomplete="off" type="text" class="form-control" placeholder="[[global:search]]" name="query" value="">
+
+							<span class="input-group-btn">
+								<a href="#" class="btn btn-default">
+									<i class="fa fa-sliders fa-fw advanced-search-link"></i>
+								</a>
+
+								<button type="submit" class="btn btn-default">
+									<i class="fa fa-search fa-fw" title="[[global:header.search]]"></i>
+								</button>
+							</span>
+						</div>
+
 						<ul id="quick-search-results" class="dropdown-menu quick-search-results hidden">
 							<!-- IMPORT partials/quick-search-results.tpl -->
 						</ul>
-					</li>
-					<li class="visible-xs" id="search-menu">
-						<a href="{relative_path}/search">
-							<i class="fa fa-search fa-fw"></i> [[global:search]]
-						</a>
-					</li>
+					</form>
 				</ul>
 				<!-- ENDIF config.searchEnabled -->
+
 
 				<ul class="nav navbar-nav navbar-right hidden-xs">
 					<li>
