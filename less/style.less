@@ -7,11 +7,6 @@ body {
 	}
 }
 
-button, a {
-	-webkit-tap-highlight-color: transparent;
-	.transition(all .2s ease 0s);
-}
-
 #content {
 	padding-bottom: 15px;
 	.transition(opacity .15s linear);
@@ -106,7 +101,7 @@ button, a {
 .category,
 .topic {
 	&.post-link {
-		display:inline-block;
+		.inline-block;
 		width:90%;
 		height:25px;
 		font-size:10px;
@@ -119,7 +114,7 @@ button, a {
 	width: 20px;
 	height: 20px;
 	text-align: center;
-	display: inline-block;
+	.inline-block;
 	line-height: 20px;
 	cursor: pointer;
 }
@@ -198,7 +193,7 @@ button, a {
 		overflow-x: auto;
 		-webkit-overflow-scrolling: touch;
 		overflow-y: hidden;
-		
+
 		li,
 		.category-children-item {
 			flex: 0 0 auto;
