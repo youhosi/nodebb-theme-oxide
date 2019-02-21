@@ -1,34 +1,5 @@
 .header,
 .slideout-menu {
-
-	.notifications,
-	.chats {
-		.notif-action-buttons {
-			padding: 10px 10px 0;
-			border-top: 1px solid @gray-lighter;
-
-			a {
-				font-size: 10px;
-				.inline-block;
-				width: ~"calc(50% - 2px)";
-				box-sizing: border-box;
-				background: @gray-light;
-				color: #fff;
-				text-align: center;
-				padding: 7px;
-				border-radius: 2px;
-				font-weight: bold;
-				text-shadow: 0 1px 0 rgba(0,0,0, .1);
-				.transition(background .1s linear);
-				.text-ellipsis();
-
-				&:hover {
-					background: #9a9a9a;
-				}
-			}
-		}
-	}
-
 	.notification-list {
 		overflow-x: hidden;
 		overflow-y: auto;
@@ -50,7 +21,7 @@
 				text-align: center;
 				padding: 20px 0;
 			}
-			
+
 			&.loading-text {
 				text-align: center;
 			}
@@ -165,20 +136,13 @@
 		}
 	}
 
-	.forum-title {
-		margin: 0px;
-	}
-
 	.forum-logo {
-		float: left;
-		max-height: 37px;
-		margin-top: 7px;
-		width: auto;
-	}
+		margin: 0 !important;
+		padding: 0;
 
-	@media (max-width: @screen-xs-max) {
-		.forum-logo {
-			margin-left: 15px;
+		& img {
+			padding: 5px 0;
+			height: @navbar-height;
 		}
 	}
 
@@ -265,14 +229,12 @@
 		}
 	}
 
-	[component="user/logout"] {
-		.btn {
-			color: #cb2431;
+	[component="user/logout"] .btn {
+		color: #cb2431;
 
-			&:hover {
-				background: #cb2431;
-				color: #fff;
-			}
+		&:hover {
+			background: #cb2431;
+			color: #fff;
 		}
 	}
 }
@@ -436,6 +398,30 @@ label.dropdown-toggle {
 			text-decoration: none;
 			color: @dropdown-link-hover-color;
 			background-color: @dropdown-link-hover-bg;
+		}
+	}
+}
+
+.notif-action-buttons {
+	padding: 10px 10px 0;
+	border-top: 1px solid @gray-lighter;
+
+	a {
+		font-size: 10px;
+		.inline-block;
+		width: ~"calc(50% - 2px)";
+		background: @gray-light;
+		color: #fff;
+		text-align: center;
+		padding: 7px;
+		border-radius: @border-radius-base;
+		font-weight: bold;
+		text-shadow: 0 1px 0 rgba(0,0,0, .1);
+		.transition(background .1s linear);
+		.text-ellipsis();
+
+		&:hover {
+			background: @gray;
 		}
 	}
 }
