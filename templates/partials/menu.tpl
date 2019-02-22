@@ -170,8 +170,6 @@
 					</li>
 				</ul>
 				<!-- ENDIF config.loggedIn -->
-
-
 				<!-- IF config.searchEnabled -->
 				<ul class="nav navbar-form navbar-right hidden-xs">
 					<form id="search-form" role="search" method="GET">
@@ -193,10 +191,13 @@
 							<!-- IMPORT partials/quick-search-results.tpl -->
 						</ul>
 					</form>
+					<li class="visible-xs" id="search-menu">
+						<a href="{relative_path}/search">
+							<i class="fa fa-search fa-fw"></i> [[global:search]]
+						</a>
+					</li>
 				</ul>
 				<!-- ENDIF config.searchEnabled -->
-
-
 				<ul class="nav navbar-nav navbar-right hidden-xs">
 					<li>
 						<a href="#" id="reconnect" class="hide" title="Connection to {config.siteTitle} has been lost, attempting to reconnect...">
