@@ -51,22 +51,22 @@
 				<span class="stat-label">[[global:reputation]]</span>
 			</div>
 			<!-- ENDIF !reputation:disabled -->
-		
+
 			<div class="stat">
 				<div class="human-readable-number" title="{postcount}">{postcount}</div>
 				<span class="stat-label">[[global:posts]]</span>
 			</div>
-		
+
 			<div class="stat">
 				<div class="human-readable-number" title="{profileviews}">{profileviews}</div>
 				<span class="stat-label">[[user:profile_views]]</span>
 			</div>
-		
+
 			<div class="stat">
 				<div class="human-readable-number" title="{followerCount}">{followerCount}</div>
 				<span class="stat-label">[[user:followers]]</span>
 			</div>
-		
+
 			<div class="stat">
 				<div class="human-readable-number" title="{followingCount}">{followingCount}</div>
 				<span class="stat-label">[[user:following]]</span>
@@ -79,23 +79,25 @@
 
 <div class="row">
 	<div class="col-md-4">
+		<!-- IF isSelfOrAdminOrGlobalModerator -->
 		<!-- IF ips.length -->
-		<div class="profile-card hidden">
+		<div class="profile-card">
 			<h2 class="card-title">
 				[[global:recentips]]
 			</h2>
 
 			<!-- BEGIN ips -->
 			<div class="data-item">
-				<span>{ips.ip}</span>
+				<span>{ips}</span>
 			</div>
 			<!-- END ips -->
 		</div>
 		<!-- ENDIF ips.length -->
+		<!-- ENDIF isSelfOrAdminOrGlobalModerator -->
 
 		<div class="profile-card">
 			<h2 class="card-title">
-				[[oxide:card-information]] 
+				[[oxide:card-information]]
 				<!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname -->
 			</h2>
 
@@ -177,7 +179,7 @@
 			<!-- END widgets.sidebar -->
 		</div>
 	</div>
-	
+
 	<div class="col-md-8">
 		<!-- IF isAdminOrGlobalModeratorOrModerator -->
 		<!-- IF banned -->
