@@ -4,7 +4,7 @@
 	<!-- IMPORT partials/account/header.tpl -->
 
 		<h1 class="section-title">[[pages:{template.name}, {username}]]</h1>
-			
+
 			<div class="groups list">
 				<div component="groups/container" id="groups-list" class="row">
 					<!-- IF !groups.length -->

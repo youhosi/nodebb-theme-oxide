@@ -2,7 +2,7 @@
 
 <div class="account">
 	<h1 class="section-title">[[user:consent.title]]</h1>
-	
+
 	<p class="lead">[[user:consent.lead]]</p>
 	<p>[[user:consent.intro]]</p>
 

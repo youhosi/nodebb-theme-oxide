@@ -71,4 +71,4 @@
 			<!-- IMPORT partials/paginator.tpl -->
 		<!-- ENDIF config.usePagination -->
 	</div>
-</div>
+</div

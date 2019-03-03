@@ -1,4 +1,3 @@
-
 <!-- IF !notifications.length -->
 <li class="no-notifs"><a href="#">[[notifications:no_notifs]]</a></li>
 <!-- ENDIF !notifications.length -->

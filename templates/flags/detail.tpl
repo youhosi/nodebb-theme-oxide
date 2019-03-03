@@ -194,7 +194,7 @@
 							<!-- IF !history.length -->
 							<div class="alert alert-success text-center">[[flags:no-history]]</div>
 							<!-- ENDIF !history.length -->
-						
+
 							<!-- BEGIN history -->
 							<li class="media">
 								<div class="media-left">

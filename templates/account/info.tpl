@@ -7,7 +7,7 @@
 			<div class="row">
 				<div class="col-xs-12 col-md-12">
 					<h1 class="section-title">[[global:sessions]]</h1>
-					
+
 					<ul class="list-group" component="user/sessions">
 						<!-- BEGIN sessions -->
 						<li class="list-group-item" data-uuid="{../uuid}">

@@ -2,7 +2,7 @@
 <div component="chat/messages" class="expanded-chat" data-roomid="{roomId}">
 	<div component="chat/header">
 		<button type="button" class="close" data-action="pop-out"><span aria-hidden="true"><i class="fa fa-compress"></i></span><span class="sr-only">[[modules:chat.pop-out]]</span></button>
-		
+
 		<div class="dropdown pull-right">
 			<button class="close" data-toggle="dropdown" component="chat/controlsToggle"><i class="fa fa-gear"></i></button>
 			<ul class="dropdown-menu dropdown-menu-right pull-right" component="chat/controls">

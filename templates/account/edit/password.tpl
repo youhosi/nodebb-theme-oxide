@@ -24,7 +24,7 @@
 			<input class="form-control" type="password" id="inputNewPasswordAgain" placeholder="[[user:confirm_password]]" value="">
 			<span class="form-feedback" id="password-confirm-notify"></span>
 		</div>
-		
+
 		<div class="form-actions">
 			<a id="changePasswordBtn" href="#" class="btn btn-primary btn-block"><i class="hide fa fa-spinner fa-spin"></i> [[user:change_password]]</a>
 		</div>

@@ -1,6 +1,5 @@
 
 <div class="notifications">
-
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<div class="btn-toolbar">
@@ -60,5 +59,3 @@
 	</ul>
 	<!-- IMPORT partials/paginator.tpl -->
 </div>
-
-

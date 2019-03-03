@@ -29,7 +29,7 @@
 		<a href="{url}" class="block">
 			<div class="alert alert-warning hide" id="new-topics-alert"></div>
 		</a>
-		
+
 		<hr class="hidden-xs"/>
 
 		<h6 class="hidden-xs categories-title">{name}</h6>

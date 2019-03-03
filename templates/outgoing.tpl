@@ -1,5 +1,4 @@
 <div class="outgoing">
-
 	<!-- IMPORT partials/breadcrumbs.tpl -->
 
 	<div class="well">

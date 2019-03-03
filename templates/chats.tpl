@@ -4,7 +4,7 @@
 			<label class="search-forum">
 				<input autocomplete="off" class="form-control search-forum" type="text" component="chat/search" placeholder="[[users:enter_username]]" data-toggle="dropdown" />
 			</label>
-			
+
 			<ul component="chat/search/list" class="dropdown-menu"></ul>
 		</div>
 		<ul component="chat/recent" class="chats-list" data-nextstart="{nextStart}">

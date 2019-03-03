@@ -20,7 +20,7 @@
 					<strong>
 						<a class="topic-title" href="{config.relative_path}/post/{posts.pid}"><!-- IF !posts.isMainPost --><!-- ENDIF !posts.isMainPost -->{posts.topic.title}</a>
 					</strong>
-					
+
 					<span class="permalink timeago" title="{posts.timestampISO}"></span>
 				</div>
 

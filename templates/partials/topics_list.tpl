@@ -19,7 +19,7 @@
 				<i class="fa fa-check"></i>
 			</div>
 			<!-- ENDIF showSelect -->
-		
+
 			<!-- IF !showSelect -->
 			<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->"
 			 class="pull-left">
@@ -62,8 +62,8 @@
 								<i style="color:{topics.category.bgColor};" class="fa fa-circle fa-stack-2x"></i>
 								<i style="color:{topics.category.color};" class="fa {topics.category.icon} fa-stack-1x"></i>
 							</span> {topics.category.name}
-						</a> 
-						
+						</a>
+
 						&bull;
 					</small>
 					<!-- ENDIF !template.category -->
@@ -84,7 +84,7 @@
 						<i class="fa fa-comment mobileItem"></i>
 						<span class="human-readable-number mobileItem">{topics.postcount}</span>
 					</a>
-					
+
 				</div>
 
 				<div class="col-md-2 hidden-sm hidden-xs stats contentItem">
@@ -131,13 +131,13 @@
 						<!-- ENDIF topics.teaser.user.picture -->
 					</a>
 				</div>
-				
+
 				<div class="info">
 					<!-- IF topics.teaser.pid -->
 					<div class="by-user">
 						<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">{topics.teaser.user.username}</a>
 					</div>
-				
+
 					<div class="time">
 						<a class="permalink" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
 							<small class="timeago" title="{topics.teaser.timestampISO}"></small>

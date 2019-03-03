@@ -50,7 +50,7 @@
 	</div>
 
 	<div component="post/content">{posts.content}</div>
-	
+
 	<!-- IF posts.user.signature -->
 	<div component="post/signature" data-uid="{posts.user.uid}" class="post-signature">{posts.user.signature}</div>
 	<!-- ENDIF posts.user.signature -->

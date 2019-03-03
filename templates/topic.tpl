@@ -73,7 +73,7 @@
 					<meta itemprop="dateModified" content="{posts.editedISO}">
 
 					<!-- IMPORT partials/topic/post.tpl -->
-	
+
 					<!-- IF !posts.index -->
 					<ul class="tags">
 						<!-- BEGIN tags -->
