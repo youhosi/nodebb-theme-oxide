@@ -50,12 +50,18 @@
 			</div>
 			<div class="col-sm-6">
 				<div class="panel panel-default">
-					<div class="panel-heading">[[oxide:bagde-title]]</div>
+					<div class="panel-heading">[[user:profile]]</div>
 					<div class="panel-body">
 						<div class="checkbox">
 							<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
 								<input class="mdl-switch__input" type="checkbox" id="enableShowUserAllGroupsInProfile" name="enableShowUserAllGroupsInProfile">
 								<span class="mdl-switch__label"><strong>[[oxide:enable-show-user-all-groups-in-profile]]</strong></span>
+							</label>
+						</div>
+						<div class="checkbox">
+							<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
+								<input class="mdl-switch__input" type="checkbox" id="enableShowIpInUserProfile" name="enableShowIpInUserProfile">
+								<span class="mdl-switch__label"><strong>[[oxide:account-ips]]</strong></span>
 							</label>
 						</div>
 					</div>

@@ -16,5 +16,6 @@
     "enable-show-user-all-groups-in-profile": "Alle Benutzergruppen in der Profilansicht anzeigen",
     "rediect": "Externer Link",
     "show-more": "Zeig mehr",
-    "topic-created": "Thema erstellt"
+    "topic-created": "Thema erstellt",
+    "account-ips": "Zeigen Sie die IP-Liebe des Benutzers im Profil an"
 }

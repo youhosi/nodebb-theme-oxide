@@ -96,6 +96,7 @@ library.getThemeConfig = function(config, callback) {
 		config.enableShowTid = settings.enableShowTid === 'on';
 		config.enableCategoryIcon = settings.enableCategoryIcon === 'on';
 		config.enableShowUserAllGroupsInProfile = settings.enableShowUserAllGroupsInProfile === 'on';
+		config.enableShowIpInUserProfile = settings.enableShowIpInUserProfile === 'on';
 	});
 
 	callback(false, config);

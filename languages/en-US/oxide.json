@@ -16,5 +16,6 @@
     "enable-show-user-all-groups-in-profile": "Show all user groups in profile view",
     "rediect": "External link",
     "show-more": "Show more",
-    "topic-created": "Topic created"
+    "topic-created": "Topic created",
+    "account-ips": "Show the user IPs in the profile"
 }

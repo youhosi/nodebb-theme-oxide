@@ -79,7 +79,8 @@
 
 <div class="row">
 	<div class="col-md-4">
-		<!-- IF isSelfOrAdminOrGlobalModerator -->
+		<!-- IF enableShowIpInUserProfile -->
+		<!-- IF isAdminOrGlobalModerator -->
 		<!-- IF ips.length -->
 		<div class="profile-card">
 			<h2 class="card-title">
@@ -93,7 +94,8 @@
 			<!-- END ips -->
 		</div>
 		<!-- ENDIF ips.length -->
-		<!-- ENDIF isSelfOrAdminOrGlobalModerator -->
+		<!-- ENDIF isAdminOrGlobalModerator -->
+		<!-- ENDIF enableShowIpInUserProfile -->
 
 		<div class="profile-card">
 			<h2 class="card-title">
