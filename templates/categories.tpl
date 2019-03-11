@@ -6,10 +6,13 @@
 </div>
 <div class="row">
 	<div class="<!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
-		<h6 class="categories-title">[[pages:categories]]</h6>
 		<ul class="categories" itemscope itemtype="http://www.schema.org/ItemList">
 			<!-- BEGIN categories -->
-			<!-- IMPORT partials/categories/item.tpl -->
+				<!-- IF ../isSection -->
+					<!-- IMPORT partials/categories/section.tpl -->
+				<!-- ELSE -->
+					<!-- IMPORT partials/categories/item.tpl -->
+				<!-- ENDIF ../isSection -->
 			<!-- END categories -->
 		</ul>
 	</div>
