@@ -1,4 +1,4 @@
-<div class="profile-card">
+<div class="profile-card" data-uid="{uid}">
 	<div class="cover" component="account/cover" style="background-image: url({cover:url}); background-position: {cover:position};">
 		<!-- IF allowCoverPicture -->
 		<!-- IF canEdit -->
@@ -28,7 +28,7 @@
 	</div>
 
 	<div class="card-info">
-		<div class="avatar-wrapper" data-uid="{uid}">
+		<div class="avatar-wrapper">
 			<!-- IF picture -->
 				<img src="{picture}" class="avatar avatar-xl avatar-rounded"/>
 			<!-- ELSE -->
@@ -41,7 +41,7 @@
 				<i component="user/status" class="fa fa-circle status {status}" title="[[global:{status}]]"></i>
 				<!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname -->
 				<!-- IF !banned --><i>(@{username})</i><!-- ELSE --><i>([[user:banned]])</i><!-- ENDIF !banned -->
-			</h1>
+			</h2>
 		</div>
 
 		<div class="account-stats">
