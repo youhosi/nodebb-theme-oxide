@@ -1,6 +1,5 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 
-
 <div class="alert alert-info">
 	[[reset_password:enter_email]]
 </div>
