@@ -58,7 +58,7 @@
 		</div>
 	</div>
 
-	<br />
+	<hr class="hidden-xs"/>
 
 	<div class="category">
 		<!-- IF !topics.length -->
