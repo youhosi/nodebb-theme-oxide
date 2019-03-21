@@ -56,7 +56,7 @@
 						</a>
 						<ul class="dropdown-menu" aria-labelledby="chat_dropdown">
 							<li>
-								<ul component="chat/list" class="chat-list chats-list">
+								<ul component="chat/list" class="chats-list">
 									<li class="loading-text">
 										<a href="#"><i class="fa fa-refresh fa-spin"></i> [[global:chats.loading]]</a>
 									</li>
