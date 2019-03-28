@@ -1,4 +1,3 @@
-
 <div id="chat-modal" class="chat-modal hide" tabindex="-1" role="dialog" aria-labelledby="Chat" aria-hidden="true" data-backdrop="none">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -45,9 +44,9 @@
 				</ul>
 
 				<div component="chat/composer">
-					<textarea component="chat/input" placeholder="[[modules:chat.placeholder]]" class="form-control chat-input mousetrap" rows="3"></textarea>
-					<button class="btn btn-primary" type="button" data-action="send"><i class="fa fa-fw fa-2x fa-paper-plane"></i></button>
-					<span component="chat/message/remaining">{maximumChatMessageLength}</span>
+					<textarea component="chat/input" placeholder="[[modules:chat.placeholder]]" class="form-control chat-input mousetrap"></textarea>
+					<button class="btn" type="button" data-action="send"><i class="fa fa-arrow-up"></i></button>
+					<span component="chat/message/remaining" class="hidden">{maximumChatMessageLength}</span>
 				</div>
 			</div>
 		</div>

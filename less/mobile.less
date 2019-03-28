@@ -64,7 +64,7 @@
 
 	.slideout-menu {
 		z-index: 10000 !important;
-		background-color: #1D1F20;
+		background-color: @gray-darker;
 
 		a, button {
 			color: #fff;
@@ -79,30 +79,36 @@
 			max-height: 100%;
 
 			li {
+				height: 60px;
 				width: auto;
+				padding: 10px 10px 10px 60px;
 				border: none;
 				color: #fff;
 				position: relative;
-				height: 60px;
-
-				&:hover {
-					background: none;
-				}
+				background: rgba(255,255,255, .05);
 
 				&:not(:last-child) {
-					border-bottom: none;
+					border-bottom: 1px solid rgba(255,255,255, .1);
 				}
 
 				.main-avatar {
-					position: absolute;
-					top: 0;
-					left: 0;
+					position: relative;
+					float: left;
+					margin-left: -50px;
+					margin-top: -20px;
+
+					a {
+						padding: 0 !important;
+					}
 
 					.avatar {
-						height: 40px;
-						width: 40px;
-						font-size: 20px;
-						.border-radius(0);
+						.user-icon-style(40px, 20px, 50%);
+					}
+
+					.status {
+						position: absolute;
+						top: 0;
+						right: 0;
 					}
 				}
 
@@ -113,13 +119,11 @@
 				.room-name {
 					display: block;
 					.text-ellipsis;
-					padding-left: 60px;
 				}
 
 				.teaser-content {
-					padding-left: 60px;
 					display: block;
-					font-size: 13px;
+					font-size: @font-size-small;
 					.opacity(.8);
 					.text-ellipsis;
 				}
@@ -127,25 +131,35 @@
 		}
 
 		.menu-section {
-			.chat-list, .notification-list-mobile {
+			.chat-list,
+			.notification-list-mobile {
 				.user-link {
 					display: inline;
 				}
+
 				.unread {
-					background-color: inherit;
+					.room-name,
+					.teaser-content {
+						padding-right: 45px;
+						font-weight: bold;
+					}
 				}
 			}
+
 			.chat-list .unread .room-name::after,
 			.notification-list-mobile .unread a::after {
 				content: "new";
 				text-transform: uppercase;
 				color: #fff;
-				margin-left: 5px;
 				font-size: 10px;
+				font-weight: 400;
 				background: @brand-danger;
-				border: 1px solid @brand-danger;
 				padding: 2px 3px;
-				.border-radius(5px);
+				.border-radius(@border-radius-base);
+				top: 50%;
+				right: 20px;
+				.transform(translateY(-50%));
+				position: absolute;
 			}
 		}
 
@@ -200,7 +214,6 @@
 	}
 
 	.menu-profile {
-		background: #101010;
 		position: relative;
 		height: 100px;
 		width: 100%;
