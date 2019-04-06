@@ -88,8 +88,10 @@ library.defineWidgetAreas = function(areas, callback) {
 };
 
 library.getThemeConfig = function(config, callback) {
-
 	meta.settings.get('oxide', function(err, settings) {
+		if (err) {
+			return callback(err);
+		}
 		config.hideSubCategories = settings.hideSubCategories === 'on';
 		config.hideCategoryLastPost = settings.hideCategoryLastPost === 'on';
 		config.enableQuickReply = settings.enableQuickReply === 'on';
@@ -97,9 +99,8 @@ library.getThemeConfig = function(config, callback) {
 		config.enableCategoryIcon = settings.enableCategoryIcon === 'on';
 		config.enableShowUserAllGroupsInProfile = settings.enableShowUserAllGroupsInProfile === 'on';
 		config.enableShowIpInUserProfile = settings.enableShowIpInUserProfile === 'on';
-	});
-
-	callback(false, config);
+		callback(null, config);
+	});	
 };
 
 function renderAdmin(req, res, next) {
