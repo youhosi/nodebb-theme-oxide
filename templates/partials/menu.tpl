@@ -87,6 +87,11 @@
 									[[user:profile]] <strong>{user.username}</strong>
 								</a>
 							</li>
+							<li>
+								<a component="header/profilelink/edit" href="{relative_path}/user/{user.userslug}/edit">
+									<i class="fa fa-fw fa-edit"></i> <span>[[user:edit-profile]]</span>
+								</a>
+							</li>
 							<li role="presentation" class="divider"></li>
 							<li>
 								<a href="#" class="user-status" data-status="online">
@@ -110,8 +115,8 @@
 							</li>
 							<li role="presentation" class="divider"></li>
 							<li>
-								<a component="header/profilelink/edit" href="{relative_path}/user/{user.userslug}/edit">
-									<i class="fa fa-fw fa-edit"></i> <span>[[user:edit-profile]]</span>
+								<a href="#" id="toggle-theme">
+									<i class="fa fa-fw fa-sun-o"></i> <span>[[oxide:toggle-theme-text]]</span>
 								</a>
 							</li>
 							<li>
