@@ -17,5 +17,6 @@
     "rediect": "External link",
     "show-more": "Show more",
     "topic-created": "Topic created",
-    "account-ips": "Show the user IPs in the profile"
+    "account-ips": "Show the user IPs in the profile",
+    "toggle-theme-text": "Dark theme"
 }
