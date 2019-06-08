@@ -100,7 +100,7 @@ library.getThemeConfig = function(config, callback) {
 		config.enableShowUserAllGroupsInProfile = settings.enableShowUserAllGroupsInProfile === 'on';
 		config.enableShowIpInUserProfile = settings.enableShowIpInUserProfile === 'on';
 		callback(null, config);
-	});	
+	});
 };
 
 function renderAdmin(req, res, next) {
