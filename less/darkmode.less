@@ -34,7 +34,8 @@ html[dark="true"] {
     .btn-group-vertical .btn,
     .list-group .list-group-item,
     .nav-tabs .active a,
-    .nav-tabs li a:hover {
+	.nav-tabs li a:hover,
+	.pagination > li > a {
         background: @bg-primary-dark;
         border-color: @border-primry-dark;
         color: @color-secondary-dark;
@@ -180,7 +181,7 @@ html[dark="true"] {
 
         &::before,
         [component="post/replies"]::before {
-            background: @border-primry-dark;
+            background: @border-primry-dark !important;
         }
 
         .postFlagged,
@@ -234,15 +235,12 @@ html[dark="true"] {
                 }
             }
         }
-    }
+	}
 
-    [component="post/content"],
-    .composer .preview {
-        code, kbd, pre, samp {
-            background: @border-primry-dark !important;
-            color: @color-primary-dark !important;
-        }
-    }
+	code, kbd, pre, samp {
+		background: @border-primry-dark !important;
+		color: @color-primary-dark !important;
+	}
 
     .plugin-mentions-user,
     .account-fab button {
@@ -265,7 +263,7 @@ html[dark="true"] {
         .quick-search-item {
             border-color: @border-primry-dark !important;
 
-            &:hover {
+            a:hover {
                 background: @border-primry-dark !important;
             }
 
