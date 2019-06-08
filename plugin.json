@@ -11,11 +11,11 @@
 		{ "hook": "filter:meta.getLinkTags", "method": "getLinkTags"}
 	],
 	"scripts": [
-		"lib/oxide.js",
 		"lib/modules/toggleTheme.js",
 		"lib/modules/nprogress.js",
 		"lib/modules/autohidingnavbar.min.js",
-		"lib/modules/quickreply.js"
+		"lib/modules/quickreply.js",
+		"lib/oxide.js"
 	],
 	"modules": {
 		"pulling.js": "node_modules/pulling/build/pulling-drawer.js"
