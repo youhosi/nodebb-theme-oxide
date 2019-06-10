@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="{function.localeToHTML, userLang, defaultLang}" <!-- IF languageDirection -->data-dir="{languageDirection}" style="direction: {languageDirection};" <!-- ENDIF languageDirection --> >
+<html lang="{function.localeToHTML, userLang, defaultLang}" <!-- IF languageDirection -->data-dir="{languageDirection}" style="direction: {languageDirection};"<!-- ENDIF languageDirection -->>
 <head>
 	<title>{browserTitle}</title>
+
 	<!-- BEGIN metaTags -->{function.buildMetaTag}<!-- END metaTags -->
-	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/client<!-- IF bootswatchSkin -->-{bootswatchSkin}<!-- END -->.css?{config.cache-buster}" />
 	<!-- BEGIN linkTags -->{function.buildLinkTag}<!-- END linkTags -->
+
+	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/client<!-- IF bootswatchSkin -->-{bootswatchSkin}<!-- END -->.css?{config.cache-buster}" />
 
 	<script>
 		var RELATIVE_PATH = "{relative_path}";
@@ -15,12 +17,8 @@
 		};
 	</script>
 
-	<!-- IF useCustomHTML -->
-	{{customHTML}}
-	<!-- END -->
-	<!-- IF useCustomCSS -->
-	<style>{{customCSS}}</style>
-	<!-- END -->
+	<!-- IF useCustomHTML -->{{customHTML}}<!-- END -->
+	<!-- IF useCustomCSS --><style>{{customCSS}}</style><!-- END -->
 </head>
 
 <body class="{bodyClass} skin-<!-- IF bootswatchSkin -->{bootswatchSkin}<!-- ELSE -->noskin<!-- END -->">
