@@ -3,7 +3,7 @@
 <div class="account">
 	<!-- IMPORT partials/account/header.tpl -->
 
-			<div class="row">
+			<div class="uploads">
 				<h1 class="section-title">{title}</h1>
 
 				<!-- IF privateUploads -->

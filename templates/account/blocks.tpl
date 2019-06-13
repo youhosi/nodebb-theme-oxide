@@ -5,7 +5,7 @@
 
 			<h1 class="section-title">[[pages:account/blocks, {username}]]</h1>
 
-			<div class="users row">
+			<div class="users">
 				<div class="col-sm-8 col-xs-12">
 					<ul id="users-container" class="users-container" data-nextstart="{nextStart}">
 						<!-- IMPORT partials/users_list.tpl -->
