@@ -373,4 +373,14 @@ html[dark="true"] {
 		background: @bg-primary-dark;
 		color: @color-secondary-dark;
 	}
+
+	tbody > tr {
+		&:not(:hover):nth-of-type(odd) {
+			background: @bg-primary-dark;
+		}
+
+		&:hover {
+			background: @border-primry-dark;
+		}
+	}
 }
