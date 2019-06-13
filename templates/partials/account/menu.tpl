@@ -10,23 +10,15 @@
 		<li class="<!-- IF !hasPrivateChat -->hidden<!-- ENDIF !hasPrivateChat -->">
 			<a component="account/chat" href="#">[[user:chat_with, {username}]]</a>
 		</li>
-		<li>
-			<a component="account/new-chat" href="#">[[user:new_chat_with, {username}]]</a>
-		</li>
+		<li><a component="account/new-chat" href="#">[[user:new_chat_with, {username}]]</a></li>
 		<!-- ENDIF !config.disableChat -->
-		<li>
-			<a component="account/flag" href="#">[[user:flag-profile]]</a>
-		</li>
-		<li>
-			<a component="account/block" href="#"><!-- IF !../isBlocked -->[[user:block_user]]<!-- ELSE -->[[user:unblock_user]]<!-- END --></a>
-		</li>
+		<li><a component="account/flag" href="#">[[user:flag-profile]]</a></li>
+		<li><a component="account/block" href="#"><!-- IF !../isBlocked -->[[user:block_user]]<!-- ELSE -->[[user:unblock_user]]<!-- END --></a></li>
 		<li class="divider"></li>
 		<!-- ENDIF !banned -->
 		<!-- ENDIF !isSelf -->
 		<!-- ENDIF loggedIn -->
-		<li>
-			<a href="{config.relative_path}/user/{userslug}" class="inline-block" id="profile">[[user:profile]]</a>
-		</li>
+		<li><a href="{config.relative_path}/user/{userslug}" class="inline-block" id="profile">[[user:profile]]</a></li>
 		<!-- IF showHidden -->
 		<li><a href="{config.relative_path}/user/{userslug}/edit">[[user:edit]]</a></li>
 		<li><a href="{config.relative_path}/user/{userslug}/settings">[[user:settings]]</a></li>
@@ -42,9 +34,7 @@
 		</li>
 		<!-- ENDIF canBan -->
 		<!-- IF isAdmin -->
-		<li>
-			<a component="account/delete" href="#" class="">[[user:delete_account]]</a>
-		</li>
+		<li><a component="account/delete" href="#" class="">[[user:delete_account]]</a></li>
 		<!-- ENDIF isAdmin -->
 		<!-- ENDIF !isSelf -->
 
