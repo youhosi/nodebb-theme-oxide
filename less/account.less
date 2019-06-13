@@ -41,8 +41,8 @@
 			.save, .indicator {
 				display: inline-block;
 				position: absolute;
-				top: 15px;
-				right: 15px;
+				top: 20px;
+				right: 20px;
 				opacity: 1;
 				background-color: @brand-primary;
 				color: @gray-lighter;
@@ -73,6 +73,10 @@
 				.save {
 					display: inline-block;
 				}
+
+				.btn-morph {
+					display: none;
+				}
 			}
 
 			&.saving {
@@ -92,8 +96,8 @@
 			}
 
 			.btn-morph {
-				top: 15px;
-				right: 15px;
+				top: 20px;
+				right: 20px;
 				position: absolute;
 			}
 		}
@@ -105,8 +109,8 @@
 			.avatar-wrapper {
 				.avatar {
 					position: absolute;
-					left: 25px;
-					top: -60px;
+					left: 20px;
+					top: -70px;
 					height: 120px;
 					width: 120px;
 					font-size: 5rem;
@@ -167,6 +171,10 @@
 
 					.human-readable-number {
 						font-weight: bold;
+					}
+
+					&:last-child {
+						border-right: 0;
 					}
 				}
 			}
@@ -234,7 +242,7 @@
 		.card-title {
 			font-size: @font-size-base;
 			text-transform: uppercase;
-			font-weight: 300;
+			font-weight: 400;
 			padding: 15px;
 			margin: 0;
 			background: @post-author-background;
@@ -244,10 +252,10 @@
 
 		.data-item {
 			display: table;
-			padding: 7px 5px;
-			margin: 5px;
-			width: ~"calc(100% - 10px)";
-			border-bottom: 1px solid rgba(0,0,0, .05);
+			padding: 10px 0;
+			margin: 5px 15px;
+			width: ~"calc(100% - 30px)";
+			border-bottom: 1px solid @gray-lighter;
 
 			&:last-child {
 				border-bottom: 0 !important;
@@ -266,15 +274,25 @@
 			[component="aboutme"] {
 				word-break: break-all;
 			}
+
+			&[component="aboutme"] p {
+				margin: 0;
+			}
 		}
 
 		.user-group {
-			a { text-decoration: none !important; }
+			a {
+				text-decoration: none !important;
+
+				.group-label:last-child {
+					margin-bottom: 0;
+				}
+			}
 
 			.group-label {
 				display: block;
 				padding: 10px 0;
-				margin: 5px;
+				margin: 15px;
 				.border-radius(@border-radius-base);
 				font-size: @font-size-base;
 				font-weight: 300;
