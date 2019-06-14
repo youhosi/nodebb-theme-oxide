@@ -8,11 +8,11 @@ assignees: ''
 ---
 
 **Smartphone / Desktop:** (please complete the following information)
-- **NodeBB version: ** 
-- **NodeBB git hash: ** (git rev-parse HEAD)
+- **NodeBB version:** 
+- **NodeBB git hash:** (git rev-parse HEAD)
  - **Device:**
- - **OS: **
- - **Browser: **
+ - **OS:**
+ - **Browser:**
 
 ---
 
