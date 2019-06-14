@@ -148,25 +148,28 @@
 						</div>
 						<div class="panel-body">
 							<textarea component="account/moderation-note" class="form-control"></textarea>
-							<br/>
-							<button class="btn btn-sm pull-right btn-success" component="account/save-moderation-note">[[user:info.moderation-note.add]]</button>
-							<br/>
+							<div class="Table Table-fixed Notes-table">
+								<div class="Table-item count-notes">{moderationNotes.length}</div>
+								<div class="Table-item button-notes">
+									<button class="btn btn-sm btn-success" component="account/save-moderation-note">[[user:info.moderation-note.add]]</button>
+								</div>
+							</div>
+						</div>
+						<div class="panel-footer">
 							<div component="account/moderation-note/list">
 								<!-- BEGIN moderationNotes -->
-								<hr/>
-
-								<div class="clearfix">
-									<div class="icon pull-left">
+								<div class="Note-item Table clearfix">
+									<div class="icon Table-item">
 										<a href="<!-- IF moderationNotes.user.userslug -->{config.relative_path}/user/{moderationNotes.user.userslug}<!-- ELSE -->#<!-- ENDIF moderationNotes.user.userslug -->">
 											<!-- IF moderationNotes.user.picture -->
-											<img class="avatar avatar-sm" component="user/picture" data-uid="{moderationNotes.user.uid}" src="{moderationNotes.user.picture}" align="left" itemprop="image" />
+											<img class="avatar avatar-sm avatar-rounded" component="user/picture" data-uid="{moderationNotes.user.uid}" src="{moderationNotes.user.picture}" align="left" itemprop="image" />
 											<!-- ELSE -->
-											<div class="avatar avatar-sm" component="user/picture" data-uid="{moderationNotes.user.uid}" style="background-color: {moderationNotes.user.icon:bgColor};">{moderationNotes.user.icon:text}</div>
+											<div class="avatar avatar-sm rounded" component="user/picture" data-uid="{moderationNotes.user.uid}" style="background-color: {moderationNotes.user.icon:bgColor};">{moderationNotes.user.icon:text}</div>
 											<!-- ENDIF moderationNotes.user.picture -->
 										</a>
 									</div>
 
-									<div class="pull-left">
+									<div class="meta Table-item">
 										<strong>
 											<a href="<!-- IF moderationNotes.user.userslug -->{config.relative_path}/user/{moderationNotes.user.userslug}<!-- ELSE -->#<!-- ENDIF moderationNotes.user.userslug -->" itemprop="author" data-username="{moderationNotes.user.username}" data-uid="{moderationNotes.user.uid}">{moderationNotes.user.username}</a>
 										</strong>
@@ -174,7 +177,6 @@
 										<div class="visible-xs-inline-block visible-sm-inline-block visible-md-inline-block visible-lg-inline-block">
 											<span class="timeago" title="{moderationNotes.timestampISO}"></span>
 										</div>
-										<br />
 
 										<div class="content">
 											{moderationNotes.note}

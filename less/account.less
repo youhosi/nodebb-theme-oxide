@@ -372,6 +372,49 @@
 			text-align: right;
 		}
 	}
+
+	[component="account/moderation-note"] {
+		margin-bottom: 15px;
+	}
+
+	.Notes-table {
+		width: 100%;
+		table-layout: fixed;
+
+		.count-notes {
+			width: 40px;
+		}
+
+		.button-notes {
+			text-align: right;
+		}
+	}
+
+	.Note-item {
+		border-bottom: 1px solid @gray-lighter;
+		width: 100%;
+		table-layout: fixed;
+		padding: 5px;
+
+		.icon {
+			width: 24px;
+			margin-right: 15px
+		}
+
+		.meta {
+			padding-left: 10px;
+			width: 100%;
+
+			.content {
+				display: block;
+				white-space: initial;
+			}
+		}
+
+		&:last-child {
+			border: 0;
+		}
+	}
 }
 
 .account-picture-block {
