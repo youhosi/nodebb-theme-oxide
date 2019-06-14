@@ -163,6 +163,16 @@
 					.opacity(0);
 				}
 			}
+
+			@media (max-width: @screen-sm-max) {
+				height: 45px;
+				border: 1px solid @gray-lighter;
+				padding: 0 10px;
+				background: @post-author-background;
+				.border-radius(@border-radius-base 0 0 0);
+				border-right: 0;
+				margin: 0 !important;
+			}
 		}
 
 		.content {
@@ -209,6 +219,11 @@
 				padding: 0 15px;
 				background: @post-author-background;
 				border-radius: @border-radius-base @border-radius-base 0 0;
+
+				@media (max-width: @screen-sm-max) {
+					overflow: hidden !important;
+					padding: 0 15px 15px 0;
+				}
 
 				.group-label {
 					text-transform: capitalize;
