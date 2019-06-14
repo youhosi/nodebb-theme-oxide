@@ -20,7 +20,7 @@ Theme itself is not fully done yet, there might still be some places where CSS s
 4. Push to the branch: git push origin my-new-feature
 5. Create PR!
 
-### 🧐 ScreenShots
+### 🧐 Screenshots
 ---
 
 [Demo](https://umod.pl)
