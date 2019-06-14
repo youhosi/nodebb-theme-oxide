@@ -6,42 +6,35 @@
 			<div class="uploads">
 				<h1 class="section-title">{title}</h1>
 
-				<!-- IF privateUploads -->
-				<div class="alert alert-info text-center">[[uploads:private-uploads-info]]</div>
-				<!-- ELSE -->
-				<div class="alert alert-info text-center">[[uploads:public-uploads-info]]</div>
-				<!-- ENDIF privateUploads -->
-
 				<!-- IF !uploads.length -->
-					<div class="alert alert-warning text-center">[[uploads:no-uploads-found]]</div>
-				<!-- ENDIF !uploads.length -->
+				<div class="alert alert-warning text-center">[[uploads:no-uploads-found]]</div>
+				<!-- ELSE -->
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<!-- IF privateUploads -->
+						<div class="alert alert-info text-center private">[[uploads:private-uploads-info]]</div>
+						<!-- ELSE -->
+						<div class="alert alert-info text-center public">[[uploads:public-uploads-info]]</div>
+						<!-- ENDIF privateUploads -->
+					</div>
 
-				<div class="col-xs-12">
-					<table class="table table-striped">
-						<thead>
-							<tr>
-								<th></th>
-								<th></th>
-							</tr>
-						</thead>
-						<tbody>
-							<!-- BEGIN uploads -->
-							<tr data-name="{uploads.name}">
-								<td>
-									<a href="{config.relative_path}{uploads.url}">{uploads.url}</a>
-								</td>
-								<td>
-									<div class="btn-group ">
-										<button class="btn btn-danger btn-xs" data-action="delete"><i class="fa fa-trash"></i></button>
-									</div>
-								</td>
-							</tr>
-							<!-- END uploads -->
-						</tbody>
-					</table>
+					<ul class="list-group">
+						<!-- BEGIN uploads -->
+						<li class="list-group-item Table" data-name="{uploads.name}">
+							<div class="source-link Table-item">
+								<a class="" href="{config.relative_path}{uploads.url}">{uploads.url}</a>
+							</div>
+
+							<div class="delete-button Table-item">
+								<button class="btn btn-danger btn-xs" data-action="delete"><i class="fa fa-trash"></i></button>
+							</div>
+						</li>
+						<!-- END uploads -->
+					</ul>
 
 					<!-- IMPORT partials/paginator.tpl -->
 				</div>
+				<!-- ENDIF !uploads.length -->
 			</div>
 		</div>
 	</div>
