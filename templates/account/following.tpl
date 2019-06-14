@@ -3,7 +3,7 @@
 <div class="account">
 	<!-- IMPORT partials/account/header.tpl -->
 
-			<div class="users row">
+			<div class="users">
 				<h1 class="section-title">[[pages:{template.name}, {username}]]</h1>
 
 				<ul id="users-container" class="users-container" data-nextstart="{nextStart}">

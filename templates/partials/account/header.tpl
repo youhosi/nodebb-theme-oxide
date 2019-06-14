@@ -99,8 +99,7 @@
 
 		<div class="profile-card">
 			<h2 class="card-title">
-				[[oxide:card-information]]
-				<!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname -->
+				[[oxide:card-information]] <!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname -->
 			</h2>
 
 			<!-- IF config.enableShowUserAllGroupsInProfile -->
@@ -169,8 +168,8 @@
 				[[oxide:aboutme]]
 			</h2>
 
-			<div class="data-item">
-				<span component="aboutme">{aboutme}</span>
+			<div class="data-item" component="aboutme">
+				{aboutme}
 			</div>
 		</div>
 		<!-- ENDIF aboutme -->

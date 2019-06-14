@@ -5,7 +5,7 @@
 
 			<h1 class="section-title">{title}</h1>
 
-			<div class="category">
+			<div class="category account-topics">
 				<!-- IF !topics.length -->
 				<div class="alert alert-warning">{noItemsFoundKey}</div>
 				<!-- ENDIF !topics.length -->

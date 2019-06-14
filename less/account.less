@@ -41,8 +41,8 @@
 			.save, .indicator {
 				display: inline-block;
 				position: absolute;
-				top: 15px;
-				right: 15px;
+				top: 20px;
+				right: 20px;
 				opacity: 1;
 				background-color: @brand-primary;
 				color: @gray-lighter;
@@ -73,6 +73,10 @@
 				.save {
 					display: inline-block;
 				}
+
+				.btn-morph {
+					display: none;
+				}
 			}
 
 			&.saving {
@@ -92,8 +96,8 @@
 			}
 
 			.btn-morph {
-				top: 15px;
-				right: 15px;
+				top: 20px;
+				right: 20px;
 				position: absolute;
 			}
 		}
@@ -105,8 +109,8 @@
 			.avatar-wrapper {
 				.avatar {
 					position: absolute;
-					left: 25px;
-					top: -60px;
+					left: 20px;
+					top: -70px;
 					height: 120px;
 					width: 120px;
 					font-size: 5rem;
@@ -167,6 +171,10 @@
 
 					.human-readable-number {
 						font-weight: bold;
+					}
+
+					&:last-child {
+						border-right: 0;
 					}
 				}
 			}
@@ -234,7 +242,7 @@
 		.card-title {
 			font-size: @font-size-base;
 			text-transform: uppercase;
-			font-weight: 300;
+			font-weight: 400;
 			padding: 15px;
 			margin: 0;
 			background: @post-author-background;
@@ -244,10 +252,10 @@
 
 		.data-item {
 			display: table;
-			padding: 7px 5px;
-			margin: 5px;
-			width: ~"calc(100% - 10px)";
-			border-bottom: 1px solid rgba(0,0,0, .05);
+			padding: 10px 0;
+			margin: 5px 15px;
+			width: ~"calc(100% - 30px)";
+			border-bottom: 1px solid @gray-lighter;
 
 			&:last-child {
 				border-bottom: 0 !important;
@@ -266,15 +274,25 @@
 			[component="aboutme"] {
 				word-break: break-all;
 			}
+
+			&[component="aboutme"] p {
+				margin: 0;
+			}
 		}
 
 		.user-group {
-			a { text-decoration: none !important; }
+			a {
+				text-decoration: none !important;
+
+				.group-label:last-child {
+					margin-bottom: 0;
+				}
+			}
 
 			.group-label {
 				display: block;
 				padding: 10px 0;
-				margin: 5px;
+				margin: 15px;
 				.border-radius(@border-radius-base);
 				font-size: @font-size-base;
 				font-weight: 300;
@@ -287,37 +305,114 @@
 		margin: 0 0 20px;
 	}
 
+	.show-success,
+	.show-danger {
+		padding-right: 2.25rem;
+		background-repeat: no-repeat;
+		background-position: center right .625rem;
+		.background-size(1.25rem 1.25rem);
+
+		.form-feedback {
+			display: block;
+			margin-top: .25rem;
+		}
+	}
+
 	.show-success {
 		.form-control {
 			border-color: @material-success;
 			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%235cb85c' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3E%3C/svg%3E");
-			padding-right: 2.25rem;
-			background-repeat: no-repeat;
-			background-position: center right .625rem;
-			.background-size(1.25rem 1.25rem);
 		}
 
-		.form-feedback {
-			color: @material-success;
-			display: block;
-			margin-top: .25rem;
-		}
+		.form-feedback { color: @material-success; }
 	}
 
 	.show-danger {
 		.form-control {
 			border-color: @material-danger;
 			background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23d9534f' viewBox='-2 -2 7 7'%3E%3Cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3E%3Ccircle r='.5'/%3E%3Ccircle cx='3' r='.5'/%3E%3Ccircle cy='3' r='.5'/%3E%3Ccircle cx='3' cy='3' r='.5'/%3E%3C/svg%3E");
-			padding-right: 2.25rem;
-			background-repeat: no-repeat;
-			background-position: center right .625rem;
-			.background-size(1.25rem 1.25rem);
 		}
 
-		.form-feedback {
-			color: @material-danger;
+		.form-feedback { color: @material-danger; }
+	}
+
+	.account-topics [component="category/topic"] {
+		.avatar {
+			padding: 0;
+		}
+
+		.teaser .avatar::before {
+			content: unset;
+		}
+
+		.stats small {
+			.text-ellipsis;
 			display: block;
-			margin-top: .25rem;
+			width: 50px;
+		}
+	}
+
+	.uploads {
+		.private,
+		.public {
+			margin-bottom: 0;
+		}
+
+		.list-group-item {
+			width: 100%;
+			table-layout: fixed;
+		}
+
+		.source-link {
+			.text-ellipsis;
+		}
+
+		.delete-button {
+			width: 30px;
+			text-align: right;
+		}
+	}
+
+	[component="account/moderation-note"] {
+		margin-bottom: 15px;
+	}
+
+	.Notes-table {
+		width: 100%;
+		table-layout: fixed;
+
+		.count-notes {
+			width: 40px;
+		}
+
+		.button-notes {
+			text-align: right;
+		}
+	}
+
+	.Note-item {
+		border-bottom: 1px solid @gray-lighter;
+		width: 100%;
+		table-layout: fixed;
+		padding: 5px;
+
+		.icon {
+			width: 24px;
+			margin-right: 15px
+		}
+
+		.meta {
+			padding-left: 10px;
+			width: 100%;
+
+			.content {
+				display: block;
+				white-space: initial;
+			}
+		}
+
+		&:last-child {
+			border: 0;
 		}
 	}
 }
