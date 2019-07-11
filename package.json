@@ -1,7 +1,7 @@
 {
 	"name": "nodebb-theme-oxide",
 	"description": "A theme that is based on the GitHub design.",
-	"version": "5.0.13",
+	"version": "5.0.14",
 	"homepage": "https://github.com/youhosi/nodebb-theme-oxide",
 	"license": "MIT",
 	"main": "theme.less",
