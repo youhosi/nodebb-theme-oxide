@@ -1,8 +1,8 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div widget-area="header">
-	<!-- BEGIN widgets.header -->
-	{{widgets.header.html}}
-	<!-- END widgets.header -->
+	{{{each widgets.header}}}
+		{{widgets.header.html}}
+	{{{end}}}
 </div>
 <div class="unread">
 	<div class="btn-toolbar">
@@ -27,11 +27,11 @@
 					<a id="markAllRead" role="menuitem" tabindex="-1" href="#">[[unread:all]]</a>
 				</li>
 				<li class="divider"></li>
-				<!-- BEGIN categories -->
+				{{{each categories}}}
 				<li role="presentation" class="category" data-cid="{categories.cid}">
 					<a role="menu-item" href="#">{categories.level}<!-- IF categories.icon --><span class="fa-stack"><i style="color: {categories.bgColor};" class="fa fa-circle fa-stack-2x"></i><i class="fa fa-fw fa-stack-1x {categories.icon}" style="color: {categories.color};"></i></span><!-- ENDIF categories.icon --> {categories.name}</a>
 				</li>
-				<!-- END categories -->
+				{{{end}}}
 			</ul>
 		</div>
 
@@ -44,11 +44,11 @@
 				<li role="presentation" class="category">
 					<a role="menu-item" href="{config.relative_path}/{allCategoriesUrl}"><i class="fa fa-fw <!-- IF !selectedCategory -->fa-check<!-- ENDIF !selectedCategory -->"></i> [[unread:all_categories]]</a>
 				</li>
-				<!-- BEGIN categories -->
+				{{{each categories}}}
 				<li role="presentation" class="category" data-cid="{categories.cid}" data-parent-cid="{categories.parentCid}">
 					<a role="menu-item" href="#"><i component="category/select/icon" class="fa fa-fw <!-- IF categories.selected -->fa-check<!-- ENDIF categories.selected -->"></i>{categories.level}<!-- IF categories.icon --><span class="fa-stack"><i style="color: {categories.bgColor};" class="fa fa-circle fa-stack-2x"></i><i class="fa fa-fw fa-stack-1x {categories.icon}" style="color: {categories.color};"></i></span><!-- ENDIF categories.icon --> {categories.name}</a>
 				</li>
-				<!-- END categories -->
+				{{{end}}}
 			</ul>
 		</div>
 
@@ -57,11 +57,11 @@
 			{selectedFilter.name} <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu" role="menu">
-				<!-- BEGIN filters -->
+				{{{each filters}}}
 				<li role="presentation" class="category">
 					<a role="menu-item" href="{config.relative_path}/{filters.url}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i>{filters.name}</a>
 				</li>
-				<!-- END filters -->
+				{{{end}}}
 			</ul>
 		</div>
 	</div>

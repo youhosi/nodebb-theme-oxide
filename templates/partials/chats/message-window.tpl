@@ -3,9 +3,9 @@
 	<div component="chat/header">
 		<div class="chat-header">
 			<!-- IF !roomName -->
-			<!-- BEGIN users -->
+			{{{each users}}}
 			<a href="{config.relative_path}/uid/{../uid}" class="title" title="[[modules:chat.chatting_with]] {../username}">{../username}</a><!-- IF !@last -->,<!-- END -->
-			<!-- END users -->
+			{{{end}}}
 			<!-- ELSE -->
 			<span class="title">{roomName}</span>
 			<!-- ENDIF !roomName -->
@@ -17,7 +17,7 @@
 				<ul class="dropdown-menu dropdown-menu-right pull-right" component="chat/controls">
 					<!-- IF users.length -->
 					<li class="dropdown-header">[[modules:chat.in-room]]</li>
-					<!-- BEGIN users -->
+					{{{each users}}}
 					<li>
 						<a href="{config.relative_path}/uid/{../uid}">
 							<!-- IF ../picture -->
@@ -28,7 +28,7 @@
 							{../username}
 						</a>
 					</li>
-					<!-- END -->
+					{{{end}}}
 					<li role="separator" class="divider"></li>
 					<!-- END -->
 					<li class="dropdown-header">[[modules:chat.options]]</li>

@@ -2,8 +2,8 @@
 	<!-- IF children.length --><h6 class="categories-title">[[category:subcategories]]</h6><!-- ENDIF children.length -->
 
 	<ul class="categories" itemscope itemtype="http://www.schema.org/ItemList">
-		<!-- BEGIN children -->
+		{{{each children}}}
 		<!-- IMPORT partials/categories/item.tpl -->
-		<!-- END children -->
+		{{{end}}}
 	</ul>
 </div>

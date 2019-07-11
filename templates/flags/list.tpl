@@ -36,7 +36,7 @@
 					</td>
 				</tr>
 				<!-- ENDIF !flags.length -->
-				<!-- BEGIN flags -->
+				{{{each flags}}}
 				<tr data-flag-id="{../flagId}">
 					<td><span class="label label-{../labelClass}">[[flags:state-{../state}]]</span></td>
 					<td>
@@ -54,7 +54,7 @@
 					</td>
 					<td><span class="timeago" title="{../datetimeISO}"></span></td>
 				</tr>
-				<!-- END flags -->
+				{{{end}}}
 			</tbody>
 		</table>
 

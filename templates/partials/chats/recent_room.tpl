@@ -4,13 +4,13 @@
 		<div class="avatar no-users"><i class="fa fa-fw fa-user-times"></i></div>
 	</div>
 	<!-- ELSE -->
-	<!-- BEGIN rooms.users -->
+	{{{each rooms.users}}}
 	<!-- IF @first -->
 	<div class="main-avatar">
 		<!-- IMPORT partials/chats/user.tpl -->
 	</div>
 	<!-- ENDIF @first -->
-	<!-- END rooms.users -->
+	{{{end}}}
 	<!-- ENDIF !rooms.lastUser.uid -->
 
 	<span class="teaser-timestamp timeago pull-right" title="{rooms.teaser.timestampISO}"></span>
@@ -24,10 +24,10 @@
 	<span class="teaser-content">{../teaser.content}</span>
 
 	<ul class="members">
-		<!-- BEGIN rooms.users -->
+		{{{each rooms.users}}}
 		<li>
 			<!-- IMPORT partials/chats/user.tpl -->
 		</li>
-		<!-- END rooms.users -->
+		{{{end}}}
 	</ul>
 </li>

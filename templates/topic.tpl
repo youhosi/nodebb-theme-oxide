@@ -1,8 +1,8 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div widget-area="header">
-	<!-- BEGIN widgets.header -->
-	{{widgets.header.html}}
-	<!-- END widgets.header -->
+	{{{each widgets.header}}}
+		{{widgets.header.html}}
+	{{{end}}}
 </div>
 <div class="row">
 	<div class="topic <!-- IF widgets.sidebar.length -->col-lg-9 col-sm-12<!-- ELSE -->col-lg-12<!-- ENDIF widgets.sidebar.length -->">
@@ -28,7 +28,7 @@
 					<!-- IF pinned --><i class="pin-item fa fa-thumb-tack" title="[[topic:pinned]]"></i><!-- ENDIF pinned -->
 					<!-- IF locked --><i class="pin-item fa fa-lock" title="[[topic:locked]]"></i><!-- ENDIF locked -->
 					<!-- IF oldCid --><i class="pin-item fa fa-arrow-circle-right" title="[[topic:moved]]"></i><!-- ENDIF oldCid -->
-					<!-- BEGIN icons -->@value<!-- END icons -->
+					{{{each icons}}}@value{{{end}}}
 				</div>
 
 				<div class="Table-item topic-stats">
@@ -65,7 +65,7 @@
 		</div>
 
 		<ul component="topic" class="posts" data-tid="{tid}" data-cid="{cid}">
-			<!-- BEGIN posts -->
+			{{{each posts}}}
 				<li component="post" class="<!-- IF posts.deleted -->deleted<!-- ENDIF posts.deleted -->" <!-- IMPORT partials/data/topic.tpl -->>
 					<a component="post/anchor" data-index="{posts.index}" id="{posts.index}"></a>
 
@@ -87,7 +87,7 @@
 					<!-- ENDIF !posts.index -->
 
 				</li>
-			<!-- END posts -->
+			{{{end}}}
 		</ul>
 
 		<!-- IF config.enableQuickReply -->
@@ -118,15 +118,15 @@
 		</div>
 	</div>
 	<div widget-area="sidebar" class="col-lg-3 col-sm-12 <!-- IF !widgets.sidebar.length -->hidden<!-- ENDIF !widgets.sidebar.length -->">
-		<!-- BEGIN widgets.sidebar -->
-		{{widgets.sidebar.html}}
-		<!-- END widgets.sidebar -->
+		{{{each widgets.sidebar}}}
+			{{widgets.sidebar.html}}
+		{{{end}}}
 	</div>
 </div>
 <div widget-area="footer">
-	<!-- BEGIN widgets.footer -->
-	{{widgets.footer.html}}
-	<!-- END widgets.footer -->
+	{{{each widgets.sidebar}}}
+		{{widgets.footer.html}}
+	{{{end}}}
 </div>
 
 <!-- IF !config.usePagination -->

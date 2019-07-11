@@ -7,9 +7,9 @@
 				<h1 class="section-title">{title}</h1>
 
 				<ul class="categories" itemscope itemtype="http://www.schema.org/ItemList">
-					<!-- BEGIN categories -->
+					{{{each categories}}}
 					<!-- IMPORT partials/account/category-item.tpl -->
-					<!-- END categories -->
+					{{{end}}}
 				</ul>
 			</div>
 		</div>

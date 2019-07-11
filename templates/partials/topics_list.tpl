@@ -1,6 +1,6 @@
 <ul component="category" itemscope itemtype="http://www.schema.org/ItemList" data-nextstart="{nextStart}" data-set="{set}">
 	<meta itemprop="itemListOrder" content="descending">
-	<!-- BEGIN topics -->
+	{{{each topics}}}
 	<li component="category/topic" class="row clearfix {function.generateTopicClass} category-item" <!-- IMPORT partials/data/category.tpl -->>
 		<meta itemprop="name" content="{function.stripTags, title}">
 
@@ -46,7 +46,7 @@
 					</div>
 
 					<h4 component="topic/header" class="title">
-						<!-- BEGIN icons -->@value<!-- END icons -->
+						{{{each icons}}}@value{{{end}}}
 
 						<!-- IF !topics.noAnchor -->
 						<a href="{config.relative_path}/topic/{topics.slug}<!-- IF topics.bookmark -->/{topics.bookmark}<!-- ENDIF topics.bookmark -->" itemprop="url">{topics.title}</a>
@@ -101,13 +101,13 @@
 			<!-- IF topics.tags.length -->
 			<div class="col-md-12 col-xs-12 box-footer">
 				<ul class="tag-list">
-					<!-- BEGIN tags -->
+					{{{each tags}}}
 					<li>
 						<a href="{config.relative_path}/tags/{topics.tags.value}" class="tag" style="<!-- IF topics.tags.color -->color: {topics.tags.color};<!-- ENDIF topics.tags.color --><!-- IF topics.tags.bgColor -->background-color: {topics.tags.bgColor};<!-- ENDIF topics.tags.bgColor -->">
 							<span class="tag-item">{topics.tags.valueEscaped}</span>
 						</a>
 					</li>
-					<!-- END tags -->
+					{{{end}}}
 				</ul>
 			</div>
 			<!-- ENDIF topics.tags.length -->
@@ -149,5 +149,5 @@
 			</div>
 		</div>
 	</li>
-	<!-- END topics -->
+	{{{end}}}
 </ul>

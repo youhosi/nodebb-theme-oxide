@@ -10,7 +10,7 @@
 					<ul class="dropdown-menu dropdown-menu-right pull-right" component="chat/controls">
 						<!-- IF users.length -->
 						<li class="dropdown-header">[[modules:chat.in-room]]</li>
-						<!-- BEGIN users -->
+						{{{each users}}}
 						<li>
 							<a href="{config.relative_path}/uid/{../uid}">
 								<!-- IF ../picture -->
@@ -19,7 +19,7 @@
 								<div class="avatar avatar-sm" component="user/picture" style="background-color: {../icon:bgColor};">{../icon:text}</div><!-- END -->{../username}
 							</a>
 						</li>
-						<!-- END -->
+						{{{end}}}
 						<li role="separator" class="divider"></li>
 						<!-- END -->
 						<li class="dropdown-header">[[modules:chat.options]]</li>

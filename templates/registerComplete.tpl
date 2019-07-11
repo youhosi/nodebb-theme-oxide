@@ -12,17 +12,17 @@
 				[[register:interstitial.errors-found]]
 			</p>
 			<ul>
-				<!-- BEGIN errors -->
+				{{{each errors}}}
 				<li>@value</li>
-				<!-- END errors -->
+				{{{end}}}
 			</ul>
 		</div>
 		<!-- ENDIF errors.length -->
 	</div>
 </div>
 
-<form role="form" method="post" action="{config.relative_path}/register/complete/?_csrf={config.csrf_token}" enctype="multipart/form-data>
-	<!-- BEGIN sections -->
+<form role="form" method="post" action="{config.relative_path}/register/complete/?_csrf={config.csrf_token}" enctype="multipart/form-data">
+	{{{each sections}}}
 	<div class="row">
 		<div class="col-xs-12 col-sm-8 col-sm-offset-2">
 			<div class="panel panel-default">
@@ -32,7 +32,7 @@
 			</div>
 		</div>
 	</div>
-	<!-- END sections -->
+	{{{end}}}
 
 	<div class="row">
 		<div class="col-xs-12 col-sm-8 col-sm-offset-2">

@@ -19,7 +19,7 @@
 					</div>
 
 					<ul class="list-group">
-						<!-- BEGIN uploads -->
+						{{{each uploads}}}
 						<li class="list-group-item Table" data-name="{uploads.name}">
 							<div class="source-link Table-item">
 								<a class="" href="{config.relative_path}{uploads.url}">{uploads.url}</a>
@@ -29,7 +29,7 @@
 								<button class="btn btn-danger btn-xs" data-action="delete"><i class="fa fa-trash"></i></button>
 							</div>
 						</li>
-						<!-- END uploads -->
+						{{{end}}}
 					</ul>
 
 					<!-- IMPORT partials/paginator.tpl -->

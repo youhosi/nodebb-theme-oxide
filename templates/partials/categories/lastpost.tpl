@@ -1,4 +1,4 @@
-<!-- BEGIN posts -->
+{{{each ./posts}}}
 <!-- IF @first -->
 <!-- IF !config.hideCategoryLastPost -->
 <div component="category/posts">
@@ -30,7 +30,7 @@
 </div>
 <!-- ENDIF !config.hideCategoryLastPost -->
 <!-- ENDIF @first -->
-<!-- END posts -->
+{{{end}}}
 
 <!-- IF !../posts.length -->
 <div component="category/posts">

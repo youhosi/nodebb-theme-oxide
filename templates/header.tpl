@@ -3,8 +3,8 @@
 <head>
 	<title>{browserTitle}</title>
 
-	<!-- BEGIN metaTags -->{function.buildMetaTag}<!-- END metaTags -->
-	<!-- BEGIN linkTags -->{function.buildLinkTag}<!-- END linkTags -->
+	{{{each metaTags}}}{function.buildMetaTag}{{{end}}}
+	{{{each linkTags}}}{function.buildLinkTag}{{{end}}}
 
 	<link rel="stylesheet" type="text/css" href="{relative_path}/assets/client<!-- IF bootswatchSkin -->-{bootswatchSkin}<!-- END -->.css?{config.cache-buster}" />
 

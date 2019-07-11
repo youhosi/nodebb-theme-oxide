@@ -1,8 +1,8 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div widget-area="header">
-	<!-- BEGIN widgets.header -->
-	{{widgets.header.html}}
-	<!-- END widgets.header -->
+	{{{each widgets.header}}}
+		{{widgets.header.html}}
+	{{{end}}}
 </div>
 <div class="groups list">
 	<div class="row">

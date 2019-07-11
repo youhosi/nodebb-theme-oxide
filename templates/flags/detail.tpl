@@ -106,9 +106,9 @@
 						<label for="assignee">[[flags:assignee]]</label>
 						<select class="form-control" id="assignee" name="assignee" disabled>
 							<option value="">[[flags:no-assignee]]</option>
-							<!-- BEGIN assignees -->
+							{{{each assignees}}}
 							<option value="{../uid}">{../username}</option>
-							<!-- END assignees -->
+							{{{end}}}
 						</select>
 					</div>
 					<button type="button" class="btn btn-block btn-primary" data-action="update">[[flags:update]]</button>
@@ -130,7 +130,7 @@
 						<div class="alert alert-success text-center">[[flags:no-notes]]</div>
 						<!-- ELSE -->
 						<div component="flag/notes">
-							<!-- BEGIN notes -->
+							{{{each notes}}}
 							<div class="postFlagged">
 								<div class="post-header">
 									<a href="{config.relative_path}/user/{../user.userslug}">
@@ -149,7 +149,7 @@
 									<div class="postContent">{../content}</div>
 								</div>
 							</div>
-							<!-- END notes -->
+							{{{end}}}
 						</div>
 						<!-- ENDIF !notes.length -->
 					</ul>
@@ -195,7 +195,7 @@
 							<div class="alert alert-success text-center">[[flags:no-history]]</div>
 							<!-- ENDIF !history.length -->
 
-							<!-- BEGIN history -->
+							{{{each history}}}
 							<li class="media">
 								<div class="media-left">
 									<a href="{config.relative_path}/user/{../user.userslug}">
@@ -212,15 +212,15 @@
 										<small><span class="timeago" title="{../datetimeISO}"></span></small>
 									</h4>
 									<ul>
-										<!-- BEGIN fields -->
+										{{{each fields}}}
 										<li>
 											<span class="label label-primary">[[flags:@key]]</span><!-- IF @value --> &rarr; <span class="label label-default">@value</span><!-- ENDIF @value -->
 										</li>
-										<!-- END fields -->
+										{{{end}}}
 									</ul>
 								</div>
 							</li>
-							<!-- END history -->
+							{{{end}}}
 						</ul>
 					</div>
 				</div>

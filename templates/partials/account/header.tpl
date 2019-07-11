@@ -87,11 +87,11 @@
 				[[global:recentips]]
 			</h2>
 
-			<!-- BEGIN ips -->
+			{{{each ips}}}
 			<div class="data-item">
 				<span>{ips}</span>
 			</div>
-			<!-- END ips -->
+			{{{end}}}
 		</div>
 		<!-- ENDIF ips.length -->
 		<!-- ENDIF isAdminOrGlobalModerator -->
@@ -104,18 +104,18 @@
 
 			<!-- IF config.enableShowUserAllGroupsInProfile -->
 			<div class="user-group">
-				<!-- BEGIN groups -->
+				{{{each groups}}}
 				<a href="{config.relative_path}/groups/{groups.slug}">
 					<span class="label group-label inline-block" style="background-color: {groups.labelColor};">
 						<!-- IF groups.icon --><i class="fa {groups.icon}"></i> <!-- ENDIF groups.icon -->{groups.userTitle}
 					</span>
 				</a>
-				<!-- END groups -->
+				{{{end}}}
 			</div>
 			<!-- ELSE -->
 			<!-- IF selectedGroup.length -->
 			<div class="user-group">
-				<!-- BEGIN selectedGroup -->
+				{{{each selectedGroup}}}
 				<!-- IF selectedGroup.slug -->
 				<a href="{config.relative_path}/groups/{selectedGroup.slug}">
 					<small class="label group-label inline-block" style="background-color: {selectedGroup.labelColor};">
@@ -123,7 +123,7 @@
 					</small>
 				</a>
 				<!-- ENDIF selectedGroup.slug -->
-				<!-- END selectedGroup -->
+				{{{end}}}
 			</div>
 			<!-- ENDIF selectedGroup.length -->
 			<!-- ENDIF config.enableShowUserAllGroupsInProfile -->

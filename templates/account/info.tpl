@@ -9,7 +9,7 @@
 					<h1 class="section-title">[[global:sessions]]</h1>
 
 					<ul class="list-group" component="user/sessions">
-						<!-- BEGIN sessions -->
+						{{{each sessions}}}
 						<li class="list-group-item" data-uuid="{../uuid}">
 							<div class="pull-right">
 								<!-- IF isSelfOrAdminOrGlobalModerator -->
@@ -26,7 +26,7 @@
 								<li><strong>[[global:ip_address]]</strong>: {../ip}</li>
 							</ul>
 						</li>
-						<!-- END sessions -->
+						{{{end}}}
 					</ul>
 				</div>
 			</div>
@@ -40,9 +40,9 @@
 						</div>
 						<div class="panel-body">
 							<ul>
-								<!-- BEGIN ips -->
+								{{{each ips}}}
 								<li>@value</li>
-								<!-- END ips -->
+								{{{end}}}
 							</ul>
 						</div>
 					</div>
@@ -53,12 +53,12 @@
 						</div>
 						<div class="panel-body">
 							<ul class="list-group">
-								<!-- BEGIN usernames -->
+								{{{each usernames}}}
 								<li class="list-group-item">
 									{../value}
 									<small class="pull-right"><span class="timeago" title="{../timestampISO}"></span></small>
 								</li>
-								<!-- END usernames -->
+								{{{end}}}
 							</ul>
 						</div>
 					</div>
@@ -69,12 +69,12 @@
 						</div>
 						<div class="panel-body">
 							<ul class="list-group">
-								<!-- BEGIN emails -->
+								{{{each emails}}}
 								<li class="list-group-item">
 									{../value}
 									<small class="pull-right"><span class="timeago" title="{../timestampISO}"></span></small>
 								</li>
-								<!-- END emails -->
+								{{{end}}}
 							</ul>
 						</div>
 					</div>
@@ -87,14 +87,14 @@
 						<div class="panel-body">
 							<!-- IF history.flags.length -->
 							<ul class="recent-flags">
-								<!-- BEGIN history.flags -->
+								{{{each history.flags}}}
 								<li>
 									<p>
 										<a class="title" href="{config.relative_path}/post/{../pid}">{../title}</a><br />
 										<span class="timestamp">Flagged <span class="timeago" title="{../timestampISO}"></span> ({../timestampReadable})</span>
 									</p>
 								</li>
-								<!-- END history.flags -->
+							{{{end}}}
 							</ul>
 							<!-- ELSE -->
 							<div class="alert alert-success">[[user:info.no-flags]]</div>
@@ -122,7 +122,7 @@
 						<div class="panel-body">
 							<!-- IF history.bans.length -->
 							<ul class="ban-history">
-								<!-- BEGIN history.bans -->
+								{{{each history.bans}}}
 								<li>
 									<p>
 										<span class="timestamp timeago" title="{../timestampISO}"></span> &mdash; {../timestampReadable}<br />
@@ -134,7 +134,7 @@
 										<span class="reason"><strong>[[user:info.banned-reason-label]]</strong>: {../reason}</span>
 									</p>
 								</li>
-								<!-- END history.bans -->
+								{{{end}}}
 							</ul>
 							<!-- ELSE -->
 							<div class="alert alert-success">[[user:info.no-ban-history]]</div>
@@ -157,7 +157,7 @@
 						</div>
 						<div class="panel-footer">
 							<div component="account/moderation-note/list">
-								<!-- BEGIN moderationNotes -->
+								{{{each moderationNotes}}}
 								<div class="Note-item Table clearfix">
 									<div class="icon Table-item">
 										<a href="<!-- IF moderationNotes.user.userslug -->{config.relative_path}/user/{moderationNotes.user.userslug}<!-- ELSE -->#<!-- ENDIF moderationNotes.user.userslug -->">
@@ -183,7 +183,7 @@
 										</div>
 									</div>
 								</div>
-								<!-- END moderationNotes -->
+								{{{end}}}
 							</div>
 							<!-- IMPORT partials/paginator.tpl -->
 						</div>

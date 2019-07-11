@@ -1,4 +1,4 @@
-<!-- BEGIN posts -->
+{{{each posts}}}
 <li class="quick-search-item">
 	<a href="{config.relative_path}/post/{posts.pid}">
 		<p class="quick-search-title">{posts.topic.title}</p>
@@ -7,7 +7,7 @@
 		</span>
 	 </a>
 </li>
-<!-- END posts -->
+{{{end}}}
 <!-- IF multiplePages -->
 <li class="text-center">
 	<a href="{url}" class="quick-search-show-more">[[search:see-more-results, {matchCount}]]</a>

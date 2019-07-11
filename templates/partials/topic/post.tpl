@@ -37,9 +37,9 @@
 			<span>
 				<!-- IF posts.user.custom_profile_info.length -->
 				&#124;
-				<!-- BEGIN custom_profile_info -->
-				{posts.user.custom_profile_info.content}
-				<!-- END custom_profile_info -->
+				{{{each posts.user.custom_profile_info}}}
+					{posts.user.custom_profile_info.content}
+				{{{end}}}
 				<!-- ENDIF posts.user.custom_profile_info.length -->
 			</span>
 		</span>
@@ -83,13 +83,13 @@
 	<!-- IF !hideReplies -->
 	<a component="post/reply-count" href="#" class="threaded-replies no-select <!-- IF !posts.replies.count -->hidden<!-- ENDIF !posts.replies.count -->">
 		<span component="post/reply-count/avatars" class="avatars <!-- IF posts.replies.hasMore -->hasMore<!-- ENDIF posts.replies.hasMore -->">
-			<!-- BEGIN posts.replies.users -->
+			{{{each posts.replies.users}}}
 			<!-- IF posts.replies.users.picture -->
 			<span><img component="user/picture" data-uid="{posts.replies.users.uid}" title="{posts.replies.users.username}" class="avatar" src="{posts.replies.users.picture}"  itemprop="image" /></span>
 			<!-- ELSE -->
 			<div component="user/picture" data-uid="{posts.replies.users.uid}" title="{posts.replies.users.username}" class="user-icon" style="background-color: {posts.replies.users.icon:bgColor};">{posts.replies.users.icon:text}</div>
 			<!-- ENDIF posts.replies.users.picture -->
-			<!-- END posts.replies.users -->
+			{{{end}}}
 		</span>
 
 		<span class="replies-count" component="post/reply-count/text" data-replies="{posts.replies.count}">{posts.replies.text}</span>

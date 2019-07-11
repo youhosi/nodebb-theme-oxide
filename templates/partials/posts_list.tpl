@@ -1,6 +1,6 @@
 <ul component="posts" class="posts posts-list" data-nextstart="{nextStart}">
 
-	<!-- BEGIN posts -->
+	{{{each posts}}}
 	<li component="post" class="posts-list-item <!-- IF posts.deleted --> deleted<!-- ELSE --><!-- IF posts.topic.deleted --> deleted<!-- ENDIF posts.topic.deleted --><!-- ENDIF posts.deleted -->" data-pid="{posts.pid}" data-uid="{posts.uid}">
 		<div class="post-body">
 			<div class="clearfix post-header">
@@ -34,7 +34,7 @@
 			</a>
 		</div>
 	</li>
-	<!-- END posts -->
+	{{{end}}}
 </ul>
 
 <div component="posts/loading" class="loading-indicator text-center hidden">

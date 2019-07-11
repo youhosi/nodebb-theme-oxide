@@ -1,4 +1,4 @@
-<!-- BEGIN users -->
+{{{each users}}}
 <li class="users-box registered-user" data-uid="{users.uid}">
 	<a href="{config.relative_path}/user/{users.userslug}">
 		<!-- IF users.picture -->
@@ -41,4 +41,4 @@
 		<!-- ENDIF section_flagged -->
 	</div>
 </li>
-<!-- END users -->
+{{{end}}}
