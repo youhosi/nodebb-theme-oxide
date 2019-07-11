@@ -7,7 +7,7 @@
 					<img title="{../user.username}" class="img-rounded user-img" src="{../user.picture}">
 					<!-- ELSE -->
 					<div class="user-icon user-img" style="background-color: {../user.icon:bgColor};" title="{../user.username}">{../user.icon:text}</div>
-					<!-- ENDIF -->
+					<!-- ENDIF ../user.picture -->
 				</a>
 			</div>
 		</div>
@@ -15,7 +15,7 @@
 		<div class="post-body content">
 			<div class="post-author">
 				<strong>
-					<a class="topic-title" href="{config.relative_path}/post/{../pid}"><!-- IF !../isMainPost--><i class="fa fa-fw fa-reply"></i><!-- ENDIF --> {../topic.title}</a>
+					<a class="topic-title" href="{config.relative_path}/post/{../pid}"><!-- IF !../isMainPost --><i class="fa fa-fw fa-reply"></i><!-- ENDIF !../isMainPost --> {../topic.title}</a>
 				</strong>
 
 				<span class="permalink timeago" title="{../timestampISO}"></span>
