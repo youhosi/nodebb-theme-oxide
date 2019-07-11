@@ -118,7 +118,7 @@
 				{{{each selectedGroup}}}
 				<!-- IF selectedGroup.slug -->
 				<a href="{config.relative_path}/groups/{selectedGroup.slug}">
-					<small class="label group-label inline-block" style="background-color: {selectedGroup.labelColor};">
+					<small class="label group-label inline-block" style="color:{selectedGroup.textColor};background-color: {selectedGroup.labelColor};">
 						<!-- IF selectedGroup.icon --><i class="fa {selectedGroup.icon}"></i> <!-- ENDIF selectedGroup.icon -->{selectedGroup.userTitle}
 					</small>
 				</a>
