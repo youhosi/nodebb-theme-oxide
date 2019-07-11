@@ -3,18 +3,32 @@
 <div class="account">
 	<!-- IMPORT partials/account/header.tpl -->
 
-			<h1 class="section-title">[[pages:account/posts, {username}]]</h1>
+			<h1 class="section-title">[[pages:account/best, {username}]]</h1>
 
 			<div class="topic">
-				<!-- IF !posts.length -->
+				<!-- IF !bestPosts.length -->
 				<div class="alert alert-warning">[[user:has_no_posts]]</div>
-				<!-- ENDIF !posts.length -->
+				<!-- ENDIF !bestPosts.length -->
 
-				<!-- IMPORT partials/posts_list.tpl -->
+				<ul component="posts" class="posts-list">
+					{{{each bestPosts}}}
+					<!-- IMPORT partials/posts_list_item.tpl -->
+					{{{end}}}
+				</ul>
+			</div>
 
-				<!-- IF config.usePagination -->
-					<!-- IMPORT partials/paginator.tpl -->
-				<!-- ENDIF config.usePagination -->
+			<h1>[[pages:account/latest-posts, {username}]]</h1>
+
+			<div class="topic">
+				<!-- IF !latestPosts.length -->
+				<div class="alert alert-warning">[[user:has_no_posts]]</div>
+				<!-- ENDIF !latestPosts.length -->
+
+				<ul component="posts" class="posts-list">
+					{{{each latestPosts}}}
+					<!-- IMPORT partials/posts_list_item.tpl -->
+					{{{end}}}
+				</ul>
 			</div>
 		</div>
 	</div>
