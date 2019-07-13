@@ -8,12 +8,12 @@
 				<ul class="members">
 					{{{each members}}}
 					<li>
-						<a href="{config.relative_path}/user/{./userslug}">
-							<!-- IF ./picture -->
-							<img class="avatar avatar-sm avatar-rounded" src="{./picture}" title="{./username}" />
+						<a href="{config.relative_path}/user/{groups.members.userslug}">
+							<!-- IF groups.members.picture -->
+							<img class="avatar avatar-sm avatar-rounded" src="{groups.members.picture}" title="{groups.members.username}" />
 							<!-- ELSE -->
-							<div class="avatar avatar-sm avatar-rounded" style="background-color: {./icon:bgColor};" title="{./username}">{./icon:text}</div>
-							<!-- ENDIF ./picture -->
+							<div class="avatar avatar-sm avatar-rounded" style="background-color: {groups.members.icon:bgColor};" title="{groups.members.username}">{groups.members.icon:text}</div>
+							<!-- ENDIF groups.members.picture -->
 						</a>
 					</li>
 					{{{end}}}
