@@ -169,7 +169,7 @@
 			</h2>
 
 			<div class="data-item" component="aboutme">
-				{aboutme}
+				{aboutmeParsed}
 			</div>
 		</div>
 		<!-- ENDIF aboutme -->
