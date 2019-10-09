@@ -5,6 +5,7 @@
 	"homepage": "https://github.com/youhosi/nodebb-theme-oxide",
 	"license": "MIT",
 	"main": "theme.less",
+	"publishConfig": { "registry": "https://npm.pkg.github.com/" },
 	"contributors": [
 		{
 			"name": "Sebastian Sycz",
