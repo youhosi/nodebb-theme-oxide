@@ -26,7 +26,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/youhosi/nodebb-theme-oxide.git"
+		"url": "git://youhosi/nodebb-theme-oxide.git"
 	},
 	"bugs": {
 		"url": "https://github.com/youhosi/nodebb-theme-oxide/issues"
