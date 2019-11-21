@@ -8,7 +8,7 @@
 		{ "hook": "static:app.load", "method": "init" },
 		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
 		{ "hook": "filter:topic.build", "method": "addUserToTopic" },
-		{ "hook": "filter:meta.getLinkTags", "method": "getLinkTags"}
+		{ "hook": "filter:meta.getLinkTags", "method": "getLinkTags" }
 	],
 	"scripts": [
 		"lib/modules/toggleTheme.js",
@@ -20,8 +20,6 @@
 	"modules": {
 		"pulling.js": "node_modules/pulling/build/pulling-drawer.js"
 	},
-	"acpScripts": [
-		"lib/admin.js"
-	],
+	"acpScripts": ["lib/admin.js"],
 	"languages": "languages"
 }
