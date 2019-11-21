@@ -9,6 +9,9 @@ module.exports = {
 	globals: {
 		document: true,
 		window: true,
+		$: true,
+		define: true,
+		app: true,
 	},
 	parserOptions: {
 		ecmaVersion: 2018,
