@@ -1,7 +1,7 @@
 {
-    "id": "nodebb-theme-oxide",
-    "name": "Oxide",
-    "description": "A theme that is based on the GitHub design.",
-    "url": "https://github.com/youhosi/nodebb-theme-oxide",
-    "screenshot": "./img/screenshot.png"
+	"id": "nodebb-theme-oxide",
+	"name": "Oxide",
+	"description": "A theme that is based on the GitHub design.",
+	"url": "https://github.com/youhosi/nodebb-theme-oxide",
+	"screenshot": "./img/screenshot.png"
 }
