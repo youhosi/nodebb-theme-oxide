@@ -1,139 +1,149 @@
-'use strict';
+"use strict";
 
-var striptags = require('striptags');
-var meta = require.main.require('./src/meta');
-var user = require.main.require('./src/user');
+const striptags = require("striptags");
+const meta = require.main.require("./src/meta");
+const user = require.main.require("./src/user");
 
-var library = {};
+let library = {};
 
-library.init = function(params, callback) {
-	var app = params.router;
-	var middleware = params.middleware;
+library.init = ({ router, middleware }, callback) => {
+	const app = router;
 
-	app.get('/admin/plugins/oxide', middleware.admin.buildHeader, renderAdmin);
-	app.get('/api/admin/plugins/oxide', renderAdmin);
+	app.get("/admin/plugins/oxide", middleware.admin.buildHeader, renderAdmin);
+	app.get("/api/admin/plugins/oxide", renderAdmin);
 
 	callback();
 };
 
-library.addAdminNavigation = function(header, callback) {
+library.addAdminNavigation = (header, callback) => {
 	header.plugins.push({
-		route: '/plugins/oxide',
-		icon: 'fa-paint-brush',
-		name: 'Oxide Theme'
+		route: "/plugins/oxide",
+		icon: "fa-paint-brush",
+		name: "Oxide Theme",
 	});
 
 	callback(null, header);
 };
 
-library.getTeasers = function(data, callback) {
-	data.teasers.forEach(function(teaser) {
-		if (teaser && teaser.content) {
-			teaser.content = striptags(teaser.content, ['img']);
-		}
-	});
+library.getTeasers = (data, callback) => {
+	data.teaser.forEach((teaser) =>
+		teaser && teaser.content ? (teaser.content = striptags(teaser.content, ["img"])) : ""
+	);
+
 	callback(null, data);
 };
 
-library.defineWidgetAreas = function(areas, callback) {
-	areas = areas.concat([
+library.defineWidgetAreas = (areas, callback) => {
+	const localAreas = [
 		{
 			name: "Categories Sidebar",
 			template: "categories.tpl",
-			location: "sidebar"
+			location: "sidebar",
 		},
 		{
 			name: "Category Sidebar",
 			template: "category.tpl",
-			location: "sidebar"
+			location: "sidebar",
 		},
 		{
 			name: "Topic Sidebar",
 			template: "topic.tpl",
-			location: "sidebar"
+			location: "sidebar",
 		},
 		{
 			name: "Categories Header",
 			template: "categories.tpl",
-			location: "header"
+			location: "header",
 		},
 		{
 			name: "Category Header",
 			template: "category.tpl",
-			location: "header"
+			location: "header",
 		},
 		{
 			name: "Topic Header",
 			template: "topic.tpl",
-			location: "header"
+			location: "header",
 		},
 		{
 			name: "Categories Footer",
 			template: "categories.tpl",
-			location: "footer"
+			location: "footer",
 		},
 		{
 			name: "Category Footer",
 			template: "category.tpl",
-			location: "footer"
+			location: "footer",
 		},
 		{
 			name: "Topic Footer",
 			template: "topic.tpl",
-			location: "footer"
-		}
-	]);
+			location: "footer",
+		},
+	];
 
-	callback(null, areas);
+	callback(null, [...areas, ...localAreas]);
 };
 
-library.getThemeConfig = function(config, callback) {
-	meta.settings.get('oxide', function(err, settings) {
-		if (err) {
-			return callback(err);
-		}
-		config.hideSubCategories = settings.hideSubCategories === 'on';
-		config.hideCategoryLastPost = settings.hideCategoryLastPost === 'on';
-		config.enableQuickReply = settings.enableQuickReply === 'on';
-		config.enableShowTid = settings.enableShowTid === 'on';
-		config.enableCategoryIcon = settings.enableCategoryIcon === 'on';
-		config.enableShowUserAllGroupsInProfile = settings.enableShowUserAllGroupsInProfile === 'on';
-		config.enableShowIpInUserProfile = settings.enableShowIpInUserProfile === 'on';
-		callback(null, config);
+library.getThemeConfig = (config, callback) => {
+	meta.settings.get("oxide", (err, settings) => {
+		if (err) return callback(err);
+
+		const {
+			hideSubCategories,
+			hideCategoryLastPost,
+			enableQuickReply,
+			enableShowTid,
+			enableCategoryIcon,
+			enableShowUserAllGroupsInProfile,
+			enableShowIpInUserProfile,
+		} = settings;
+
+		config.hideSubCategories = hideSubCategories === "on";
+		config.hideCategoryLastPost = hideCategoryLastPost === "on";
+		config.enableQuickReply = enableQuickReply === "on";
+		config.enableShowTid = enableShowTid === "on";
+		config.enableCategoryIcon = enableCategoryIcon === "on";
+		config.enableShowUserAllGroupsInProfile = enableShowUserAllGroupsInProfile === "on";
+		config.enableShowIpInUserProfile = enableShowIpInUserProfile === "on";
 	});
+
+	callback(null, config);
 };
 
-function renderAdmin(req, res, next) {
-	res.render('admin/plugins/oxide', {});
-}
+const renderAdmin = (req, res) => res.render("admin/plugins/oxide");
 
-library.addUserToTopic = function(data, callback) {
-	if (data.req.user) {
-		user.getUserData(data.req.user.uid, function(err, userdata) {
-			if (err) {
-				return callback(err);
-			}
+library.addUserToTopic = (data, callback) => {
+	const {
+		req: { user: reqUser = {} },
+	} = data;
+
+	if (reqUser) {
+		user.getUserData(reqUser.uid, (err, userdata) => {
+			if (err) return callback(err);
 
 			data.templateData.loggedInUser = userdata;
+
 			callback(null, data);
 		});
 	} else {
 		data.templateData.loggedInUser = {
 			uid: 0,
-			username: '[[global:guest]]',
+			username: "[[global:guest]]",
 			picture: user.getDefaultAvatar(),
-			'icon:text': '?',
-			'icon:bgColor': '#aaa',
+			"icon:text": "?",
+			"icon:bgColor": "#aaa",
 		};
+
 		callback(null, data);
 	}
 };
 
-library.getLinkTags = function (data, callback) {
+library.getLinkTags = (data, callback) => {
 	data.links.push({
-		rel: 'prefetch stylesheet',
-		type: '',
-		href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700',
+		rel: "prefetch stylesheet",
+		type: "",
+		href: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700",
 	});
 
 	callback(null, data);
