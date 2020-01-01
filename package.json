@@ -1,13 +1,10 @@
 {
-	"name": "@youhosi/nodebb-theme-oxide",
+	"name": "nodebb-theme-oxide",
 	"description": "A theme that is based on the GitHub design.",
-	"version": "5.0.28",
+	"version": "5.0.27",
 	"homepage": "https://github.com/youhosi/nodebb-theme-oxide",
 	"license": "MIT",
 	"main": "theme.less",
-	"publishConfig": {
-		"registry": "https://npm.pkg.github.com/"
-	},
 	"contributors": [
 		{
 			"name": "Sebastian Sycz",
@@ -24,7 +21,7 @@
 		"oxide"
 	],
 	"nbbpm": {
-		"compatibility": "^1.13.0"
+		"compatibility": "^1.13.1"
 	},
 	"repository": {
 		"type": "git",
