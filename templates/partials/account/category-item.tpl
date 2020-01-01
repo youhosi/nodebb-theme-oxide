@@ -10,9 +10,9 @@
 			</div>
 
 			<div class="col-md-10 contentItem">
-				<h2 class="title">
+				<h4 class="title">
 					<!-- IMPORT partials/categories/link.tpl -->
-				</h2>
+				</h4>
 
 				<!-- IF ../descriptionParsed -->
 				<div class="description">
