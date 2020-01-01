@@ -1,4 +1,4 @@
 <div class="cookie-consent">
-    <button class="pull-right btn btn-primary">{dismiss}</button>
-    {message} <a target="_blank" href="{link_url}">{link}</a>
+	<button class="pull-right btn btn-primary">{dismiss}</button>
+	{message} <a target="_blank" rel="noopener noreferrer nofollow" href="{link_url}">{link}</a>
 </div>
