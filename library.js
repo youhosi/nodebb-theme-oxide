@@ -26,7 +26,7 @@ library.addAdminNavigation = (header, callback) => {
 };
 
 library.getTeasers = (data, callback) => {
-	data.teaser.forEach((teaser) =>
+	data.teasers.forEach((teaser) =>
 		teaser && teaser.content ? (teaser.content = striptags(teaser.content, ["img"])) : ""
 	);
 
