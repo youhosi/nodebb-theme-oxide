@@ -99,9 +99,10 @@
 	#user_dropdown {
 		padding: 10px 15px;
 
-		img, .user-icon {
+		img,
+		.user-icon {
 			.user-icon-style(30px, 1.8rem, 50%);
-			box-shadow: 0 3px 6px rgba(0,0,0, .1);
+			box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 			border: 0px none;
 
 			span {
@@ -219,7 +220,7 @@
 	font-weight: bold;
 	margin-bottom: 15px;
 	padding: 0;
-	.opacity(.8);
+	.opacity(0.8);
 	background: none;
 
 	li {
@@ -237,7 +238,9 @@
 			display: none;
 		}
 
-		li:nth-last-child(2), li:nth-last-child(1), li:last-child {
+		li:nth-last-child(2),
+		li:nth-last-child(1),
+		li:last-child {
 			.inline-block;
 		}
 
@@ -257,7 +260,7 @@
 		.opacity(1);
 	}
 
-	& +div.tooltip .tooltip-inner {
+	& + div.tooltip .tooltip-inner {
 		width: 350px;
 	}
 }
@@ -277,7 +280,7 @@
 	line-height: 15px;
 	border-radius: 50%;
 	background: @brand-danger;
-	box-shadow: 0 1px 7px rgba(250,26,44, .29);
+	box-shadow: 0 1px 7px rgba(250, 26, 44, 0.29);
 }
 
 .unread-count[data-content]:not([data-content=""]):not([data-content="0"]):after {
@@ -292,7 +295,6 @@
 
 body.skin-default .header {
 	.notification-list {
-
 		li a {
 			color: inherit;
 		}
@@ -311,13 +313,12 @@ label.dropdown-toggle {
 #user-control-list {
 	li > a > i {
 		width: unset;
-		margin-right: 10px
+		margin-right: 10px;
 	}
 }
 
 .navbar-default {
 	.navbar-nav {
-
 		> li > label {
 			color: @navbar-default-link-color;
 
@@ -355,7 +356,8 @@ label.dropdown-toggle {
 }
 
 .dropdown-menu > li > form {
-	> button, > .btn-link {
+	> button,
+	> .btn-link {
 		text-align: left;
 		width: 100%;
 		background: none;
@@ -391,8 +393,8 @@ label.dropdown-toggle {
 		padding: 7px;
 		.border-radius(@border-radius-base);
 		font-weight: bold;
-		text-shadow: 0 1px 0 rgba(0,0,0, .1);
-		.transition(background .1s linear);
+		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+		.transition(background 0.1s linear);
 		.text-ellipsis();
 
 		&:hover {

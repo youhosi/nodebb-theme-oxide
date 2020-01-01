@@ -1,6 +1,5 @@
 .modal-flag {
-	@media only screen and (min-width: @screen-sm-min)
-	{
+	@media only screen and (min-width: @screen-sm-min) {
 		.lead {
 			font-size: @font-size-large;
 		}
@@ -19,21 +18,22 @@
 
 .page-flags {
 	.avatar-sm {
-		.user-icon-style(24px ~"!important", 15px ~"!important", 50% ~"!important");
+		.user-icon-style(24px ~"", 15px ~"!important", 50% ~"!important") !important;
 	}
 
 	.avatar-md {
-		.user-icon-style(32px ~"!important", 15px ~"!important", 50% ~"!important");
+		.user-icon-style(32px ~"", 15px ~"!important", 50% ~"!important") !important;
 	}
 
 	.avatar-lg {
-		.user-icon-style(44px ~"!important", 4rem ~"!important", 50% ~"!important");
+		.user-icon-style(44px ~"", 4rem ~"!important", 50% ~"!important") !important;
 	}
-	
+
 	.ulFixBottom {
 		padding: 0;
 
-		ul, li {
+		ul,
+		li {
 			list-style-type: none;
 			padding: 0;
 		}
@@ -54,7 +54,7 @@
 
 	.postFlagged {
 		.post-author {
-			margin: 0; 
+			margin: 0;
 		}
 
 		.content {
@@ -62,7 +62,9 @@
 		}
 	}
 
-	.flagNotes.posts { margin-top: 15px; }
+	.flagNotes.posts {
+		margin-top: 15px;
+	}
 
 	[component="flag/history"] {
 		.media {

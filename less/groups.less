@@ -16,7 +16,7 @@
 
 		&:hover {
 			.controls {
-				.opacity(.8);
+				.opacity(0.8);
 			}
 		}
 
@@ -25,7 +25,7 @@
 			min-height: 200px;
 			line-height: 200px;
 			.opacity(0);
-			.transition(opacity .15s linear);
+			.transition(opacity 0.15s linear);
 			.pointer;
 			pointer-events: none;
 
@@ -72,7 +72,8 @@
 			}
 		}
 
-		.save, .indicator {
+		.save,
+		.indicator {
 			.inline-block;
 			position: absolute;
 			top: 1em;
@@ -114,14 +115,14 @@
 	table[component="groups/invited"] {
 		margin: 0;
 	}
-	
+
 	.alert {
 		margin: 0 !important;
 	}
 
 	.form-group {
 		margin-top: 15px;
-		
+
 		textarea {
 			border-radius: 5px;
 			padding: 10px;
@@ -135,7 +136,8 @@
 	}
 
 	.post-body {
-		.topic-title, p {
+		.topic-title,
+		p {
 			overflow-y: hidden;
 			display: block;
 		}
@@ -145,7 +147,7 @@
 		.label-info {
 			position: absolute;
 			right: 10px;
-			padding: 2px 5px
+			padding: 2px 5px;
 		}
 	}
 
@@ -172,7 +174,7 @@
 		}
 
 		.panel {
-			box-shadow: 0 1px 4px rgba(0,0,0, .1);
+			box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 		}
 
 		.list-cover {
@@ -185,7 +187,7 @@
 			border: 0;
 
 			h3 {
-				background-color: rgba(0,0,0, .1);
+				background-color: rgba(0, 0, 0, 0.1);
 				.inline-block;
 				padding: 10px 15px;
 				width: 100%;
@@ -204,7 +206,7 @@
 					right: 15px;
 					top: 12px;
 					font-size: 12px;
-					font-weight: bold
+					font-weight: bold;
 				}
 			}
 		}

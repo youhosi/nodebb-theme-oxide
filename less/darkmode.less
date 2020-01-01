@@ -185,13 +185,13 @@ html[dark="true"] {
 		}
 
 		.postFlagged,
-		[component=post] {
+		[component="post"] {
 			&.highlight > .content {
 				box-shadow: 0 0 0 3px @border-highlight;
 
 				&::before {
-					-webkit-filter: drop-shadow(-.25em 0 0 @border-highlight);
-					filter: drop-shadow(-.25em 0 0 @border-highlight);
+					-webkit-filter: drop-shadow(-0.25em 0 0 @border-highlight);
+					filter: drop-shadow(-0.25em 0 0 @border-highlight);
 				}
 			}
 
@@ -229,7 +229,8 @@ html[dark="true"] {
 			.post-footer {
 				.post-tools,
 				.votes {
-					a, span {
+					a,
+					span {
 						color: @color-secondary-dark;
 					}
 				}
@@ -237,7 +238,10 @@ html[dark="true"] {
 		}
 	}
 
-	code, kbd, pre, samp {
+	code,
+	kbd,
+	pre,
+	samp {
 		background: @border-primry-dark !important;
 		color: @color-primary-dark !important;
 	}

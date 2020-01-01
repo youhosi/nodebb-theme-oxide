@@ -16,7 +16,7 @@
 	}
 
 	margin-top: 0;
-	.transition(.15s ease-in opacity);
+	.transition(0.15s ease-in opacity);
 
 	background: none;
 	border: none;
@@ -43,7 +43,7 @@
 
 			&.new a {
 				-webkit-animation-name: bounceIn;
-  				animation-name: bounceIn;
+				animation-name: bounceIn;
 				-webkit-animation-duration: 1s;
 				animation-duration: 1s;
 				-webkit-animation-fill-mode: both;
@@ -58,15 +58,15 @@
 				height: 50px;
 				width: 50px;
 
-				box-shadow: 0 8px 16px rgba(0,0,0,.1);
+				box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 
 				> span {
 					display: none;
 				}
 
 				-webkit-animation-name: bounceIn;
-  				animation-name: bounceIn;
-  				-webkit-animation-duration: 1s;
+				animation-name: bounceIn;
+				-webkit-animation-duration: 1s;
 				animation-duration: 1s;
 				-webkit-animation-fill-mode: both;
 				animation-fill-mode: both;
@@ -80,7 +80,7 @@
 
 			&.pulse a {
 				-webkit-animation-name: bounceIn;
-  				animation-name: bounceIn;
+				animation-name: bounceIn;
 				-webkit-animation-duration: 1s;
 				animation-duration: 1s;
 				-webkit-animation-fill-mode: both;
@@ -88,13 +88,19 @@
 			}
 
 			&.taskbar-composer {
-				a, a:hover, a:focus, a:active {
+				a,
+				a:hover,
+				a:focus,
+				a:active {
 					background: #f44336;
 				}
 			}
 
 			&.taskbar-chat {
-				a, a:hover, a:focus, a:active {
+				a,
+				a:hover,
+				a:focus,
+				a:active {
 					.user-icon-style(50px, 2.4rem, 50%) !important;
 					padding: 0;
 					color: white;
@@ -122,7 +128,7 @@
 					line-height: 15px;
 					.border-radius(50%);
 					background: #d9534f;
-					box-shadow: 0 1px 7px rgba(250,26,44,.29);
+					box-shadow: 0 1px 7px rgba(250, 26, 44, 0.29);
 				}
 
 				&.new[data-content="0"]:after {
@@ -130,7 +136,8 @@
 				}
 			}
 
-			&.taskbar-composer, &.taskbar-chat {
+			&.taskbar-composer,
+			&.taskbar-chat {
 				a {
 					text-align: center;
 					margin-left: 15px;
@@ -138,7 +145,7 @@
 					i {
 						font-size: 18px;
 						line-height: 42px;
-						color: #FFF;
+						color: #fff;
 					}
 				}
 			}

@@ -55,7 +55,7 @@
 				text-align: center;
 				border: 1px solid transparent;
 				.border-radius(50%);
-				box-shadow: 0 3px 6px rgba(0,0,0, .2);
+				box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 
 				&:last-child {
 					margin-right: 10px;
@@ -115,7 +115,7 @@
 				.user-img,
 				[component="user/picture"],
 				.media-object {
-					.user-icon-style(26px ~"!important", 16px ~"!important", 50% ~"!important");
+					.user-icon-style(26px ~"", 16px ~"!important", 50% ~"!important") !important;
 				}
 
 				.user-img,
@@ -135,7 +135,8 @@
 			top: -20px;
 		}
 
-		[component="user/picture"], [component="user/status"] {
+		[component="user/picture"],
+		[component="user/status"] {
 			.opacity(1);
 		}
 
@@ -149,7 +150,7 @@
 				.user-icon,
 				.user-img,
 				[component="user/picture"] {
-					box-shadow: 0 4px 9px rgba(0,0,0, .1);
+					box-shadow: 0 4px 9px rgba(0, 0, 0, 0.1);
 					.user-icon-style(44px, 2.4rem, 50%);
 				}
 
@@ -262,7 +263,7 @@
 					text-align: center;
 					color: inherit;
 					.opacity(0);
-					.transition(.75s ease-in-out opacity);
+					.transition(0.75s ease-in-out opacity);
 				}
 			}
 
@@ -406,7 +407,7 @@
 						height: 16px;
 						line-height: 16px;
 						background: #000;
-						.opacity(.6);
+						.opacity(0.6);
 						color: #fff;
 						position: absolute;
 						right: 2px;
@@ -454,7 +455,7 @@
 				font-size: 14px;
 
 				> a {
-					padding: .25em;
+					padding: 0.25em;
 				}
 
 				a {
@@ -466,7 +467,8 @@
 					}
 				}
 
-				.favourite.btn-warning, .follow.btn-success {
+				.favourite.btn-warning,
+				.follow.btn-success {
 					background: #fff !important;
 					color: #333;
 
@@ -514,7 +516,7 @@
 
 		&.deleted {
 			[component="post/content"] {
-				.opacity(.3);
+				.opacity(0.3);
 			}
 
 			.votes {
@@ -522,19 +524,19 @@
 			}
 		}
 
-		&.highlight  {
+		&.highlight {
 			.bookmarked {
 				opacity: 1 !important;
 			}
 
 			> .content {
-					border-color: @gray-light;
-					box-shadow: 0 0 0 3px @gray-lighter;
+				border-color: @gray-light;
+				box-shadow: 0 0 0 3px @gray-lighter;
 
-					&:before {
-						border-right-color: darken(@gray-light, 10%);
-						filter: drop-shadow(-.25em 0 0 @gray-lighter);
-					}
+				&:before {
+					border-right-color: darken(@gray-light, 10%);
+					filter: drop-shadow(-0.25em 0 0 @gray-lighter);
+				}
 			}
 		}
 
@@ -542,13 +544,13 @@
 			background: unset;
 
 			> .content {
-					border-color: @material-warning;
-					box-shadow: 0 0 0 3px lighten(@material-warning, 10%);
+				border-color: @material-warning;
+				box-shadow: 0 0 0 3px lighten(@material-warning, 10%);
 
-					&:before {
-						border-right-color: darken(@material-warning, 10%);
-						filter: drop-shadow(-.25em 0 0 lighten(@material-warning, 10%));
-					}
+				&:before {
+					border-right-color: darken(@material-warning, 10%);
+					filter: drop-shadow(-0.25em 0 0 lighten(@material-warning, 10%));
+				}
 			}
 
 			.icon:before {
@@ -556,7 +558,7 @@
 				background: @body-bg;
 				border: 1px solid @material-warning;
 				color: @material-warning;
-				.transition(.2s ease-in-out all);
+				.transition(0.2s ease-in-out all);
 				padding: 14px;
 				.border-radius(50%);
 				.opacity(1);
@@ -572,7 +574,8 @@
 				}
 			}
 
-			[component="user/picture"], [component="user/status"] {
+			[component="user/picture"],
+			[component="user/status"] {
 				.opacity(0);
 			}
 		}
@@ -594,7 +597,7 @@
 			.topic-main-buttons {
 				border: 1px solid @gray-lighter;
 				padding: 15px;
-				background: #FFF;
+				background: #fff;
 			}
 		}
 	}
@@ -619,7 +622,7 @@
 		z-index: 100;
 		border-top: 1px solid darken(@gray-lighter, 15%);
 		.opacity(0);
-		.transition(opacity .25s ease-in);
+		.transition(opacity 0.25s ease-in);
 
 		&.ready {
 			.opacity(1);
@@ -661,7 +664,7 @@
 
 	.avatar-sm {
 		.user-icon-style(26px, @font-size-large, 50%);
-		box-shadow: 0 3px 6px rgba(0,0,0,.1);
+		box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 	}
 }
 
@@ -671,7 +674,8 @@
 	a[data-uid] {
 		position: relative;
 
-		img, .user-icon {
+		img,
+		.user-icon {
 			.user-icon-style(20px, 1rem, 50%);
 			vertical-align: middle;
 			margin: 0 7px;
@@ -684,7 +688,7 @@
 
 			font-family: "FontAwesome";
 			content: "\f11c";
-			padding: 4px .25em;
+			padding: 4px 0.25em;
 			top: -36px;
 			left: 7px;
 
@@ -726,7 +730,7 @@
 }
 
 .open-dropdown {
-	animation-duration: .15s;
+	animation-duration: 0.15s;
 	animation-name: open-dropdown;
-	animation-timing-function: cubic-bezier(.2,0,.13,1.5);
+	animation-timing-function: cubic-bezier(0.2, 0, 0.13, 1.5);
 }

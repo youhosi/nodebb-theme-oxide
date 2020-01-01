@@ -9,7 +9,7 @@
 	@media (min-width: @screen-md) {
 		.write,
 		.preview {
-			.border-radius(@border-radius-base ~"!important");
+			.border-radius(@border-radius-base ~"") !important;
 			box-shadow: none !important;
 		}
 
@@ -24,7 +24,7 @@
 		background: @table-bg-accent;
 		border: 1px solid @gray-light;
 		outline: none;
-		.transition(box-shadow .1s linear);
+		.transition(box-shadow 0.1s linear);
 
 		@media (min-width: @screen-md) {
 			&:focus {

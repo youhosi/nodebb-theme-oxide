@@ -8,7 +8,7 @@ body {
 
 #content {
 	padding-bottom: 15px;
-	.transition(opacity .15s linear);
+	.transition(opacity 0.15s linear);
 
 	&.ajaxifying {
 		.opacity(0);
@@ -27,7 +27,8 @@ body {
 	}
 }
 
-.block, .show {
+.block,
+.show {
 	display: block;
 }
 
@@ -75,7 +76,8 @@ body {
 	}
 }
 
-.topic .topic-item, .category .category-item {
+.topic .topic-item,
+.category .category-item {
 	.transition(background-color 500ms linear);
 }
 
@@ -101,10 +103,10 @@ body {
 .topic {
 	&.post-link {
 		.inline-block;
-		width:90%;
-		height:25px;
-		font-size:10px;
-		padding:0px;
+		width: 90%;
+		height: 25px;
+		font-size: 10px;
+		padding: 0px;
 	}
 }
 
@@ -131,14 +133,15 @@ body {
 	.row {
 		margin: 0;
 		i {
-			width:20px;
-			height:20px;
+			width: 20px;
+			height: 20px;
 			margin: 1px;
 			.pointer;
 			line-height: 20px;
 			text-align: center;
 
-			&:hover, &.selected {
+			&:hover,
+			&.selected {
 				background: black;
 				color: white;
 			}
@@ -182,8 +185,7 @@ body {
 	font-weight: bold;
 }
 
-@media only screen and (max-width: @screen-xs-max)
-{
+@media only screen and (max-width: @screen-xs-max) {
 	.users-list-menu,
 	.category-children,
 	.box-footer .tag-list {
@@ -223,8 +225,7 @@ img,
 .accout .user-group,
 .stat .stat-label,
 .data-item span,
-.categories-title
- {
+.categories-title {
 	.no-select;
 }
 
