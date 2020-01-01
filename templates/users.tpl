@@ -14,11 +14,9 @@
 			<div class="search">
 				<div class="input-group">
 					<div class="input-group-btn">
-						<!-- IF inviteOnly -->
-						<!-- IF loggedIn -->
+						<!-- IF showInviteButton -->
 						<button component="user/invite" class="btn btn-success"><i class="fa fa-users"></i> [[users:invite]]</button>
-						<!-- ENDIF loggedIn -->
-						<!-- ENDIF inviteOnly -->
+						<!-- ENDIF showInviteButton -->
 						<span class="btn btn-default"><i component="user/search/icon" class="fa fa-fw fa-at"></i></span>
 					</div>
 					<input class="form-control" id="search-user" type="text" placeholder="[[users:enter_username]]"/>
