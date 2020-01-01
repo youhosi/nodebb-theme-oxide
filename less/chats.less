@@ -1,5 +1,11 @@
 // Make chats page edge-to-edge
 .page-user-chats {
+	[data-widget-area="header"],
+	[data-widget-area="footer"] {
+		display: none;
+		visibility: hidden;
+	}
+
 	#content {
 		width: auto;
 		padding: 0;
@@ -18,11 +24,6 @@
 			padding-top: 0px !important;
 		}
 	}
-}
-
-[data-widget-area="header"],
-[data-widget-area="footer"] {
-	display: none;
 }
 
 .chats-full,
