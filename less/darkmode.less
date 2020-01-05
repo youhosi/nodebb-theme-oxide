@@ -110,6 +110,14 @@ html[dark="true"] {
 
 	.profile-card {
 		border-color: @border-primry-dark;
+
+		.data-item {
+			border-bottom-color: @border-primry-dark;
+		}
+
+		.card-info .account-stats .stat {
+			border-right-color: rgba(255, 255, 255, 0.2);
+		}
 	}
 
 	.category li:not(.unread) {
@@ -170,7 +178,8 @@ html[dark="true"] {
 	}
 
 	.topic,
-	.posts {
+	.posts,
+	.posts-list {
 		.topic-header {
 			border-color: @border-primry-dark;
 
@@ -376,6 +385,7 @@ html[dark="true"] {
 	.bootstrap-tagsinput {
 		background: @bg-primary-dark;
 		color: @color-secondary-dark;
+		border-color: @bg-primary-dark;
 	}
 
 	tbody > tr {
@@ -385,6 +395,25 @@ html[dark="true"] {
 
 		&:hover {
 			background: @border-primry-dark;
+		}
+	}
+
+	.header {
+		.notification-list {
+			li:nth-child(even) {
+				background-color: rgba(255, 255, 255, 0.5) !important;
+			}
+
+			li:nth-child(odd) {
+				background-color: rgba(255, 255, 255, 0.08) !important;
+			}
+		}
+	}
+
+	.notifications-list {
+		li {
+			border-color: @bg-primary-dark;
+			background-color: @bg-primary-dark;
 		}
 	}
 }
