@@ -6,6 +6,8 @@ const user = require.main.require("./src/user");
 
 let library = {};
 
+const renderAdmin = (req, res) => res.render("admin/plugins/oxide");
+
 library.init = ({ router, middleware }, callback) => {
 	const app = router;
 
@@ -111,8 +113,6 @@ library.getThemeConfig = (config, callback) => {
 	callback(null, config);
 };
 
-const renderAdmin = (req, res) => res.render("admin/plugins/oxide");
-
 library.addUserToTopic = (data, callback) => {
 	const {
 		req: { user: reqUser = {} },
@@ -137,16 +137,6 @@ library.addUserToTopic = (data, callback) => {
 
 		callback(null, data);
 	}
-};
-
-library.getLinkTags = (data, callback) => {
-	data.links.push({
-		rel: "prefetch stylesheet",
-		type: "",
-		href: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700",
-	});
-
-	callback(null, data);
 };
 
 module.exports = library;
