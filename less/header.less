@@ -117,48 +117,47 @@
 		padding: 0;
 
 		& img {
-			padding: 5px 0;
 			height: @navbar-height;
+			padding: 5px 0;
 		}
 	}
 
 	.header-topic-title {
+		font-size: @font-size-h4;
 		text-align: right;
 		padding: 15px 15px;
-		font-size: @font-size-h4;
 		line-height: 20px;
 		.text-ellipsis;
 
 		span {
-			.text-ellipsis;
 			color: @brand-primary;
+			.text-ellipsis;
 		}
 	}
 
 	.pagination-block {
 		margin-right: 10px !important;
 		margin-left: 10px !important;
-		.transition(opacity 250ms ease-in);
-		.opacity(0);
 		pointer-events: none;
+		.opacity(0);
+		.transition(opacity 0.2s ease-in);
 
 		&.ready {
-			.opacity(1);
 			pointer-events: inherit;
+			.opacity(1);
 		}
 
 		a {
+			padding: 0 2px;
 			.inline-block;
-			padding-left: 2px;
-			padding-right: 2px;
 		}
 
 		.progress-container {
+			background-color: @gray-lighter;
 			height: 2px;
 			position: absolute;
 			bottom: 8px;
 			left: 8px;
-			background: @gray-lighter;
 			width: 90%;
 			margin: auto;
 
@@ -169,8 +168,8 @@
 		}
 
 		.dropdown-toggle {
-			.inline-block;
 			padding: 0 5px 0 5px;
+			.inline-block;
 		}
 
 		.open > a {
@@ -183,12 +182,12 @@
 
 		@media (max-width: @screen-xs-max) {
 			.progress-container {
-				.inline-block;
 				position: static;
 				bottom: 0px;
-				margin-left: 1em;
 				width: 100px;
+				margin-left: 1em;
 				margin-bottom: 3px;
+				.inline-block;
 			}
 		}
 	}
@@ -209,7 +208,7 @@
 		color: #cb2431;
 
 		&:hover {
-			background: #cb2431;
+			background-color: #cb2431;
 			color: #fff;
 		}
 	}
@@ -220,8 +219,8 @@
 	font-weight: bold;
 	margin-bottom: 15px;
 	padding: 0;
+	background-color: none;
 	.opacity(0.8);
-	background: none;
 
 	li {
 		max-width: 100%;
@@ -252,9 +251,9 @@
 
 #reconnect {
 	font-size: @font-size-base;
-	.transition(opacity 250ms linear);
-	.opacity(0);
 	min-width: 45px;
+	.opacity(0);
+	.transition(opacity 0.2s linear);
 
 	&.active {
 		.opacity(1);
@@ -266,10 +265,11 @@
 }
 
 .unread-count:after {
+	background-color: @brand-danger;
+	font-family: @font-family-sans-serif;
 	position: absolute;
 	left: 23px;
 	top: 10px;
-	font-family: @font-family-sans-serif;
 	font-weight: bold;
 	font-size: 9px;
 	color: #fff;
@@ -279,7 +279,6 @@
 	min-height: 15px;
 	line-height: 15px;
 	border-radius: 50%;
-	background: @brand-danger;
 	box-shadow: 0 1px 7px rgba(250, 26, 44, 0.29);
 }
 
@@ -302,8 +301,8 @@ body.skin-default .header {
 }
 
 label.dropdown-toggle {
-	.pointer;
 	margin: 0;
+	.pointer;
 }
 
 #user-control-list-check:checked + #user-control-list {
@@ -328,6 +327,7 @@ label.dropdown-toggle {
 				background-color: @navbar-default-link-hover-bg;
 			}
 		}
+
 		> .active > label {
 			&,
 			&:hover,
@@ -336,6 +336,7 @@ label.dropdown-toggle {
 				background-color: @navbar-default-link-active-bg;
 			}
 		}
+
 		> .disabled > label {
 			&,
 			&:hover,
@@ -344,6 +345,7 @@ label.dropdown-toggle {
 				background-color: @navbar-default-link-disabled-bg;
 			}
 		}
+
 		> .open > label {
 			&,
 			&:hover,
@@ -360,15 +362,15 @@ label.dropdown-toggle {
 	> .btn-link {
 		text-align: left;
 		width: 100%;
-		background: none;
+		background-color: none;
 		border: none;
 		display: block;
 		padding: 3px 20px;
-		.clear;
 		font-weight: normal;
 		line-height: @line-height-base;
 		color: @dropdown-link-color;
 		white-space: nowrap; // prevent links from randomly breaking onto new lines
+		.clear;
 
 		&:hover,
 		&:focus {
@@ -381,24 +383,24 @@ label.dropdown-toggle {
 
 .notif-action-buttons {
 	padding: 10px 10px 0;
+	margin-top: 5px;
 	border-top: 1px solid @gray-lighter;
 
 	a {
-		font-size: 10px;
-		.inline-block;
+		font-size: 11px;
 		width: ~"calc(50% - 2px)";
-		background: @gray-light;
+		background-color: @gray-light;
 		color: #fff;
 		text-align: center;
-		padding: 7px;
-		.border-radius(@border-radius-base);
+		padding: 7px 14px;
 		font-weight: bold;
-		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+		.inline-block;
+		.border-radius(@border-radius-base);
 		.transition(background 0.1s linear);
 		.text-ellipsis();
 
 		&:hover {
-			background: @gray;
+			background-color: @gray;
 		}
 	}
 }
