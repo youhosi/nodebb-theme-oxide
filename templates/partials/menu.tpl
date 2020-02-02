@@ -114,11 +114,13 @@
 								</a>
 							</li>
 							<li role="presentation" class="divider"></li>
+							<!-- IF config.enableDarkmodeIsDefault -->
 							<li>
 								<a href="#" id="toggle-theme">
 									<i class="fa fa-fw fa-sun-o"></i> <span>[[oxide:toggle-theme-text]]</span>
 								</a>
 							</li>
+							<!-- ENDIF config.enableDarkmodeIsDefault -->
 							<li>
 								<a component="header/profilelink/settings" href="{relative_path}/user/{user.userslug}/settings">
 									<i class="fa fa-fw fa-gear"></i> <span>[[user:settings]]</span>
