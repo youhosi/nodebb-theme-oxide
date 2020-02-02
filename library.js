@@ -109,7 +109,7 @@ library.getThemeConfig = (config, callback) => {
 		config.enableCategoryIcon = enableCategoryIcon === "on";
 		config.enableShowUserAllGroupsInProfile = enableShowUserAllGroupsInProfile === "on";
 		config.enableShowIpInUserProfile = enableShowIpInUserProfile === "on";
-		config.enableDarkmodeIsDefault = enableDarkmodeIsDefault === "off";
+		config.enableDarkmodeIsDefault = enableDarkmodeIsDefault === "on";
 	});
 
 	callback(null, config);
