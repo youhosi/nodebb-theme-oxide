@@ -18,5 +18,6 @@
 	"show-more": "Pokaż więcej",
 	"topic-created": "Temat utworzony",
 	"account-ips": "Pokazuj adresy IP użytkownika w profilu",
-	"toggle-theme-text": "Ciemny motyw"
+	"toggle-theme-text": "Ciemny motyw",
+	"darkmode-default": "Ustaw ciemny motyw jako domyślny"
 }
