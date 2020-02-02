@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{function.localeToHTML, userLang, defaultLang}" <!-- IF languageDirection -->data-dir="{languageDirection}" style="direction: {languageDirection};"<!-- ENDIF languageDirection -->>
+<html lang="{function.localeToHTML, userLang, defaultLang}" <!-- IF languageDirection -->data-dir="{languageDirection}" style="direction: {languageDirection};"<!-- ENDIF languageDirection --> <!-- IF config.enableDarkmodeIsDefault -->dark="true"<!-- ENDIF config.enableDarkmodeIsDefault -->>
 <head>
 	<title>{browserTitle}</title>
 
