@@ -20,6 +20,16 @@
 							</label>
 						</div>
 					</div>
+
+					<div class="panel-heading">[[oxide:other]]</div>
+					<div class="panel-body">
+						<div class="checkbox">
+							<label class="mdl-switch mdl-js-switch mdl-js-ripple-effect">
+								<input class="mdl-switch__input" type="checkbox" id="enableDarkmodeIsDefault" name="enableDarkmodeIsDefault">
+								<span class="mdl-switch__label"><strong>[[oxide:darkmode-default]]</strong></span>
+							</label>
+						</div>
+					</div>
 				</div>
 			</div>
 
@@ -48,6 +58,7 @@
 					</div>
 				</div>
 			</div>
+
 			<div class="col-sm-6">
 				<div class="panel panel-default">
 					<div class="panel-heading">[[user:profile]]</div>
