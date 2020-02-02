@@ -19,5 +19,6 @@
 	"topic-created": "Topic created",
 	"account-ips": "Show the user IPs in the profile",
 	"toggle-theme-text": "Dark theme",
-	"darkmode-default": "Set dark theme as default"
+	"darkmode-default": "Set dark theme as default",
+	"other": "Other"
 }

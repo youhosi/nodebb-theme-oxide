@@ -19,5 +19,6 @@
 	"topic-created": "Thema erstellt",
 	"account-ips": "Zeigen Sie die IP-Liebe des Benutzers im Profil an",
 	"toggle-theme-text": "Dunkles Thema",
-	"darkmode-default": "Stellen Sie das dunkle Thema als Standard ein"
+	"darkmode-default": "Stellen Sie das dunkle Thema als Standard ein",
+	"other": "Andere"
 }
