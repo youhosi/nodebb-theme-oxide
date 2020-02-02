@@ -99,6 +99,7 @@ library.getThemeConfig = (config, callback) => {
 			enableCategoryIcon,
 			enableShowUserAllGroupsInProfile,
 			enableShowIpInUserProfile,
+			enableDarkmodeIsDefault,
 		} = settings;
 
 		config.hideSubCategories = hideSubCategories === "on";
@@ -108,6 +109,7 @@ library.getThemeConfig = (config, callback) => {
 		config.enableCategoryIcon = enableCategoryIcon === "on";
 		config.enableShowUserAllGroupsInProfile = enableShowUserAllGroupsInProfile === "on";
 		config.enableShowIpInUserProfile = enableShowIpInUserProfile === "on";
+		config.enableDarkmodeIsDefault = enableDarkmodeIsDefault === "on";
 	});
 
 	callback(null, config);
