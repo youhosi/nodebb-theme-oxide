@@ -76,10 +76,25 @@ html[data-initial-dark="true"] {
 
 	.panel,
 	.profile-card {
-		background: @bg-body-dark;
+		background-color: @bg-body-dark;
+		border-color: @border-primry-dark;
 
 		&.panel-default {
 			border-color: @border-primry-dark;
+		}
+
+		.data-item {
+			border-bottom-color: @border-primry-dark;
+		}
+
+		.card-info {
+			.fullname {
+				color: @color-primary-dark;
+			}
+
+			.account-stats .stat {
+				border-color: rgba(255, 255, 255, 0.2);
+			}
 		}
 
 		.panel-heading,
@@ -106,18 +121,6 @@ html[data-initial-dark="true"] {
 			.close {
 				color: @color-primary-dark;
 			}
-		}
-	}
-
-	.profile-card {
-		border-color: @border-primry-dark;
-
-		.data-item {
-			border-bottom-color: @border-primry-dark;
-		}
-
-		.card-info .account-stats .stat {
-			border-right-color: rgba(255, 255, 255, 0.2);
 		}
 	}
 
