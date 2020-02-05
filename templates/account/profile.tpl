@@ -4,7 +4,6 @@
 	<!-- IMPORT partials/account/header.tpl -->
 
 			<h1 class="section-title">[[pages:account/best, {username}]]</h1>
-
 			<div class="topic">
 				<!-- IF !bestPosts.length -->
 				<div class="alert alert-warning">[[user:has_no_posts]]</div>
@@ -17,8 +16,7 @@
 				</ul>
 			</div>
 
-			<h1>[[pages:account/latest-posts, {username}]]</h1>
-
+			<h1 class="section-title">[[pages:account/latest-posts, {username}]]</h1>
 			<div class="topic">
 				<!-- IF !latestPosts.length -->
 				<div class="alert alert-warning">[[user:has_no_posts]]</div>
