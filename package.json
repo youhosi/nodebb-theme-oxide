@@ -1,17 +1,7 @@
 {
 	"name": "nodebb-theme-oxide",
-	"description": "A theme that is based on the GitHub design.",
 	"version": "5.0.41",
-	"homepage": "https://github.com/youhosi/nodebb-theme-oxide",
-	"license": "MIT",
-	"main": "theme.less",
-	"contributors": [
-		{
-			"name": "Sebastian Sycz",
-			"email": "sebastiansycz99@icloud.com",
-			"url": "https://github.com/youhosi"
-		}
-	],
+	"description": "A theme that is based on the GitHub design.",
 	"keywords": [
 		"nodebb",
 		"theme",
@@ -20,15 +10,34 @@
 		"responsive",
 		"oxide"
 	],
-	"nbbpm": {
-		"compatibility": "^1.13.1"
+	"homepage": "https://github.com/youhosi/nodebb-theme-oxide",
+	"bugs": {
+		"url": "https://github.com/youhosi/nodebb-theme-oxide/issues"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git://youhosi/nodebb-theme-oxide.git"
 	},
-	"bugs": {
-		"url": "https://github.com/youhosi/nodebb-theme-oxide/issues"
+	"license": "MIT",
+	"contributors": [
+		{
+			"name": "Sebastian Sycz",
+			"email": "sebastiansycz99@icloud.com",
+			"url": "https://github.com/youhosi"
+		}
+	],
+	"main": "theme.less",
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.+(js)": [
+			"prettier --config .prettierrc --write",
+			"eslint --fix",
+			"git add"
+		]
 	},
 	"dependencies": {
 		"pulling": "^2.0.0",
@@ -41,16 +50,7 @@
 		"lint-staged": "^9.4.3",
 		"prettier": "^1.19.1"
 	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
-	"lint-staged": {
-		"*.+(js)": [
-			"prettier --config .prettierrc --write",
-			"eslint --fix",
-			"git add"
-		]
+	"nbbpm": {
+		"compatibility": "^1.13.1"
 	}
 }
