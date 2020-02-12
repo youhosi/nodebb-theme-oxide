@@ -116,19 +116,9 @@ library.getThemeConfig = (config, callback) => {
 };
 
 library.addUserToTopic = (data, callback) => {
-	const {
-		req: { user: reqUser = {} },
-	} = data;
+	const { user: reqUser } = data.req;
 
-	if (reqUser) {
-		user.getUserData(reqUser.uid, (err, userdata) => {
-			if (err) return callback(err);
-
-			data.templateData.loggedInUser = userdata;
-
-			callback(null, data);
-		});
-	} else {
+	if (!reqUser) {
 		data.templateData.loggedInUser = {
 			uid: 0,
 			username: "[[global:guest]]",
@@ -137,8 +127,16 @@ library.addUserToTopic = (data, callback) => {
 			"icon:bgColor": "#aaa",
 		};
 
-		callback(null, data);
+		return callback(null, data);
 	}
+
+	user.getUserData(reqUser.uid, (err, userdata) => {
+		if (err) return callback(err);
+
+		data.templateData.loggedInUser = userdata;
+
+		callback(null, data);
+	});
 };
 
 module.exports = library;
