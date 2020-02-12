@@ -91,25 +91,14 @@ library.getThemeConfig = (config, callback) => {
 	meta.settings.get("oxide", (err, settings) => {
 		if (err) return callback(err);
 
-		const {
-			hideSubCategories,
-			hideCategoryLastPost,
-			enableQuickReply,
-			enableShowTid,
-			enableCategoryIcon,
-			enableShowUserAllGroupsInProfile,
-			enableShowIpInUserProfile,
-			enableDarkmodeIsDefault,
-		} = settings;
-
-		config.hideSubCategories = hideSubCategories === "on";
-		config.hideCategoryLastPost = hideCategoryLastPost === "on";
-		config.enableQuickReply = enableQuickReply === "on";
-		config.enableShowTid = enableShowTid === "on";
-		config.enableCategoryIcon = enableCategoryIcon === "on";
-		config.enableShowUserAllGroupsInProfile = enableShowUserAllGroupsInProfile === "on";
-		config.enableShowIpInUserProfile = enableShowIpInUserProfile === "on";
-		config.enableDarkmodeIsDefault = enableDarkmodeIsDefault === "on";
+		config.hideSubCategories = settings.hideSubCategories === "on";
+		config.hideCategoryLastPost = settings.hideCategoryLastPost === "on";
+		config.enableQuickReply = settings.enableQuickReply === "on";
+		config.enableShowTid = settings.enableShowTid === "on";
+		config.enableCategoryIcon = settings.enableCategoryIcon === "on";
+		config.enableShowUserAllGroupsInProfile = settings.enableShowUserAllGroupsInProfile === "on";
+		config.enableShowIpInUserProfile = settings.enableShowIpInUserProfile === "on";
+		config.enableDarkmodeIsDefault = settings.enableDarkmodeIsDefault === "on";
 	});
 
 	callback(null, config);
