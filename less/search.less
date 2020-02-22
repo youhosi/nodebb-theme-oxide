@@ -1,7 +1,8 @@
 .search {
 	.user-img {
-		.user-icon-style(24px, 1.5, 50%);
+		.user-icon-style(24px, 1.5px, 50%);
 	}
+
 	.post-search-item {
 		.bootstrap-tagsinput {
 			display: block;
@@ -45,6 +46,29 @@
 		&:active {
 			width: 300px;
 			margin-left: -136px; // Buttons 86px | search-form 50px (250+50)
+		}
+	}
+
+	@media only screen and (max-width: @screen-md-max) {
+		width: 20px !important;
+
+		#search-fields {
+			input,
+			a {
+				display: none;
+			}
+
+			button {
+				color: @gray;
+				padding: 7px 0;
+				border: 0;
+
+				&:hover,
+				&:focus {
+					background-color: transparent;
+					border-color: transparent;
+				}
+			}
 		}
 	}
 }
