@@ -37,7 +37,7 @@
 
 		<div class="profile-name">
 			<h2 class="fullname">
-				<i component="user/status" class="fa fa-circle status {status}" title="[[global:{status}]]"></i>
+				<i component="user/status" class="status status-medium {status}" title="[[global:{status}]]"></i>
 				<!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname -->
 				<!-- IF !banned --><i>(@{username})</i><!-- ELSE --><i>([[user:banned]])</i><!-- ENDIF !banned -->
 			</h2>

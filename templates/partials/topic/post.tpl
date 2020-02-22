@@ -6,7 +6,7 @@
 			<!-- ELSE -->
 			<div component="user/picture" data-uid="{posts.user.uid}" class="user-icon" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
 			<!-- ENDIF posts.user.picture -->
-			<i component="user/status" class="fa fa-circle status {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
+			<i component="user/status" class="status status-small {posts.user.status}" title="[[global:{posts.user.status}]]"></i>
 		</a>
 	</div>
 </div>

@@ -55,24 +55,40 @@ body {
 }
 
 .status {
-	font-size: 10px;
-	vertical-align: middle;
+	display: inline-block;
+	.pointer;
+	.border-radius(50%);
+
+	&-small {
+		width: 11px;
+		height: 11px;
+	}
+
+	&-medium {
+		width: 13px;
+		height: 13px;
+	}
+
+	&-big {
+		width: 15px;
+		height: 15px;
+	}
 
 	&.online {
-		color: @material-success;
+		background-color: @material-success;
 		.pulse;
 	}
 
 	&.away {
-		color: @material-warning;
+		background-color: @material-warning;
 	}
 
 	&.dnd {
-		color: @material-danger;
+		background-color: @material-danger;
 	}
 
 	&.offline {
-		color: @gray;
+		background-color: @gray;
 	}
 }
 

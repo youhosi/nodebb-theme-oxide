@@ -6,7 +6,7 @@
 	<!-- ELSE -->
 	<div class="user-icon" style="background-color: {user.icon:bgColor};">{user.icon:text}</div>
 	<!-- ENDIF user.picture -->
-	<i component="user/status" class="fa fa-fw fa-circle status {user.status}"></i>
+	<i component="user/status" class="status status-big {user.status}"></i>
 	<!-- ENDIF user.uid -->
 </div>
 <!-- ENDIF config.loggedIn -->
