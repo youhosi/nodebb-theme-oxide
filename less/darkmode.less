@@ -11,7 +11,7 @@
 html[dark="true"],
 html[data-initial-dark="true"] {
 	body {
-		background: @bg-body-dark;
+		background-color: @bg-body-dark;
 		color: @color-primary-dark;
 	}
 
@@ -57,12 +57,12 @@ html[data-initial-dark="true"] {
 		.open > label:hover,
 		.open > label:focus {
 			color: @color-secondary-dark !important;
-			background: @border-primry-dark !important;
+			background-color: @border-primry-dark !important;
 		}
 	}
 
 	.navbar-default {
-		background: @bg-primary-dark;
+		background-color: @bg-primary-dark;
 		border-color: transparent;
 
 		.navbar-brand {
@@ -101,13 +101,13 @@ html[data-initial-dark="true"] {
 		.card-title,
 		.panel-footer {
 			color: @color-primary-dark;
-			background: @bg-primary-dark;
+			background-color: @bg-primary-dark;
 			border-color: @border-primry-dark;
 		}
 	}
 
 	.modal-content {
-		background: @bg-body-dark;
+		background-color: @bg-body-dark;
 		border-color: @border-primry-dark;
 
 		.modal-header,
@@ -116,7 +116,7 @@ html[data-initial-dark="true"] {
 		}
 
 		.modal-header {
-			background: @bg-primary-dark;
+			background-color: @bg-primary-dark;
 
 			.close {
 				color: @color-primary-dark;
@@ -132,7 +132,7 @@ html[data-initial-dark="true"] {
 	}
 
 	.category-details {
-		background: @bg-primary-dark;
+		background-color: @bg-primary-dark;
 		border-color: @border-primry-dark;
 
 		.show-separator {
@@ -169,11 +169,11 @@ html[data-initial-dark="true"] {
 	}
 
 	.dropdown-menu {
-		background: @bg-primary-dark;
+		background-color: @bg-primary-dark;
 		border-color: @border-primry-dark;
 
 		.divider {
-			background: @border-primry-dark;
+			background-color: @border-primry-dark;
 		}
 
 		.notif-action-buttons {
@@ -209,7 +209,7 @@ html[data-initial-dark="true"] {
 			}
 
 			.content {
-				background: @bg-body-dark;
+				background-color: @bg-body-dark;
 				border-color: @border-primry-dark;
 
 				&::before {
@@ -221,7 +221,7 @@ html[data-initial-dark="true"] {
 				}
 
 				.post-author {
-					background: @bg-primary-dark;
+					background-color: @bg-primary-dark;
 					border-color: @border-primry-dark;
 
 					.permalink {
@@ -236,7 +236,7 @@ html[data-initial-dark="true"] {
 
 			&:last-child,
 			.post-footer [component="post/replies"] > li:last-child {
-				background: @bg-body-dark;
+				background-color: @bg-body-dark;
 			}
 
 			.post-footer {
@@ -255,7 +255,7 @@ html[data-initial-dark="true"] {
 	kbd,
 	pre,
 	samp {
-		background: @border-primry-dark !important;
+		background-color: @border-primry-dark !important;
 		color: @color-primary-dark !important;
 	}
 
@@ -281,10 +281,11 @@ html[data-initial-dark="true"] {
 			border-color: @border-primry-dark !important;
 
 			a:hover {
-				background: @border-primry-dark !important;
+				background-color: @border-primry-dark !important;
 			}
 
-			.quick-search-title {
+			.quick-search-title,
+			.quick-search-info {
 				color: @color-primary-dark !important;
 			}
 
@@ -296,23 +297,23 @@ html[data-initial-dark="true"] {
 
 	.chat-content,
 	[component="chat/nav-wrapper"] {
-		background: @bg-body-dark;
+		background-color: @bg-body-dark;
 		border-color: @border-primry-dark;
 	}
 
 	[component="chat/header"],
 	.chat-search {
-		background: @bg-primary-dark;
+		background-color: @bg-primary-dark;
 		border-color: @border-primry-dark;
 	}
 
 	[component="chat/nav-wrapper"] {
 		.chat-search {
-			background: @bg-primary-dark;
+			background-color: @bg-primary-dark;
 			border-color: @border-primry-dark;
 
 			.search-input input {
-				background: @bg-body-dark !important;
+				background-color: @bg-body-dark !important;
 				color: @color-secondary-dark;
 
 				&::before {
@@ -323,7 +324,7 @@ html[data-initial-dark="true"] {
 	}
 
 	[component="chat/recent/room"].bg-info {
-		background: @border-highlight;
+		background-color: @border-highlight;
 	}
 
 	.chats-list .room-name,
@@ -338,7 +339,7 @@ html[data-initial-dark="true"] {
 	}
 
 	.composer {
-		background: @bg-primary-dark;
+		background-color: @bg-primary-dark;
 
 		.title {
 			color: @color-primary-dark;
@@ -356,7 +357,7 @@ html[data-initial-dark="true"] {
 
 		.write,
 		.preview {
-			background: @bg-body-dark;
+			background-color: @bg-body-dark;
 			border-color: @border-primry-dark !important;
 		}
 
@@ -368,11 +369,11 @@ html[data-initial-dark="true"] {
 	}
 
 	.emoji-dialog {
-		background: @bg-primary-dark;
+		background-color: @bg-primary-dark;
 		border-color: @border-primry-dark;
 
 		.top-bar {
-			background: @bg-primary-dark;
+			background-color: @bg-primary-dark;
 		}
 
 		.nav-tabs {
