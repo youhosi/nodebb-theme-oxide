@@ -3,8 +3,7 @@
 	max-height: 350px;
 	overflow-x: hidden;
 	overflow-y: auto;
-	padding-top: 0;
-	z-index: @zindex-tooltip + 1;
+	z-index: @zindex-navbar + 1;
 
 	.quick-search-item {
 		border-bottom: 1px solid @gray-lighter;
@@ -14,15 +13,16 @@
 
 			&:hover,
 			&:focus {
-				background: lighten(@gray-lighter, 10%);
+				color: @gray-dark !important;
+				background-color: lighten(@gray-lighter, 10%);
 			}
 		}
 
 		.quick-search-title {
 			color: @gray-dark;
-			font-weight: bold;
+			font-weight: 600;
+			margin: 0 0 3px;
 			.text-ellipsis;
-			margin: 0 0 2px;
 		}
 
 		.quick-search-content {
@@ -31,6 +31,38 @@
 			word-break: break-word;
 			white-space: normal;
 			display: block;
+		}
+
+		.quick-search-info {
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			margin-top: 4px;
+			font-size: 12px;
+			font-weight: 500;
+
+			.quick-search-meta {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				align-items: center;
+			}
+
+			.quick-search-icon {
+				border-radius: 50%;
+				margin-right: 10px;
+				width: 20px;
+				height: 20px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 11px;
+			}
+
+			.px-1 {
+				margin: 5px;
+			}
 		}
 
 		&:last-child {

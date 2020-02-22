@@ -15,8 +15,7 @@
 
 		<!-- IF loggedIn -->
 		<!-- IF !isSelf -->
-		<button class="btn-morph fab <!-- IF isFollowing -->heart<!-- ELSE -->plus<!-- ENDIF isFollowing --><!-- IF banned --> hide<!-- ENDIF banned -->"
-			title="<!-- IF isFollowing -->[[global:unfollow]]<!-- ELSE -->[[global:follow]]<!-- ENDIF isFollowing -->">
+		<button class="btn-morph fab <!-- IF isFollowing -->heart<!-- ELSE -->plus<!-- ENDIF isFollowing -->" title="<!-- IF isFollowing -->[[global:unfollow]]<!-- ELSE -->[[global:follow]]<!-- ENDIF isFollowing -->">
 			<span>
 				<span class="s1"></span>
 				<span class="s2"></span>
@@ -38,7 +37,7 @@
 
 		<div class="profile-name">
 			<h2 class="fullname">
-				<i component="user/status" class="fa fa-circle status {status}" title="[[global:{status}]]"></i>
+				<i component="user/status" class="status status-medium {status}" title="[[global:{status}]]"></i>
 				<!-- IF fullname -->{fullname}<!-- ELSE -->{username}<!-- ENDIF fullname -->
 				<!-- IF !banned --><i>(@{username})</i><!-- ELSE --><i>([[user:banned]])</i><!-- ENDIF !banned -->
 			</h2>

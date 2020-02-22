@@ -9,7 +9,7 @@
 	</a>
 	<div class="user-info">
 		<div class="username">
-			<i component="user/status" class="fa fa-circle status {users.status}" title="[[global:{users.status}]]"></i>
+			<i component="user/status" class="status status-medium {users.status}" title="[[global:{users.status}]]"></i>
 			<a href="{config.relative_path}/user/{users.userslug}" title="{users.username}">{users.username}</a>
 		</div>
 

@@ -122,27 +122,29 @@
 
 		[component="category/posts"] {
 			display: table;
-			table-layout: fixed;
+			flex-direction: row;
 			width: 100%;
+			justify-content: space-between;
+			align-items: center;
 
 			.avatar,
 			.info {
 				display: table-cell;
-				vertical-align: top;
 			}
 
 			.avatar {
-				width: 40px;
+				overflow: initial !important;
 
 				img,
 				.user-icon {
-					box-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
-					.user-icon-style(37px, 17px, 50%);
+					box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+					.user-icon-style(36px, 17px, 50%);
 				}
 			}
 
 			.info {
 				padding-left: 15px;
+				flex: 1;
 
 				.title {
 					padding-bottom: 5px;
