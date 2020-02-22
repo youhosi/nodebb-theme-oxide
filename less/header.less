@@ -80,10 +80,6 @@
 }
 
 .header {
-	[component="navbar/title"] {
-		display: none !important;
-	}
-
 	.navbar-toggle {
 		.notification-icon {
 			position: absolute;
@@ -97,18 +93,13 @@
 	}
 
 	#user_dropdown {
-		padding: 10px 15px;
+		padding: 10px;
 
 		img,
 		.user-icon {
-			.user-icon-style(30px, 1.8rem, 50%);
 			box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 			border: 0px none;
-
-			span {
-				font-size: @font-size-base;
-				font-weight: 400;
-			}
+			.user-icon-style(30px, 17px, 50%);
 		}
 	}
 
@@ -251,7 +242,6 @@
 
 #reconnect {
 	font-size: @font-size-base;
-	min-width: 45px;
 	.opacity(0);
 	.transition(opacity 0.2s linear);
 
@@ -316,43 +306,41 @@ label.dropdown-toggle {
 	}
 }
 
-.navbar-default {
-	.navbar-nav {
-		> li > label {
-			color: @navbar-default-link-color;
+.navbar-default .navbar-nav {
+	> li > label {
+		color: @navbar-default-link-color;
 
-			&:hover,
-			&:focus {
-				color: @navbar-default-link-hover-color;
-				background-color: @navbar-default-link-hover-bg;
-			}
+		&:hover,
+		&:focus {
+			color: @navbar-default-link-hover-color;
+			background-color: @navbar-default-link-hover-bg;
 		}
+	}
 
-		> .active > label {
-			&,
-			&:hover,
-			&:focus {
-				color: @navbar-default-link-active-color;
-				background-color: @navbar-default-link-active-bg;
-			}
+	> .active > label {
+		&,
+		&:hover,
+		&:focus {
+			color: @navbar-default-link-active-color;
+			background-color: @navbar-default-link-active-bg;
 		}
+	}
 
-		> .disabled > label {
-			&,
-			&:hover,
-			&:focus {
-				color: @navbar-default-link-disabled-color;
-				background-color: @navbar-default-link-disabled-bg;
-			}
+	> .disabled > label {
+		&,
+		&:hover,
+		&:focus {
+			color: @navbar-default-link-disabled-color;
+			background-color: @navbar-default-link-disabled-bg;
 		}
+	}
 
-		> .open > label {
-			&,
-			&:hover,
-			&:focus {
-				background-color: @navbar-default-link-active-bg;
-				color: @navbar-default-link-active-color;
-			}
+	> .open > label {
+		&,
+		&:hover,
+		&:focus {
+			background-color: @navbar-default-link-active-bg;
+			color: @navbar-default-link-active-color;
 		}
 	}
 }
