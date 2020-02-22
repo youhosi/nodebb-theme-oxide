@@ -36,7 +36,7 @@ html[data-initial-dark="true"] {
 	.list-group .list-group-item,
 	.nav-tabs .active a,
 	.nav-tabs li a:hover,
-	.pagination > li > a {
+	.pagination li:not(.active) > a {
 		background-color: @bg-primary-dark;
 		border-color: @border-primry-dark;
 		color: @color-secondary-dark;
@@ -437,8 +437,13 @@ html[data-initial-dark="true"] {
 	}
 
 	.categories,
-	[component="category"] {
-		> li .highlight .category-details {
+	[component="category"],
+	[component="category/topic"] {
+		.permalink {
+			border-top-color: @border-primry-dark !important;
+		}
+
+		.highlight .category-details {
 			box-shadow: 0 0 0 3px @border-highlight !important;
 			border-color: @border-primry-dark !important;
 		}
