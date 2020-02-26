@@ -41,7 +41,7 @@
 
 		<div class="col-md-8 col-xs-12 col-sm-8 clearfix category-details">
 			<div class="content">
-				<div class="col-md-8 col-xs-8 show-separator contentItem">
+				<div class="col-md-8 col-xs-12 show-separator contentItem">
 					<div class="pnt">
 						<i component="topic/pinned"
 							class="fa fa-thumb-tack <!-- IF !topics.pinned -->hide<!-- ENDIF !topics.pinned -->"
@@ -57,8 +57,7 @@
 						{{{each icons}}}@value{{{end}}}
 
 						<!-- IF !topics.noAnchor -->
-						<a href="{config.relative_path}/topic/{topics.slug}<!-- IF topics.bookmark -->/{topics.bookmark}<!-- ENDIF topics.bookmark -->"
-							itemprop="url">{topics.title}</a>
+						<a href="{config.relative_path}/topic/{topics.slug}<!-- IF topics.bookmark -->/{topics.bookmark}<!-- ENDIF topics.bookmark -->"itemprop="url">{topics.title}</a>
 						<!-- ELSE -->
 						<span>{topics.title}</span>
 						<!-- ENDIF !topics.noAnchor -->
@@ -85,24 +84,31 @@
 						<!-- ELSE -->
 						<span class="timeago" title="{topics.timestampISO}"></span>
 						<!-- ENDIF topics.teaser.timestamp -->
+
+						<div class="mobile-stat pull-right">
+
+							<a href="{config.relative_path}/topic/{topics.slug}/">
+								<i class="fa fa-eye mobileItem"></i>
+								<span class="human-readable-number mobileItem">{topics.viewcount}</span>
+							</a>
+							
+							<a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
+								<i class="fa fa-comment mobileItem"></i>
+								<span class="human-readable-number mobileItem">{topics.postcount}</span>
+							</a>
+		
+							
+							<a href="{config.relative_path}/topic/{topics.slug}">
+								<i class="fa fa-thumbs-up mobileItem"></i>
+								<span class="human-readable-number mobileItem">{topics.votes}</span>
+							</a>
+		
+						</div>
+		
+
 					</small>
 				</div>
 
-				<div class="mobile-stat col-xs-2 visible-xs text-right contentItem">
-					<a href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
-						<i class="fa fa-comment mobileItem"></i>
-						<span class="human-readable-number mobileItem">{topics.postcount}</span>
-					</a>
-
-				</div>
-
-				<div class="mobile-stat col-xs-2 visible-xs text-right contentItem">
-					<a href="{config.relative_path}/topic/{topics.slug}">
-						<i class="fa fa-thumbs-up mobileItem"></i>
-						<span class="human-readable-number mobileItem">{topics.votes}</span>
-					</a>
-
-				</div>
 
 				<!-- 				
 	<div class="col-md-1 hidden-sm hidden-xs stats contentItem">
