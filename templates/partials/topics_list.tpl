@@ -2,8 +2,7 @@
 	data-set="{set}">
 	<meta itemprop="itemListOrder" content="descending">
 	{{{each topics}}}
-	<li component="category/topic" class="row clearfix {function.generateTopicClass} category-item" <!-- IMPORT
-		partials/data/category.tpl -->>
+	<li component="category/topic" class="row clearfix {function.generateTopicClass} category-item" <!-- IMPORT partials/data/category.tpl -->>
 		<meta itemprop="name" content="{function.stripTags, title}">
 
 		<div class="col-md-1 hidden-sm hidden-xs avatar">
@@ -147,8 +146,7 @@
 
 				<!-- IF topics.teaser.pid -->
 				<p>
-					<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">{buildAvatar(topics.teaser.user, "24",
-						true, "not-responsive")}</a>
+					<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">{buildAvatar(topics.teaser.user, "24", true, "not-responsive")}</a>
 					<a class="permalink" href="{config.relative_path}/topic/{topics.slug}/{topics.teaser.index}">
 						<span class="timeago" title="{topics.teaser.timestampISO}"></span>
 					</a>
