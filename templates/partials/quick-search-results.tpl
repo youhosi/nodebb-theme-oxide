@@ -1,6 +1,6 @@
 <ul id="quick-search-results" class="quick-search-results">
 	{{{each posts}}}
-	<li class="quick-search-item">
+	<li class="quick-search-item" data-tid="{posts.topic.tid}" data-pid="{posts.pid}">
 		<a href="{config.relative_path}/post/{posts.pid}">
 			<p class="quick-search-title">{posts.topic.title}</p>
 
