@@ -2,7 +2,7 @@
 	<meta itemprop="itemListOrder" content="descending">
 	{{{each topics}}}
 	<li component="category/topic" class="row clearfix {function.generateTopicClass} category-item" <!-- IMPORT partials/data/category.tpl -->>
-		<meta itemprop="name" content="{function.stripTags, title}">
+			<meta itemprop="name" content="{function.stripTags, title}">
 
 		<div class="col-md-1 col-xs-12 col-sm-1 hidden-xs avatar">
 			<!-- IF showSelect -->
@@ -21,8 +21,7 @@
 			<!-- ENDIF showSelect -->
 
 			<!-- IF !showSelect -->
-			<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->"
-			 class="pull-left">
+			<a href="<!-- IF topics.user.userslug -->{config.relative_path}/user/{topics.user.userslug}<!-- ELSE -->#<!-- ENDIF topics.user.userslug -->" class="pull-left">
 				<!-- IF topics.thumb -->
 				<img src="{topics.thumb}" class="user-img not-responsive" />
 				<!-- ELSE -->
@@ -103,7 +102,7 @@
 				<ul class="tag-list">
 					{{{each topics.tags}}}
 					<li>
-						<a href="{config.relative_path}/tags/{topics.tags.value}" class="tag" style="<!-- IF topics.tags.color -->color: {topics.tags.color};<!-- ENDIF topics.tags.color --><!-- IF topics.tags.bgColor -->background-color: {topics.tags.bgColor};<!-- ENDIF topics.tags.bgColor -->">
+						<a href="{config.relative_path}/tags/{topics.tags.valueEscaped}" class="tag" style="<!-- IF topics.tags.color -->color: {topics.tags.color};<!-- ENDIF topics.tags.color --><!-- IF topics.tags.bgColor -->background-color: {topics.tags.bgColor};<!-- ENDIF topics.tags.bgColor -->">
 							<span class="tag-item">{topics.tags.valueEscaped}</span>
 						</a>
 					</li>
@@ -125,7 +124,7 @@
 				<div class="avatar">
 					<a href="{config.relative_path}/user/{topics.teaser.user.userslug}">
 						<!-- IF topics.teaser.user.picture -->
-						<img title="{topics.teaser.user.username}" class="user-img not-responsive" src="{topics.teaser.user.picture}"/>
+						<img title="{topics.teaser.user.username}" class="user-img not-responsive" src="{topics.teaser.user.picture}" />
 						<!-- ELSE -->
 						<span title="{topics.teaser.user.username}" class="user-icon user-img" style="background-color: {topics.teaser.user.icon:bgColor};">{topics.teaser.user.icon:text}</span>
 						<!-- ENDIF topics.teaser.user.picture -->
