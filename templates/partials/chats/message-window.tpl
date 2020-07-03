@@ -4,7 +4,8 @@
 		<div class="chat-header">
 			<!-- IF !roomName -->
 			{{{each users}}}
-			<a href="{config.relative_path}/uid/{../uid}" class="title" title="[[modules:chat.chatting_with]] {../username}">{../username}</a><!-- IF !@last -->,<!-- END -->
+			<a href="{config.relative_path}/uid/{../uid}" class="title" title="[[modules:chat.chatting_with]] {../username}">{../username}</a><!-- IF !@last -->,
+			<!-- END -->
 			{{{end}}}
 			<!-- ELSE -->
 			<span class="title">{roomName}</span>
@@ -15,22 +16,6 @@
 			<div class="dropdown chat-item">
 				<button class="close" data-toggle="dropdown" component="chat/controlsToggle"><i class="fa fa-gear"></i></button>
 				<ul class="dropdown-menu dropdown-menu-right pull-right" component="chat/controls">
-					<!-- IF users.length -->
-					<li class="dropdown-header">[[modules:chat.in-room]]</li>
-					{{{each users}}}
-					<li>
-						<a href="{config.relative_path}/uid/{../uid}">
-							<!-- IF ../picture -->
-							<img class="avatar avatar-sm" component="user/picture" src="{../picture}" itemprop="image"/>
-							<!-- ELSE -->
-							<div class="avatar avatar-sm" component="user/picture" style="background-color:{../icon:bgColor};">{../icon:text}</div>
-							<!-- END -->
-							{../username}
-						</a>
-					</li>
-					{{{end}}}
-					<li role="separator" class="divider"></li>
-					<!-- END -->
 					<li class="dropdown-header">[[modules:chat.options]]</li>
 					<li>
 						<a href="#" data-action="members"><i class="fa fa-fw fa-cog"></i> [[modules:chat.manage-room]]</a>
@@ -43,6 +28,23 @@
 					<li>
 						<a href="#" data-action="leave"><i class="fa fa-fw fa-sign-out"></i> [[modules:chat.leave]]</a>
 					</li>
+					<!-- IF users.length -->
+					<li role="separator" class="divider"></li>
+
+					<li class="dropdown-header">[[modules:chat.in-room]]</li>
+					{{{each users}}}
+					<li>
+						<a href="{config.relative_path}/uid/{../uid}">
+							<!-- IF ../picture -->
+							<img class="avatar avatar-sm" component="user/picture" src="{../picture}" itemprop="image" />
+							<!-- ELSE -->
+							<div class="avatar avatar-sm" component="user/picture" style="background-color:{../icon:bgColor};">{../icon:text}</div>
+							<!-- END -->
+							{../username}
+						</a>
+					</li>
+					{{{end}}}
+					<!-- END -->
 				</ul>
 			</div>
 			<button type="button" class="close chat-item" data-action="pop-out"><span aria-hidden="true"><i class="fa fa-compress"></i></span><span class="sr-only">[[modules:chat.pop-out]]</span></button>

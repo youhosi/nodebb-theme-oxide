@@ -10,7 +10,7 @@
 
 				<!-- IF brand:logo -->
 				<a href="<!-- IF brand:logo:url -->{brand:logo:url}<!-- ELSE -->{relative_path}/<!-- ENDIF brand:logo:url -->" class="navbar-brand forum-logo {brand:logo:display}">
-					<img alt="{brand:logo:alt}" src="{brand:logo}?{config.cache-buster}"/>
+					<img alt="{brand:logo:alt}" src="{brand:logo}?{config.cache-buster}" />
 				</a>
 				<!-- ENDIF brand:logo -->
 				<!-- IF config.showSiteTitle -->
@@ -74,7 +74,7 @@
 					<li id="user_label" class="dropdown">
 						<label for="user-control-list-check" class="dropdown-toggle" data-toggle="dropdown" id="user_dropdown" title="[[global:header.profile]]" role="button">
 							<!-- IF user.picture -->
-							<img component="header/userpicture" src="{user.picture}" alt="{user.username}"/>
+							<img component="header/userpicture" src="{user.picture}" alt="{user.username}" />
 							<!-- ELSE -->
 							<span component="header/usericon" class="user-icon" style="background-color: {user.icon:bgColor}; display: block;">{user.icon:text}</span>
 							<!-- ENDIF user.picture -->
@@ -95,22 +95,26 @@
 							<li role="presentation" class="divider"></li>
 							<li>
 								<a href="#" class="user-status" data-status="online">
-									<i class="status status-medium online"></i><span <!-- IF user.online -->class="bold"<!-- ENDIF user.online -->> [[global:online]]</span>
+									<i class="status status-medium online"></i><span <!-- IF user.online -->class="bold"
+										<!-- ENDIF user.online -->> [[global:online]]</span>
 								</a>
 							</li>
 							<li>
 								<a href="#" class="user-status" data-status="away">
-									<i class="status status-medium away"></i><span <!-- IF user.away -->class="bold"<!-- ENDIF user.away -->> [[global:away]]</span>
+									<i class="status status-medium away"></i><span <!-- IF user.away -->class="bold"
+										<!-- ENDIF user.away -->> [[global:away]]</span>
 								</a>
 							</li>
 							<li>
 								<a href="#" class="user-status" data-status="dnd">
-									<i class="status status-medium dnd"></i><span <!-- IF user.dnd -->class="bold"<!-- ENDIF user.dnd -->> [[global:dnd]]</span>
+									<i class="status status-medium dnd"></i><span <!-- IF user.dnd -->class="bold"
+										<!-- ENDIF user.dnd -->> [[global:dnd]]</span>
 								</a>
 							</li>
 							<li>
 								<a href="#" class="user-status" data-status="offline">
-									<i class="status status-medium offline"></i><span <!-- IF user.offline -->class="bold"<!-- ENDIF user.offline -->> [[global:invisible]]</span>
+									<i class="status status-medium offline"></i><span <!-- IF user.offline -->class="bold"
+										<!-- ENDIF user.offline -->> [[global:invisible]]</span>
 								</a>
 							</li>
 							<li role="presentation" class="divider"></li>
@@ -194,9 +198,9 @@
 							</span>
 						</div>
 
-						<ul id="quick-search-results" class="dropdown-menu quick-search-results hidden">
-							<!-- IMPORT partials/quick-search-results.tpl -->
-						</ul>
+						<div id="quick-search-container" class="quick-search-container hidden">
+							<div class="quick-search-results-container"></div>
+						</div>
 					</form>
 					<li class="visible-xs" id="search-menu">
 						<a href="{relative_path}/search">
@@ -231,8 +235,8 @@
 
 						<ul class="dropdown-menu" role="menu">
 							<li>
-  								<input type="text" class="form-control" id="indexInput" placeholder="[[global:pagination.enter_index]]">
-  							</li>
+								<input type="text" class="form-control" id="indexInput" placeholder="[[global:pagination.enter_index]]">
+							</li>
 						</ul>
 					</li>
 				</ul>
@@ -241,7 +245,10 @@
 					{{{each navigation}}}
 					<!-- IF function.displayMenuItem, @index -->
 					<li class="{navigation.class}">
-						<a class="navigation-link" href="{navigation.route}" title="{navigation.title}" <!-- IF navigation.id -->id="{navigation.id}"<!-- ENDIF navigation.id --><!-- IF navigation.properties.targetBlank --> target="_blank"<!-- ENDIF navigation.properties.targetBlank -->>
+						<a class="navigation-link" href="{navigation.route}" title="{navigation.title}" <!-- IF navigation.id -->id="{navigation.id}"
+							<!-- ENDIF navigation.id -->
+							<!-- IF navigation.properties.targetBlank --> target="_blank"
+							<!-- ENDIF navigation.properties.targetBlank -->>
 							<!-- IF navigation.iconClass -->
 							<i class="fa fa-fw {navigation.iconClass}" data-content="{navigation.content}"></i>
 							<!-- ENDIF navigation.iconClass -->

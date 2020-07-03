@@ -16,8 +16,12 @@
 								<option value="titlesposts">[[search:titles-posts]]</option>
 								<option value="titles">[[search:titles]]</option>
 								<option value="posts">[[global:posts]]</option>
+								{{{if privileges.search:users}}}
 								<option value="users">[[global:users]]</option>
+								{{{end}}}
+								{{{if privileges.search:tags}}}
 								<option value="tags">[[tags:tags]]</option>
+								{{{end}}}
 							</select>
 						</div>
 						<div class="col-md-2">
@@ -190,7 +194,7 @@
 						<span class="pull-right post-preview-footer">
 							<a href="{config.relative_path}/user/{posts.user.userslug}">
 								<!-- IF posts.user.picture -->
-								<img class="user-img" title="{posts.user.username}" src="{posts.user.picture}"/>
+								<img class="user-img" title="{posts.user.username}" src="{posts.user.picture}" />
 								<!-- ELSE -->
 								<div class="user-icon user-img" title="{posts.user.username}" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
 								<!-- ENDIF posts.user.picture -->
@@ -204,7 +208,7 @@
 
 			<!-- IF users.length -->
 			<ul id="users-container" class="users-container">
-			<!-- IMPORT partials/users_list.tpl -->
+				<!-- IMPORT partials/users_list.tpl -->
 			</ul>
 			<!-- ENDIF users.length -->
 

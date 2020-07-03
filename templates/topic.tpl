@@ -1,7 +1,7 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div data-widget-area="header">
 	{{{each widgets.header}}}
-		{{widgets.header.html}}
+	{{widgets.header.html}}
 	{{{end}}}
 </div>
 <div class="row">
@@ -38,55 +38,47 @@
 
 			<div class="header-info">
 
-			<!-- IF merger -->
-			<div component="topic/merged/message" class="alert alert-warning clearfix">
-				<span class="pull-left">[[topic:merged_message, {mergeIntoTid}, {merger.mergedIntoTitle}]]</span>
-				<span class="pull-right">
-					<a href="{config.relative_path}/user/{merger.userslug}">
-						<strong>{merger.username}</strong>
-					</a>
-					<small class="timeago" title="{mergedTimestampISO}"></small>
-				</span>
-			</div>
-			<!-- ENDIF merger -->
+				<!-- IF merger -->
+				<div component="topic/merged/message" class="alert alert-warning clearfix">
+					<span class="pull-left">[[topic:merged_message, {mergeIntoTid}, {merger.mergedIntoTitle}]]</span>
+					<span class="pull-right">
+						<a href="{config.relative_path}/user/{merger.userslug}">
+							<strong>{merger.username}</strong>
+						</a>
+						<small class="timeago" title="{mergedTimestampISO}"></small>
+					</span>
+				</div>
+				<!-- ENDIF merger -->
 
-			<div component="topic/deleted/message" class="alert alert-warning<!-- IF !deleted --> hidden<!-- ENDIF !deleted --> clearfix">
-				<span class="pull-left">[[topic:deleted_message]]</span>
-				<span class="pull-right">
-					<!-- IF deleter -->
-					<a href="{config.relative_path}/user/{deleter.userslug}">
-						<strong>{deleter.username}</strong>
-					</a>
-					<small class="timeago" title="{deletedTimestampISO}"></small>
-					<!-- ENDIF deleter -->
-				</span>
-			</div>
+				<div component="topic/deleted/message" class="alert alert-warning<!-- IF !deleted --> hidden<!-- ENDIF !deleted --> clearfix">
+					<span class="pull-left">[[topic:deleted_message]]</span>
+					<span class="pull-right">
+						<!-- IF deleter -->
+						<a href="{config.relative_path}/user/{deleter.userslug}">
+							<strong>{deleter.username}</strong>
+						</a>
+						<small class="timeago" title="{deletedTimestampISO}"></small>
+						<!-- ENDIF deleter -->
+					</span>
+				</div>
 			</div>
 		</div>
 
 		<ul component="topic" class="posts" data-tid="{tid}" data-cid="{cid}">
 			{{{each posts}}}
-				<li component="post" class="<!-- IF posts.deleted -->deleted<!-- ENDIF posts.deleted -->" <!-- IMPORT partials/data/topic.tpl -->>
-					<a component="post/anchor" data-index="{posts.index}" id="{posts.index}"></a>
+			<li component="post" class="<!-- IF posts.deleted -->deleted<!-- ENDIF posts.deleted -->" <!-- IMPORT partials/data/topic.tpl -->>
+				<a component="post/anchor" data-index="{posts.index}" id="{posts.index}"></a>
 
-					<meta itemprop="datePublished" content="{posts.timestampISO}">
-					<meta itemprop="dateModified" content="{posts.editedISO}">
+				<meta itemprop="datePublished" content="{posts.timestampISO}">
+				<meta itemprop="dateModified" content="{posts.editedISO}">
 
-					<!-- IMPORT partials/topic/post.tpl -->
+				<!-- IMPORT partials/topic/post.tpl -->
 
-					<!-- IF !posts.index -->
-					<ul class="tags">
-						<!-- BEGIN tags -->
-						<li>
-							<a href="{config.relative_path}/tags/{tags.value}" class="tag" style="<!-- IF tags.color -->color: {tags.color};<!-- ENDIF tags.color --><!-- IF tags.bgColor -->background-color: {tags.bgColor};<!-- ENDIF tags.bgColor -->">
-								<span class="tag-item" data-tag="{tags.value}">{tags.valueEscaped}</span>
-							</a>
-						</li>
-						<!-- END tags -->
-					</ul>
-					<!-- ENDIF !posts.index -->
+				<!-- IF !posts.index -->
+				<!-- IMPORT partials/topic/tags.tpl -->
+				<!-- ENDIF !posts.index -->
 
-				</li>
+			</li>
 			{{{end}}}
 		</ul>
 
@@ -119,13 +111,13 @@
 	</div>
 	<div data-widget-area="sidebar" class="col-lg-3 col-sm-12 <!-- IF !widgets.sidebar.length -->hidden<!-- ENDIF !widgets.sidebar.length -->">
 		{{{each widgets.sidebar}}}
-			{{widgets.sidebar.html}}
+		{{widgets.sidebar.html}}
 		{{{end}}}
 	</div>
 </div>
 <div data-widget-area="footer">
 	{{{each widgets.sidebar}}}
-		{{widgets.footer.html}}
+	{{widgets.footer.html}}
 	{{{end}}}
 </div>
 

@@ -1,14 +1,14 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div data-widget-area="header">
 	{{{each widgets.header}}}
-		{{widgets.header.html}}
+	{{widgets.header.html}}
 	{{{end}}}
 </div>
 <div class="top">
 	<div class="btn-toolbar">
 		<div class="pull-left">
 			<!-- IF loggedIn -->
-				<!-- IMPORT partials/buttons/newTopic.tpl -->
+			<!-- IMPORT partials/buttons/newTopic.tpl -->
 			<!-- ELSE -->
 			<a component="category/post/guest" href="{config.relative_path}/login" class="btn btn-primary">[[category:guest-login-post]]</a>
 			<!-- ENDIF loggedIn -->
@@ -16,8 +16,11 @@
 
 		<div component="category/dropdown" class="btn-group pull-right category-dropdown-container <!-- IF !categories.length -->hidden<!-- ENDIF !categories.length -->">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-				<!-- IF selectedCategory --><!-- IF selectedCategory.icon --><span class="fa-stack"><i style="color: {selectedCategory.bgColor};" class="fa fa-circle fa-stack-2x"></i><i class="fa fa-fw fa-stack-1x {selectedCategory.icon}" style="color: {selectedCategory.color};"></i></span><!-- ENDIF selectedCategory.icon --> {selectedCategory.name}<!-- ELSE -->
-				[[unread:all_categories]]<!-- ENDIF selectedCategory --> <span class="caret"></span>
+				<!-- IF selectedCategory -->
+				<!-- IF selectedCategory.icon --><span class="fa-stack"><i style="color: {selectedCategory.bgColor};" class="fa fa-circle fa-stack-2x"></i><i class="fa fa-fw fa-stack-1x {selectedCategory.icon}" style="color: {selectedCategory.color};"></i></span><!-- ENDIF selectedCategory.icon --> {selectedCategory.name}
+				<!-- ELSE -->
+				[[unread:all_categories]]
+				<!-- ENDIF selectedCategory --> <span class="caret"></span>
 			</button>
 			<ul component="category/list" class="dropdown-menu category-dropdown-menu" role="menu">
 				<li role="presentation" class="category">
@@ -25,7 +28,8 @@
 				</li>
 				<!-- BEGIN categories -->
 				<li role="presentation" class="category" data-cid="{categories.cid}" data-parent-cid="{categories.parentCid}">
-					<a role="menu-item" href="#"><i component="category/select/icon" class="fa fa-fw <!-- IF categories.selected -->fa-check<!-- ENDIF categories.selected -->"></i>{categories.level}<!-- IF categories.icon --><span class="fa-stack"><i style="color: {categories.bgColor};" class="fa fa-circle fa-stack-2x"></i><i class="fa fa-fw fa-stack-1x {categories.icon}" style="color: {categories.color};"></i></span><!-- ENDIF categories.icon --> {categories.name}</a>
+					<a role="menu-item" href="#"><i component="category/select/icon" class="fa fa-fw <!-- IF categories.selected -->fa-check<!-- ENDIF categories.selected -->"></i>{categories.level}
+						<!-- IF categories.icon --><span class="fa-stack"><i style="color: {categories.bgColor};" class="fa fa-circle fa-stack-2x"></i><i class="fa fa-fw fa-stack-1x {categories.icon}" style="color: {categories.color};"></i></span><!-- ENDIF categories.icon --> {categories.name}</a>
 				</li>
 				<!-- END categories -->
 			</ul>
@@ -33,11 +37,11 @@
 
 		<div class="btn-group pull-right <!-- IF !filters.length -->hidden<!-- ENDIF !filters.length -->">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-			{selectedFilter.name} <span class="caret"></span>
+				{selectedFilter.name} <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu" role="menu">
 				{{{each filters}}}
-				<li role="presentation" class="category">
+				<li role="presentation" class="category {{{if filters.selected}}}selected{{{end}}}">
 					<a role="menu-item" href="{config.relative_path}/{filters.url}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i>{filters.name}</a>
 				</li>
 				{{{end}}}
@@ -46,7 +50,7 @@
 
 		<div class="btn-group pull-right <!-- IF !terms.length -->hidden<!-- ENDIF !terms.length -->">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-			{selectedTerm.name} <span class="caret"></span>
+				{selectedTerm.name} <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu" role="menu">
 				{{{each terms}}}
@@ -58,7 +62,7 @@
 		</div>
 	</div>
 
-	<hr class="hidden-xs"/>
+	<hr class="hidden-xs" />
 
 	<div class="category">
 		<!-- IF !topics.length -->
@@ -68,7 +72,7 @@
 		<!-- IMPORT partials/topics_list.tpl -->
 
 		<!-- IF config.usePagination -->
-			<!-- IMPORT partials/paginator.tpl -->
+		<!-- IMPORT partials/paginator.tpl -->
 		<!-- ENDIF config.usePagination -->
 	</div>
 </div
