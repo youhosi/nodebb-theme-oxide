@@ -1,7 +1,7 @@
 <!-- IMPORT partials/breadcrumbs.tpl -->
 <div data-widget-area="header">
 	{{{each widgets.header}}}
-		{{widgets.header.html}}
+	{{widgets.header.html}}
 	{{{end}}}
 </div>
 <div class="unread">
@@ -29,7 +29,8 @@
 				<li class="divider"></li>
 				{{{each categories}}}
 				<li role="presentation" class="category" data-cid="{categories.cid}">
-					<a role="menu-item" href="#">{categories.level}<!-- IF categories.icon --><span class="fa-stack"><i style="color: {categories.bgColor};" class="fa fa-circle fa-stack-2x"></i><i class="fa fa-fw fa-stack-1x {categories.icon}" style="color: {categories.color};"></i></span><!-- ENDIF categories.icon --> {categories.name}</a>
+					<a role="menu-item" href="#">{categories.level}
+						<!-- IF categories.icon --><span class="fa-stack"><i style="color: {categories.bgColor};" class="fa fa-circle fa-stack-2x"></i><i class="fa fa-fw fa-stack-1x {categories.icon}" style="color: {categories.color};"></i></span><!-- ENDIF categories.icon --> {categories.name}</a>
 				</li>
 				{{{end}}}
 			</ul>
@@ -37,8 +38,11 @@
 
 		<div component="category/dropdown" class="btn-group pull-right category-dropdown-container">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-				<!-- IF selectedCategory --><!-- IF selectedCategory.icon --><span class="fa-stack"><i style="color: {selectedCategory.bgColor};" class="fa fa-circle fa-stack-2x"></i><i class="fa fa-fw fa-stack-1x {selectedCategory.icon}" style="color: {selectedCategory.color};"></i></span><!-- ENDIF selectedCategory.icon --> {selectedCategory.name}<!-- ELSE -->
-				[[unread:all_categories]]<!-- ENDIF selectedCategory --> <span class="caret"></span>
+				<!-- IF selectedCategory -->
+				<!-- IF selectedCategory.icon --><span class="fa-stack"><i style="color: {selectedCategory.bgColor};" class="fa fa-circle fa-stack-2x"></i><i class="fa fa-fw fa-stack-1x {selectedCategory.icon}" style="color: {selectedCategory.color};"></i></span><!-- ENDIF selectedCategory.icon --> {selectedCategory.name}
+				<!-- ELSE -->
+				[[unread:all_categories]]
+				<!-- ENDIF selectedCategory --> <span class="caret"></span>
 			</button>
 			<ul component="category/list" class="dropdown-menu category-dropdown-menu" role="menu">
 				<li role="presentation" class="category">
@@ -46,7 +50,8 @@
 				</li>
 				{{{each categories}}}
 				<li role="presentation" class="category" data-cid="{categories.cid}" data-parent-cid="{categories.parentCid}">
-					<a role="menu-item" href="#"><i component="category/select/icon" class="fa fa-fw <!-- IF categories.selected -->fa-check<!-- ENDIF categories.selected -->"></i>{categories.level}<!-- IF categories.icon --><span class="fa-stack"><i style="color: {categories.bgColor};" class="fa fa-circle fa-stack-2x"></i><i class="fa fa-fw fa-stack-1x {categories.icon}" style="color: {categories.color};"></i></span><!-- ENDIF categories.icon --> {categories.name}</a>
+					<a role="menu-item" href="#"><i component="category/select/icon" class="fa fa-fw <!-- IF categories.selected -->fa-check<!-- ENDIF categories.selected -->"></i>{categories.level}
+						<!-- IF categories.icon --><span class="fa-stack"><i style="color: {categories.bgColor};" class="fa fa-circle fa-stack-2x"></i><i class="fa fa-fw fa-stack-1x {categories.icon}" style="color: {categories.color};"></i></span><!-- ENDIF categories.icon --> {categories.name}</a>
 				</li>
 				{{{end}}}
 			</ul>
@@ -54,11 +59,11 @@
 
 		<div class="btn-group pull-right">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-			{selectedFilter.name} <span class="caret"></span>
+				{selectedFilter.name} <span class="caret"></span>
 			</button>
 			<ul class="dropdown-menu" role="menu">
 				{{{each filters}}}
-				<li role="presentation" class="category">
+				<li role="presentation" class="category {{{if filters.selected}}}selected{{{end}}}">
 					<a role="menu-item" href="{config.relative_path}/{filters.url}"><i class="fa fa-fw <!-- IF filters.selected -->fa-check<!-- ENDIF filters.selected -->"></i>{filters.name}</a>
 				</li>
 				{{{end}}}
@@ -66,7 +71,7 @@
 		</div>
 	</div>
 
-	<hr class="hidden-xs"/>
+	<hr class="hidden-xs" />
 
 	<div class="category">
 		<div id="category-no-topics" class="alert alert-warning <!-- IF topics.length -->hidden<!-- ENDIF topics.length -->">[[unread:no_unread_topics]]</div>
@@ -74,7 +79,7 @@
 		<!-- IMPORT partials/topics_list.tpl -->
 		<button id="load-more-btn" class="btn btn-primary hide">[[unread:load_more]]</button>
 		<!-- IF config.usePagination -->
-			<!-- IMPORT partials/paginator.tpl -->
+		<!-- IMPORT partials/paginator.tpl -->
 		<!-- ENDIF config.usePagination -->
 	</div>
 </div>
