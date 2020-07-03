@@ -45,11 +45,11 @@
 	},
 	"devDependencies": {
 		"eslint": "^6.6.0",
-		"eslint-config-prettier": "^6.10.1",
-		"husky": "^4.2.3",
-		"lint-staged": "^10.1.2",
+		"eslint-config-prettier": "^6.11.0",
+		"husky": "^4.2.5",
+		"lint-staged": "^10.2.11",
 		"minimist": "^1.2.5",
-		"prettier": "^2.0.4"
+		"prettier": "^2.0.5"
 	},
 	"nbbpm": {
 		"compatibility": "^1.13.1"
