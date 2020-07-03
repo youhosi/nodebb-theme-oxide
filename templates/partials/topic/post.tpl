@@ -2,7 +2,7 @@
 	<div class="icon pull-left">
 		<a href="<!-- IF posts.user.userslug -->{config.relative_path}/user/{posts.user.userslug}<!-- ELSE -->#<!-- ENDIF posts.user.userslug -->">
 			<!-- IF posts.user.picture -->
-			<img component="user/picture" data-uid="{posts.user.uid}" src="{posts.user.picture}" align="left" itemprop="image"/>
+			<img component="user/picture" data-uid="{posts.user.uid}" src="{posts.user.picture}" align="left" itemprop="image" />
 			<!-- ELSE -->
 			<div component="user/picture" data-uid="{posts.user.uid}" class="user-icon" style="background-color: {posts.user.icon:bgColor};">{posts.user.icon:text}</div>
 			<!-- ENDIF posts.user.picture -->
@@ -31,14 +31,17 @@
 			<small data-editor="{posts.editor.userslug}" component="post/editor" class="hidden">[[global:last_edited_by, {posts.editor.username}]] <span class="timeago" title="{posts.editedISO}"></span></small>
 
 			<!-- IF posts.toPid -->
-			<a component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="{posts.toPid}" href="{config.relative_path}/post/{posts.toPid}"><i class="fa fa-reply"></i> @<!-- IF posts.parent.username -->{posts.parent.username}<!-- ELSE -->[[global:guest]]<!-- ENDIF posts.parent.username --></a>
+			<a component="post/parent" class="btn btn-xs btn-default hidden-xs" data-topid="{posts.toPid}" href="{config.relative_path}/post/{posts.toPid}"><i class="fa fa-reply"></i> @
+				<!-- IF posts.parent.username -->{posts.parent.username}
+				<!-- ELSE -->[[global:guest]]
+				<!-- ENDIF posts.parent.username --></a>
 			<!-- ENDIF posts.toPid -->
 
 			<span>
 				<!-- IF posts.user.custom_profile_info.length -->
 				&#124;
 				{{{each posts.user.custom_profile_info}}}
-					{posts.user.custom_profile_info.content}
+				{posts.user.custom_profile_info.content}
 				{{{end}}}
 				<!-- ENDIF posts.user.custom_profile_info.length -->
 			</span>
@@ -85,7 +88,7 @@
 		<span component="post/reply-count/avatars" class="avatars <!-- IF posts.replies.hasMore -->hasMore<!-- ENDIF posts.replies.hasMore -->">
 			{{{each posts.replies.users}}}
 			<!-- IF posts.replies.users.picture -->
-			<span><img component="user/picture" data-uid="{posts.replies.users.uid}" title="{posts.replies.users.username}" class="avatar" src="{posts.replies.users.picture}"  itemprop="image" /></span>
+			<span><img component="user/picture" data-uid="{posts.replies.users.uid}" title="{posts.replies.users.username}" class="avatar" src="{posts.replies.users.picture}" itemprop="image" /></span>
 			<!-- ELSE -->
 			<div component="user/picture" data-uid="{posts.replies.users.uid}" title="{posts.replies.users.username}" class="user-icon" style="background-color: {posts.replies.users.icon:bgColor};">{posts.replies.users.icon:text}</div>
 			<!-- ENDIF posts.replies.users.picture -->
