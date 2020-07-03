@@ -4,7 +4,7 @@
 		<div class="message-avatar">
 			<a href="{config.relative_path}/user/{messages.fromUser.userslug}">
 				<!-- IF messages.fromUser.picture -->
-				<img class="chat-user-image not-responsive" title="{messages.fromUser.username} <!-- IF !messages.self --><!-- IF ../fromUser.banned --> · [[user:banned]]<!-- END --><!-- IF ../fromUser.deleted --> · [[user:deleted]]<!-- END --><!-- ENDIF !messages.self -->"  src="{messages.fromUser.picture}">
+				<img class="chat-user-image not-responsive" title="{messages.fromUser.username} <!-- IF !messages.self --><!-- IF ../fromUser.banned --> · [[user:banned]]<!-- END --><!-- IF ../fromUser.deleted --> · [[user:deleted]]<!-- END --><!-- ENDIF !messages.self -->" src="{messages.fromUser.picture}">
 				<!-- ELSE -->
 				<div class="user-icon chat-user-image" title="{messages.fromUser.username} <!-- IF !messages.self --><!-- IF ../fromUser.banned --> · [[user:banned]]<!-- END --><!-- IF ../fromUser.deleted --> · [[user:deleted]]<!-- END --><!-- ENDIF !messages.self -->" style="background-color:{messages.fromUser.icon:bgColor};">{messages.fromUser.icon:text}</div>
 				<!-- ENDIF messages.fromUser.picture -->
