@@ -1,3 +1,5 @@
+<!-- IMPORT partials/breadcrumbs.tpl -->
+
 <div class="row">
 	<div class="col-sm-4 col-md-3">
 		<!-- IMPORT partials/flags/filters.tpl -->
@@ -187,6 +189,14 @@
 										<li><a href="#" data-chat="{reporter.uid}">[[flags:start-new-chat]]</a></li>
 									</ul>
 								</div>
+							</li>
+							<br />
+
+							<li>
+								<a class="btn btn-default btn-block" href="#" data-action="assign">
+									<i class="fa fa-id-card-o"></i>
+									[[flags:assign-to-me]]
+								</a>
 							</li>
 							<br />
 
