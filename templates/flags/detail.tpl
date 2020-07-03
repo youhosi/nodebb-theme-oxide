@@ -149,6 +149,7 @@
 							</li>
 							<br />
 
+							{{{ if target.uid }}}
 							<li>
 								<div class="btn-group btn-block" data-uid="{target.uid}">
 									<button type="button" class="btn btn-default btn-block dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -162,11 +163,14 @@
 										<li><a href="#" data-action="chat">[[flags:start-new-chat]]</a></li>
 										<li role="separator" class="divider"></li>
 										<li><a href="#" data-action="ban">[[user:ban_account]]</a></li>
-										<li><a href="#" data-action="delete">[[user:delete_account]]</a></li>
+										<li><a href="#" data-action="delete-account">[[user:delete_account_as_admin]]</a></li>
+										<li><a href="#" data-action="delete-content">[[user:delete_content]]</a></li>
+										<li><a href="#" data-action="delete-all">[[user:delete_all]]</a></li>
 									</ul>
 								</div>
 							</li>
 							<br />
+							{{{ end }}}
 
 							<li>
 								<div class="btn-group btn-block">
@@ -181,6 +185,20 @@
 									</ul>
 								</div>
 							</li>
+							<br />
+
+							{{{ if type_bool.post }}}
+							{{{ if !target.deleted}}}
+							<li>
+								<a class="btn btn-danger btn-block" href="#" data-action="delete-post">[[flags:delete-post]]</a>
+							</li>
+							{{{ else }}}
+							<li>
+								<a class="btn btn-danger btn-block" href="#" data-action="purge-post">[[flags:purge-post]]</a>
+								<a class="btn btn-success btn-block" href="#" data-action="restore-post">[[flags:restore-post]]</a>
+							</li>
+							{{{ end }}}
+							{{{ end }}}
 						</ul>
 					</div>
 				</div>
