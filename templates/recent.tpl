@@ -18,6 +18,10 @@
 			</a>
 		</div>
 
+		<div class="btn-group pull-right">
+			<!-- IMPORT partials/category/tools.tpl -->
+		</div>
+
 		<div component="category/dropdown" class="btn-group pull-right category-dropdown-container <!-- IF !categories.length -->hidden<!-- ENDIF !categories.length -->">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 				<!-- IF selectedCategory -->
