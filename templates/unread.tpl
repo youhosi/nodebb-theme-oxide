@@ -13,6 +13,11 @@
 				<div class="alert alert-warning hide" id="new-topics-alert"></div>
 			</a>
 		</div>
+
+		<div class="btn-group pull-right">
+			<!-- IMPORT partials/category/tools.tpl -->
+		</div>
+
 		<div class="markread btn-group pull-right category-dropdown-container<!-- IF !topics.length --> hidden<!-- ENDIF !topics.length -->">
 			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
 				[[unread:mark_as_read]] <span class="caret"></span>
